@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EHS Simplified — Workplace Safety Made Simple</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #202344;
+    --orange: #DD5D0A;
+    --orange-light: #FF6B1A;
+    --white: #FFFFFF;
+    --off-white: #F7F7F5;
+    --light-gray: #EEEEEB;
+    --mid-gray: #888880;
+    --dark: #111120;
+    --font-display: 'Barlow Condensed', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--white);
+    color: var(--navy);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 72px;
+    background: rgba(32, 35, 68, 0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(221, 93, 10, 0.2);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .nav-logo-text {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    color: var(--white);
+  }
+
+  .nav-logo-text span { color: var(--orange); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--orange); }
+
+  .nav-cta {
+    background: var(--orange);
+    color: var(--white) !important;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: 600 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--orange-light) !important; color: var(--white) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 120px 5% 80px;
+    gap: 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(221,93,10,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(221,93,10,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-content { position: relative; z-index: 1; }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 24px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: var(--orange);
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(48px, 6vw, 80px);
+    line-height: 1.0;
+    letter-spacing: -0.5px;
+    color: var(--white);
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+
+  .hero h1 span { color: var(--orange); }
+
+  .hero-sub {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.7);
+    max-width: 480px;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--orange);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding: 16px 32px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-primary:hover { background: var(--orange-light); transform: translateY(-1px); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 15px;
+    padding: 16px 32px;
+    border-radius: 4px;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .btn-secondary:hover { border-color: var(--orange); background: rgba(221,93,10,0.08); }
+
+  .hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .hero-stat-value {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--orange);
+    line-height: 1;
+  }
+
+  .hero-stat-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+  }
+
+  /* App mockup */
+  .hero-visual {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app-mockup {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(221,93,10,0.3);
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.05);
+  }
+
+  .app-mockup-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .app-mockup-dots { display: flex; gap: 6px; }
+  .app-mockup-dots span {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+  }
+  .app-mockup-dots span:first-child { background: #FF5F57; }
+  .app-mockup-dots span:nth-child(2) { background: #FEBC2E; }
+  .app-mockup-dots span:nth-child(3) { background: #28C840; }
+
+  .app-mockup-url {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    font-family: monospace;
+    letter-spacing: 0.5px;
+  }
+
+  .app-mockup iframe {
+    width: 100%;
+    height: 420px;
+    border: none;
+    border-radius: 8px;
+    background: #1a1d3a;
+  }
+
+  .app-demo-placeholder {
+    width: 100%;
+    height: 420px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #1a1d3a 0%, #252850 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    border: 1px dashed rgba(221,93,10,0.3);
+  }
+
+  .app-demo-placeholder:hover { opacity: 0.85; }
+
+  .app-demo-icon {
+    width: 64px; height: 64px;
+    border-radius: 16px;
+    background: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .app-demo-icon svg { width: 32px; height: 32px; fill: white; }
+
+  .app-demo-label {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .app-demo-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* ── TAGLINE BAND ── */
+  .tagline-band {
+    background: var(--orange);
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    overflow: hidden;
+  }
+
+  .tagline-band p {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--white);
+    white-space: nowrap;
+  }
+
+  .tagline-band-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    flex-shrink: 0;
+  }
+
+  /* ── SECTION BASE ── */
+  section { padding: 100px 5%; }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 16px;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 24px; height: 2px;
+    background: var(--orange);
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(36px, 4vw, 56px);
+    line-height: 1.05;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 20px;
+  }
+
+  .section-title span { color: var(--orange); }
+
+  .section-body {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--mid-gray);
+    max-width: 560px;
+    font-weight: 300;
+  }
+
+  /* ── WHY SECTION ── */
+  .why { background: var(--off-white); }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  .why-points { display: flex; flex-direction: column; gap: 32px; }
+
+  .why-point {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .why-point-num {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 1;
+    color: var(--orange);
+    opacity: 0.25;
+    flex-shrink: 0;
+    width: 48px;
+  }
+
+  .why-point-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .why-point-body {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--mid-gray);
+  }
+
+  .why-callout {
+    background: var(--navy);
+    border-radius: 12px;
+    padding: 48px;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .why-callout::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(221,93,10,0.2) 0%, transparent 70%);
+  }
+
+  .why-callout-quote {
+    font-family: var(--font-display);
+    font-size: 72px;
+    color: var(--orange);
+    line-height: 0.8;
+    margin-bottom: 16px;
+    opacity: 0.4;
+  }
+
+  .why-callout p {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  .why-callout-stat {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 56px;
+    color: var(--orange);
+    line-height: 1;
+  }
+
+  .why-callout-stat-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* ── TIERS ── */
+  .tiers { background: var(--white); }
+
+  .tiers-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 56px;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+
+  .tier-card {
+    border: 1.5px solid var(--light-gray);
+    border-radius: 10px;
+    padding: 36px 28px;
+    position: relative;
+    transition: border-color 0.2s, transform 0.2s;
+    background: var(--white);
+  }
+
+  .tier-card:hover { border-color: var(--orange); transform: translateY(-4px); }
+
+  .tier-card.featured {
+    border-color: var(--orange);
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .tier-badge {
+    position: absolute;
+    top: -12px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--orange);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+  }
+
+  .tier-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 8px;
+  }
+
+  .tier-tagline {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .tier-card.featured .tier-tagline { color: var(--white); }
+
+  .tier-price {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 44px;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .tier-card.featured .tier-price { color: var(--white); }
+
+  .tier-price-sub {
+    font-size: 12px;
+    color: var(--mid-gray);
+    margin-bottom: 28px;
+    letter-spacing: 0.5px;
+  }
+
+  .tier-card.featured .tier-price-sub { color: rgba(255,255,255,0.5); }
+
+  .tier-divider {
+    height: 1px;
+    background: var(--light-gray);
+    margin-bottom: 24px;
+  }
+
+  .tier-card.featured .tier-divider { background: rgba(255,255,255,0.1); }
+
+  .tier-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+  .tier-features li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 13.5px;
+    line-height: 1.4;
+    color: var(--mid-gray);
+  }
+
+  .tier-card.featured .tier-features li { color: rgba(255,255,255,0.7); }
+
+  .tier-features li::before {
+    content: '✓';
+    color: var(--orange);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .tier-cta {
+    display: block;
+    margin-top: 32px;
+    text-align: center;
+    padding: 13px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 1.5px solid var(--orange);
+    color: var(--orange);
+    background: transparent;
+  }
+
+  .tier-cta:hover { background: var(--orange); color: var(--white); }
+  .tier-card.featured .tier-cta { background: var(--orange); color: var(--white); border-color: var(--orange); }
+  .tier-card.featured .tier-cta:hover { background: var(--orange-light); }
+
+  .tiers-footnote {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--mid-gray);
+  }
+
+  /* ── HOW IT WORKS ── */
+  .how { background: var(--navy); }
+  .how .section-title { color: var(--white); }
+  .how .section-body { color: rgba(255,255,255,0.55); }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 64px;
+  }
+
+  .step {
+    position: relative;
+    padding: 40px 32px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+  }
+
+  .step-num {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 80px;
+    color: var(--orange);
+    opacity: 0.15;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .step-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .step-body {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ── ABOUT ── */
+  .about { background: var(--off-white); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  .about-credential {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--navy);
+    color: var(--white);
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .about-credential span { color: var(--orange); }
+
+  .about-name {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .about-title {
+    font-size: 16px;
+    color: var(--orange);
+    font-weight: 600;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+  }
+
+  .about-bio {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--mid-gray);
+    font-weight: 300;
+    margin-bottom: 32px;
+  }
+
+  .about-visual {
+    background: var(--navy);
+    border-radius: 12px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .about-visual-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 8px;
+  }
+
+  .expertise-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .expertise-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+  }
+
+  .expertise-bar {
+    height: 4px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .expertise-fill {
+    height: 100%;
+    background: var(--orange);
+    border-radius: 2px;
+  }
+
+  /* ── SCHEDULE ── */
+  .schedule { background: var(--white); }
+
+  .schedule-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    margin-top: 60px;
+  }
+
+  .schedule-info { display: flex; flex-direction: column; gap: 24px; }
+
+  .schedule-point {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .schedule-icon {
+    width: 44px; height: 44px;
+    background: rgba(221,93,10,0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .schedule-icon svg { width: 20px; height: 20px; stroke: var(--orange); fill: none; stroke-width: 2; }
+
+  .schedule-point-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .schedule-point-body { font-size: 14px; color: var(--mid-gray); line-height: 1.5; }
+
+  .calendly-embed {
+    background: var(--off-white);
+    border: 1.5px solid var(--light-gray);
+    border-radius: 10px;
+    padding: 48px 40px;
+    text-align: center;
+  }
+
+  .calendly-embed h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .calendly-embed p { font-size: 15px; color: var(--mid-gray); margin-bottom: 32px; }
+
+  .calendly-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--orange);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 16px 36px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .calendly-btn:hover { background: var(--orange-light); }
+
+  .calendly-note {
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--mid-gray);
+    letter-spacing: 0.5px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    padding: 60px 5% 40px;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .footer-brand { max-width: 320px; }
+
+  .footer-logo {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--white);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .footer-logo span { color: var(--orange); }
+
+  .footer-tagline {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .footer-links { display: flex; flex-direction: column; gap: 12px; }
+
+  .footer-links a {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--orange); }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+  .footer-csp { font-size: 12px; color: var(--orange); font-weight: 500; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; padding-top: 100px; }
+    .hero-visual { order: -1; }
+    .why-grid, .about-grid, .schedule-grid { grid-template-columns: 1fr; }
+    .tiers-grid { grid-template-columns: 1fr 1fr; }
+    .steps { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .tiers-header { flex-direction: column; }
+  }
+
+  @media (max-width: 600px) {
+    .tiers-grid { grid-template-columns: 1fr; }
+    .hero-stats { flex-direction: column; gap: 20px; }
+  }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow { animation: fadeUp 0.6s ease both; }
+  .hero h1 { animation: fadeUp 0.6s 0.1s ease both; }
+  .hero-sub { animation: fadeUp 0.6s 0.2s ease both; }
+  .hero-actions { animation: fadeUp 0.6s 0.3s ease both; }
+  .hero-stats { animation: fadeUp 0.6s 0.4s ease both; }
+  .hero-visual { animation: fadeUp 0.8s 0.2s ease both; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="nav-logo-text">EHS <span>Simplified</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#why">Why EHS</a></li>
+    <li><a href="#tiers">Plans</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#schedule" class="nav-cta">Schedule a Call</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">CSP-Backed Safety Program</div>
+    <h1>Your Safety<br>Department.<br><span>In Their Pocket.</span></h1>
+    <p class="hero-sub">EHS Simplified gives small trade and manufacturing businesses a complete, expert-backed safety program — without hiring a full-time EHS manager.</p>
+    <div class="hero-actions">
+      <a href="https://app.ehssimplified.com" target="_blank" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        See the App Demo
+      </a>
+      <a href="#schedule" class="btn-secondary">Schedule a Free Call</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-value">25+</div>
+        <div class="hero-stat-label">Years EHS Experience</div>
+      </div>
+      <div>
+        <div class="hero-stat-value">CSP</div>
+        <div class="hero-stat-label">Certified Safety Professional</div>
+      </div>
+      <div>
+        <div class="hero-stat-value">$99</div>
+        <div class="hero-stat-label">Starting per month</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="app-mockup">
+      <div class="app-mockup-bar">
+        <div class="app-mockup-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="app-mockup-url">app.ehssimplified.com</div>
+      </div>
+      <a href="https://app.ehssimplified.com" target="_blank" class="app-demo-placeholder">
+        <div class="app-demo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        </div>
+        <div class="app-demo-label">Launch Live Demo</div>
+        <div class="app-demo-sub">Click to explore the EHS Simplified app</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TAGLINE BAND -->
+<div class="tagline-band">
+  <p>Protect Your People</p>
+  <div class="tagline-band-dot"></div>
+  <p>Stay Compliant</p>
+  <div class="tagline-band-dot"></div>
+  <p>Build a Safety Culture</p>
+  <div class="tagline-band-dot"></div>
+  <p>Starting at $99/Month</p>
+</div>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div class="section-label">The Problem</div>
+  <h2 class="section-title">Safety Binders<br>Don't <span>Save Lives.</span></h2>
+  <p class="section-body">Small trade and manufacturing businesses face the same OSHA obligations as large employers — without the budget, staff, or tools to manage them. Until now.</p>
+
+  <div class="why-grid">
+    <div class="why-points">
+      <div class="why-point">
+        <div class="why-point-num">01</div>
+        <div>
+          <div class="why-point-title">Enterprise tools are out of reach</div>
+          <p class="why-point-body">Platforms like VelocityEHS and Benchmark Gensuite cost $800–$5,000/month. Built for large corporations, priced out of reach for small businesses.</p>
+        </div>
+      </div>
+      <div class="why-point">
+        <div class="why-point-num">02</div>
+        <div>
+          <div class="why-point-title">Independent consultants are expensive</div>
+          <p class="why-point-body">Retaining a safety consultant typically runs $2,500–$3,500/month — consulting only, no software, no ongoing program management.</p>
+        </div>
+      </div>
+      <div class="why-point">
+        <div class="why-point-num">03</div>
+        <div>
+          <div class="why-point-title">Doing nothing costs more</div>
+          <p class="why-point-body">OSHA serious violation fines run up to $16,550 per violation. A single lost-time injury can drive workers' comp premiums up for years. The cost of inaction is not zero.</p>
+        </div>
+      </div>
+    </div>
+    <div class="why-callout">
+      <div class="why-callout-quote">"</div>
+      <p>For less than the cost of a 30-minute consultation with a workers' compensation attorney, EHS Simplified gives your business a complete, managed safety program — every month.</p>
+      <div class="why-callout-stat">$99</div>
+      <div class="why-callout-stat-label">per month — Safety Starter tier</div>
+    </div>
+  </div>
+</section>
+
+<!-- TIERS -->
+<section class="tiers" id="tiers">
+  <div class="tiers-header">
+    <div>
+      <div class="section-label">Pricing</div>
+      <h2 class="section-title">Find Your<br><span>Right Fit</span></h2>
+    </div>
+    <p class="section-body" style="max-width: 360px; font-size:15px;">All plans include a 12-month agreement with no surprise fees. Cancel anytime with 30 days notice.</p>
+  </div>
+
+  <div class="tiers-grid">
+    <!-- Starter -->
+    <div class="tier-card">
+      <div class="tier-name">Safety Starter</div>
+      <div class="tier-tagline">Manage Safety Your Way</div>
+      <div class="tier-price">$99</div>
+      <div class="tier-price-sub">/month · 12-month agreement</div>
+      <div class="tier-divider"></div>
+      <ul class="tier-features">
+        <li>Full mobile app access</li>
+        <li>Secure company document portal</li>
+        <li>SDS library (self-managed)</li>
+        <li>Preloaded training videos</li>
+        <li>App support included</li>
+        <li>Consulting available at hourly rates</li>
+      </ul>
+      <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="tier-cta">Get Started</a>
+    </div>
+
+    <!-- Foundation -->
+    <div class="tier-card featured">
+      <div class="tier-badge">Most Popular</div>
+      <div class="tier-name">Safety Foundation</div>
+      <div class="tier-tagline">Built & Ready to Go</div>
+      <div class="tier-price">$199</div>
+      <div class="tier-price-sub">/month · 12-month agreement</div>
+      <div class="tier-divider"></div>
+      <ul class="tier-features">
+        <li>Everything in Safety Starter</li>
+        <li>Done-for-you setup</li>
+        <li>SDS library populated for you</li>
+        <li>Emergency contacts configured</li>
+        <li>Basic policy framework loaded</li>
+        <li>30-min/month CSP check-in</li>
+        <li>Consulting available at hourly rates</li>
+      </ul>
+      <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="tier-cta">Get Started</a>
+    </div>
+
+    <!-- Partner -->
+    <div class="tier-card">
+      <div class="tier-name">Safety Partner</div>
+      <div class="tier-tagline">A Partner in Your Corner</div>
+      <div class="tier-price">$349</div>
+      <div class="tier-price-sub">/month · 12-month agreement</div>
+      <div class="tier-divider"></div>
+      <ul class="tier-features">
+        <li>Everything in Safety Foundation</li>
+        <li>2 hrs/month CSP consulting</li>
+        <li>Flexible — use time your way</li>
+        <li>Monthly safety program review</li>
+        <li>Compliance guidance</li>
+        <li>Policy support</li>
+        <li>Consulting available at hourly rates</li>
+      </ul>
+      <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="tier-cta">Get Started</a>
+    </div>
+
+    <!-- Management -->
+    <div class="tier-card">
+      <div class="tier-name">Safety Management</div>
+      <div class="tier-tagline">Your Outsourced Safety Dept.</div>
+      <div class="tier-price">$699</div>
+      <div class="tier-price-sub">/month · 12-month agreement</div>
+      <div class="tier-divider"></div>
+      <ul class="tier-features">
+        <li>Everything in Safety Partner</li>
+        <li>4 hrs/month CSP consulting</li>
+        <li>1 custom safety policy/month</li>
+        <li>Custom training module/month</li>
+        <li>Dedicated CSP support</li>
+        <li>Active program management</li>
+        <li>Consulting available at hourly rates</li>
+      </ul>
+      <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="tier-cta">Get Started</a>
+    </div>
+  </div>
+
+  <p class="tiers-footnote">Annual prepay available on request — save 2 months. All prices exclude applicable taxes.</p>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="section-label">The Process</div>
+  <h2 class="section-title" style="color:var(--white)">Simple.<br><span>Straightforward.</span><br>Safe.</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-title">Schedule a Free Consultation</div>
+      <p class="step-body">Book a 30-minute call with Aaron Leff, CSP. We'll discuss your business, your workforce, and which plan fits your needs and budget.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-title">We Set Everything Up</div>
+      <p class="step-body">Send us your documents and we handle the rest. Your company safety portal, SDS library, policies, and emergency contacts — configured and ready to go.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-title">Your Team Stays Safe</div>
+      <p class="step-body">Your employees get mobile access to everything they need — inspections, safety data sheets, training, and emergency information — right on their phone.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div>
+      <div class="section-label">About</div>
+      <div class="about-credential">Certified Safety Professional <span>· CSP</span></div>
+      <div class="about-name">Aaron<br>Leff</div>
+      <div class="about-title">Founder & Consultant, EHS Simplified</div>
+      <p class="about-bio">With over 25 years of hands-on Environmental Health & Safety experience, Aaron Leff built EHS Simplified because he saw the same problem everywhere: small businesses carrying full OSHA compliance obligations with none of the tools or expertise to manage them. EHS Simplified is the solution he wished existed.</p>
+      <p class="about-bio">Every subscription — from Safety Starter to Safety Management — has a real CSP behind it. Not a chatbot. Not a template library. A credentialed safety professional who knows your business and is invested in keeping your people safe.</p>
+      <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="btn-primary" style="display:inline-flex; margin-top:8px;">
+        Schedule a Free Call
+      </a>
+    </div>
+    <div class="about-visual">
+      <div class="about-visual-title">Areas of Expertise</div>
+      <div class="expertise-item">
+        <div class="expertise-label"><span>OSHA Compliance</span><span>Expert</span></div>
+        <div class="expertise-bar"><div class="expertise-fill" style="width:98%"></div></div>
+      </div>
+      <div class="expertise-item">
+        <div class="expertise-label"><span>Occupational Safety</span><span>Expert</span></div>
+        <div class="expertise-bar"><div class="expertise-fill" style="width:95%"></div></div>
+      </div>
+      <div class="expertise-item">
+        <div class="expertise-label"><span>Manufacturing / General Industry</span><span>Expert</span></div>
+        <div class="expertise-bar"><div class="expertise-fill" style="width:92%"></div></div>
+      </div>
+      <div class="expertise-item">
+        <div class="expertise-label"><span>Hazard Communication / SDS</span><span>Expert</span></div>
+        <div class="expertise-bar"><div class="expertise-fill" style="width:97%"></div></div>
+      </div>
+      <div class="expertise-item">
+        <div class="expertise-label"><span>Safety Program Development</span><span>Expert</span></div>
+        <div class="expertise-bar"><div class="expertise-fill" style="width:96%"></div></div>
+      </div>
+      <div class="expertise-item">
+        <div class="expertise-label"><span>Incident Investigation</span><span>Expert</span></div>
+        <div class="expertise-bar"><div class="expertise-fill" style="width:90%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="schedule" id="schedule">
+  <div class="schedule-grid">
+    <div>
+      <div class="section-label">Get Started</div>
+      <h2 class="section-title">Ready to<br><span>Simplify</span><br>Safety?</h2>
+      <div class="schedule-info" style="margin-top: 40px;">
+        <div class="schedule-point">
+          <div class="schedule-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div class="schedule-point-title">Free 30-Minute Consultation</div>
+            <p class="schedule-point-body">No pressure, no pitch deck. Just a real conversation with a CSP about your business and what you need.</p>
+          </div>
+        </div>
+        <div class="schedule-point">
+          <div class="schedule-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div>
+            <div class="schedule-point-title">Choose Your Time</div>
+            <p class="schedule-point-body">Evening and weekend availability. We work around your schedule, not the other way around.</p>
+          </div>
+        </div>
+        <div class="schedule-point">
+          <div class="schedule-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div class="schedule-point-title">Walk Away with a Plan</div>
+            <p class="schedule-point-body">Every call ends with a clear recommendation for your business — and no obligation to sign up.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calendly-embed">
+      <h3>Book Your Free<br>Consultation</h3>
+      <p>30 minutes. Virtual. No strings attached.</p>
+      <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="calendly-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Schedule Now
+      </a>
+      <p class="calendly-note">You'll receive a confirmation email immediately after booking.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">EHS <span>Simplified</span></div>
+      <p class="footer-tagline">Professional EHS management for small trade and manufacturing businesses. A complete safety program — without hiring a full-time EHS manager.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#why">Why EHS Simplified</a>
+      <a href="#tiers">Plans & Pricing</a>
+      <a href="#about">About Aaron</a>
+      <a href="https://app.ehssimplified.com" target="_blank">App Demo</a>
+      <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank">Schedule a Call</a>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:aaron@ehssimplified.com">aaron@ehssimplified.com</a>
+      <a href="tel:6033977067">(603) 397-7067</a>
+      <a href="#">Manchester, NH</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 EHS Simplified. All rights reserved.</p>
+    <p class="footer-csp">Aaron Leff, CSP · Founder & Consultant</p>
+  </div>
+</footer>
+
+</body>
+</html>
