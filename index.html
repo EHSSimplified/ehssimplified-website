@@ -1440,7 +1440,9 @@
       <h2 class="section-title">How Has EHS Simplified<br><span>Helped Your Business?</span></h2>
       <p class="section-sub">We'd love to hear from you. Your feedback helps other small business owners understand what's possible.</p>
 
-      <div class="form-grid" id="testimonial-form">
+      <form class="form-grid" id="testimonial-form" name="testimonials" netlify netlify-honeypot="bot-field" data-netlify="true">
+  <input type="hidden" name="form-name" value="testimonials" />
+  <p hidden><input name="bot-field" /></p>
         <div class="form-group">
           <label for="t-name">Your Name</label>
           <input type="text" id="t-name" placeholder="Jane Smith" />
@@ -1485,8 +1487,8 @@
           <input type="checkbox" id="t-consent" style="width:auto;background:none;border:none;padding:0;" />
           <label for="t-consent" style="font-size:0.82rem;text-transform:none;letter-spacing:0;color:#94A3B8;font-weight:400;">I give EHS Simplified permission to display this testimonial on their website.</label>
         </div>
-      </div>
-      <button class="form-submit" onclick="submitTestimonial()">Submit Testimonial</button>
+     </form>
+      <button type="submit" class="form-submit">Submit Testimonial</button>
 
       <div class="form-success" id="form-success">
         <h3>Thank you! 🎉</h3>
