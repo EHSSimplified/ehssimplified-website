@@ -1502,28 +1502,15 @@
 ══════════════════════════════════════════ -->
 <div id="page-blog" class="page">
   <section class="blog-page">
-    <div class="blog-coming-soon">
-      <div class="blog-icon">📋</div>
-      <div class="section-label" style="justify-content:center;display:flex;">Safety Resources</div>
-      <h2>Practical Safety Guidance<br>for Small Business</h2>
-      <p>Articles, checklists, and guides written by a CSP — not a content farm. Topics include OSHA compliance, workers' comp cost reduction, industry-specific hazards, and building a real safety culture.</p>
-      <div class="blog-topics">
-        <span class="blog-topic-tag">OSHA Compliance</span>
-        <span class="blog-topic-tag">Workers' Comp</span>
-        <span class="blog-topic-tag">Construction Safety</span>
-        <span class="blog-topic-tag">Hazard Communication</span>
-        <span class="blog-topic-tag">Safety Culture</span>
-        <span class="blog-topic-tag">Incident Investigation</span>
-        <span class="blog-topic-tag">Small Business EHS</span>
-        <span class="blog-topic-tag">Training Tips</span>
-      </div>
-      <p style="font-size:0.9rem;color:#6B7280;margin-bottom:16px;">New articles dropping soon. Enter your email to get notified.</p>
-      <div class="notify-form">
-        <input type="email" id="notify-email" placeholder="your@email.com" />
-        <button onclick="notifySubmit()">Notify Me</button>
-      </div>
-      <p id="notify-confirm" style="font-size:0.85rem;color:#0072CE;margin-top:12px;display:none;">✓ You're on the list!</p>
-    </div>
+  <div id="blog-container">
+  <div style="text-align:center;padding:60px 24px;">
+    <div class="section-label" style="justify-content:center;display:flex;">Safety Resources</div>
+    <h2 class="section-title">Practical Safety Guidance<br><span>for Small Business</span></h2>
+    <p class="section-sub" style="margin:0 auto;">Articles written by a CSP — not a content farm.</p>
+  </div>
+  <div id="blog-posts-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;max-width:1100px;margin:0 auto;padding:0 5% 80px;"></div>
+  <div id="blog-loading" style="text-align:center;padding:60px;color:var(--muted);">Loading posts...</div>
+</div>
   </section>
 </div>
 
