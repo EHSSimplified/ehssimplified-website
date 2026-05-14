@@ -1701,22 +1701,26 @@
         const bodyMatch = text.match(/^---[\s\S]*?---\n([\s\S]*)$/);
         const body = bodyMatch ? bodyMatch[1].trim() : '';
         const summary = frontmatter.summary || body.replace(/#+\s/g, '').replace(/\*\*/g, '').substring(0, 160) + '...';
-        posts.push({ ...frontmatter, summary, slug: file.name.replace('.md', '') });
+        posts.push({ ...frontmatter, summary, fullBody: body, slug: file.name.replace('.md', '') });
       }
       loading.style.display = 'none';
       if (posts.length === 0) {
         grid.innerHTML = '<p style="color:var(--muted);text-align:center;">No posts yet — check back soon.</p>';
         return;
       }
-      posts.forEach(post => {
+     posts.forEach(post => {
         const card = document.createElement('div');
-       card.style.cssText = 'background:var(--white);border:1px solid var(--border);border-top:4px solid var(--blue);border-radius:8px;padding:28px;display:flex;flex-direction:column;gap:12px;';
+        card.style.cssText = 'background:var(--white);border:1px solid var(--border);border-top:4px solid var(--blue);border-radius:8px;padding:28px;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:box-shadow 0.2s;';
+        card.onmouseenter = () => card.style.boxShadow = '0 4px 20px rgba(0,114,206,0.12)';
+        card.onmouseleave = () => card.style.boxShadow = 'none';
         card.innerHTML = `
           ${post.topic ? `<span style="font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);">${post.topic}</span>` : ''}
           <h3 style="font-family:var(--font-display);font-size:1.3rem;font-weight:800;line-height:1.2;margin:0;">${post.title || 'Untitled'}</h3>
           <p style="font-size:0.85rem;color:var(--muted);margin:0;">${post.date ? new Date(post.date).toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'}) : ''} ${post.author ? '· ' + post.author : ''}</p>
           <p style="font-size:0.9rem;color:var(--mid);line-height:1.6;margin:0;">${post.summary}</p>
+          <span style="color:var(--blue);font-weight:700;font-size:0.9rem;">Read More →</span>
         `;
+        card.onclick = () => openPost(post);
         grid.appendChild(card);
       });
     } catch (e) {
@@ -1726,6 +1730,30 @@
   }
 
   document.addEventListener('DOMContentLoaded', loadBlogPosts);
+function openPost(post) {
+    const container = document.getElementById('blog-container');
+    const body = post.fullBody || '';
+    const html = body
+      .replace(/^### (.+)$/gm, '<h3 style="font-family:var(--font-display);font-size:1.3rem;font-weight:800;margin:24px 0 8px;">$1</h3>')
+      .replace(/^## (.+)$/gm, '<h2 style="font-family:var(--font-display);font-size:1.6rem;font-weight:800;margin:32px 0 12px;">$1</h2>')
+      .replace(/^# (.+)$/gm, '<h1 style="font-family:var(--font-display);font-size:2rem;font-weight:800;margin:32px 0 12px;">$1</h1>')
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.+?)\*/g, '<em>$1</em>')
+      .replace(/^---$/gm, '<hr style="border:none;border-top:1px solid var(--border);margin:32px 0;">')
+      .replace(/\n\n/g, '</p><p style="margin-bottom:16px;line-height:1.7;color:var(--mid);">')
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style="color:var(--blue);font-weight:600;">$1</a>');
+    container.innerHTML = `
+      <div style="max-width:760px;margin:0 auto;padding:60px 5%;">
+        <button onclick="loadBlogPosts()" style="background:none;border:none;color:var(--blue);font-weight:700;font-size:0.9rem;cursor:pointer;margin-bottom:32px;padding:0;">← Back to Blog</button>
+        ${post.topic ? `<div style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">${post.topic}</div>` : ''}
+        <h1 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.1;margin-bottom:16px;">${post.title}</h1>
+        <p style="font-size:0.9rem;color:var(--muted);margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid var(--border);">${post.date ? new Date(post.date).toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'}) : ''} · ${post.author || 'Aaron Leff, CSP'}</p>
+        <div style="font-size:1rem;line-height:1.8;color:var(--mid);">
+          <p style="margin-bottom:16px;line-height:1.7;color:var(--mid);">${html}</p>
+        </div>
+      </div>
+    `;
+  }
 </script>
 </body>
 </html>
