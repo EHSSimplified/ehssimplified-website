@@ -1679,5 +1679,37 @@
       });
     }
   </script>
+<script>
+  async function loadBlogPosts() {
+    const grid = document.getElementById('blog-posts-grid');
+    const loading = document.getElementById('blog-loading');
+    try {
+      const res = await fetch('https://api.github.com/repos/EHSSimplified/ehssimplified-website/contents/_posts');
+      const files = await res.json();
+      const posts = [];
+      for (const file of files) {
+        const r = await fetch(file.download_url);
+        const text = await r.text();
+        const frontmatter = {};
+        const match = text.match(/^---\n([\s\S]*?)\n---/);
+        if (match) {
+          match[1].split('\n').forEach(line => {
+            const [key, ...val] = line.split(': ');
+            if (key && val.length) frontmatter[key.trim()] = val.join(': ').trim().replace(/^"|"$/g, '');
+          });
+        }
+        const bodyMatch = text.match(/^---[\s\S]*?---\n([\s\S]*)$/);
+        const body = bodyMatch ? bodyMatch[1].trim() : '';
+        const summary = frontmatter.summary || body.replace(/#+\s/g, '').replace(/\*\*/g, '').substring(0, 160) + '...';
+        posts.push({ ...frontmatter, summary, slug: file.name.replace('.md', '') });
+      }
+      loading.style.display = 'none';
+      if (posts.length === 0) {
+        grid.innerHTML = '<p style="color:var(--muted);text-align:center;">No posts yet — check back soon.</p>';
+        return;
+      }
+      posts.forEach(post => {
+        const card = document.createElement('div');
+        card.style.cssText = 'background:var(--white);bor
 </body>
 </html>
