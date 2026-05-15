@@ -1614,6 +1614,7 @@
     const navEl = document.getElementById('nav-' + name);
     if (navEl) navEl.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (name === 'testimonials') initTestimonialForm();
     return false;
   }
 
@@ -1623,33 +1624,38 @@
   });
 
 // ─── Testimonial Form ───
-  document.getElementById('testimonial-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = document.getElementById('t-name').value.trim();
-    const quote = document.getElementById('t-quote').value.trim();
-    const consent = document.getElementById('t-consent').checked;
-    if (!name || !quote) {
-      alert('Please fill in your name and testimonial before submitting.');
-      return;
-    }
-    if (!consent) {
-      alert('Please check the consent box to allow us to display your testimonial.');
-      return;
-    }
-    const formData = new FormData(this);
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString()
-    }).then(() => {
-      document.getElementById('testimonial-form').style.opacity = '0.3';
-      document.getElementById('testimonial-form').style.pointerEvents = 'none';
-      document.querySelector('.form-submit').style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-    }).catch(() => {
-      alert('Something went wrong. Please try again.');
+ function initTestimonialForm() {
+    const form = document.getElementById('testimonial-form');
+    if (!form || form.dataset.bound) return;
+    form.dataset.bound = 'true';
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('t-name').value.trim();
+      const quote = document.getElementById('t-quote').value.trim();
+      const consent = document.getElementById('t-consent').checked;
+      if (!name || !quote) {
+        alert('Please fill in your name and testimonial before submitting.');
+        return;
+      }
+      if (!consent) {
+        alert('Please check the consent box to allow us to display your testimonial.');
+        return;
+      }
+      const formData = new FormData(this);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      }).then(() => {
+        form.style.opacity = '0.3';
+        form.style.pointerEvents = 'none';
+        document.querySelector('.form-submit').style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      }).catch(() => {
+        alert('Something went wrong. Please try again.');
+      });
     });
-  });
+  }
   // ─── Blog Notify ───
   function notifySubmit() {
     const email = document.getElementById('notify-email').value.trim();
