@@ -1445,15 +1445,15 @@
   <p hidden><input name="bot-field" /></p>
         <div class="form-group">
           <label for="t-name">Your Name</label>
-          <input type="text" id="t-name" placeholder="Jane Smith" />
+         <input type="text" id="t-name" name="name" placeholder="Jane Smith" />
         </div>
         <div class="form-group">
           <label for="t-company">Company &amp; Size</label>
-          <input type="text" id="t-company" placeholder="ABC Contracting, 14 employees" />
+          <input type="text" id="t-company" name="company" placeholder="ABC Contracting, 14 employees" />
         </div>
         <div class="form-group">
           <label for="t-industry">Industry</label>
-          <select id="t-industry">
+         <select id="t-industry" name="industry">
             <option value="">Select your industry</option>
             <option>Construction &amp; Trades</option>
             <option>Manufacturing</option>
@@ -1481,10 +1481,10 @@
         </div>
         <div class="form-group full">
           <label for="t-quote">Your Testimonial</label>
-          <textarea id="t-quote" placeholder="Tell us how EHS Simplified has helped your business — what problem it solved, what changed, what you'd tell another business owner..."></textarea>
+          <textarea id="t-quote" name="testimonial" placeholder="Tell us how EHS Simplified has helped your business — what problem it solved, what changed, what you'd tell another business owner..."></textarea>
         </div>
         <div class="form-group full" style="display:flex;align-items:center;gap:10px;">
-          <input type="checkbox" id="t-consent" style="width:auto;background:none;border:none;padding:0;" />
+          <input type="checkbox" id="t-consent" name="consent" style="width:auto;background:none;border:none;padding:0;" />
           <label for="t-consent" style="font-size:0.82rem;text-transform:none;letter-spacing:0;color:#94A3B8;font-weight:400;">I give EHS Simplified permission to display this testimonial on their website.</label>
         </div>
      </form>
