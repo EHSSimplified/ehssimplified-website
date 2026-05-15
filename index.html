@@ -1622,13 +1622,12 @@
     a.addEventListener('click', e => e.preventDefault());
   });
 
-  // ─── Testimonial Form ───
-  function submitTestimonial() {
+// ─── Testimonial Form ───
+  document.getElementById('testimonial-form').addEventListener('submit', function(e) {
+    e.preventDefault();
     const name = document.getElementById('t-name').value.trim();
     const quote = document.getElementById('t-quote').value.trim();
     const consent = document.getElementById('t-consent').checked;
-    const rating = document.querySelector('input[name="rating"]:checked');
-
     if (!name || !quote) {
       alert('Please fill in your name and testimonial before submitting.');
       return;
@@ -1637,23 +1636,20 @@
       alert('Please check the consent box to allow us to display your testimonial.');
       return;
     }
-
-    // Show success message
-    document.getElementById('testimonial-form').style.opacity = '0.3';
-    document.getElementById('testimonial-form').style.pointerEvents = 'none';
-    document.querySelector('.form-submit').style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
-
-    // In production: replace this with a fetch() POST to your backend / Formspree / Netlify Forms
-    console.log('Testimonial submitted:', {
-      name,
-      company: document.getElementById('t-company').value,
-      industry: document.getElementById('t-industry').value,
-      rating: rating ? rating.value : null,
-      quote,
+    const formData = new FormData(this);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    }).then(() => {
+      document.getElementById('testimonial-form').style.opacity = '0.3';
+      document.getElementById('testimonial-form').style.pointerEvents = 'none';
+      document.querySelector('.form-submit').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }).catch(() => {
+      alert('Something went wrong. Please try again.');
     });
-  }
-
+  });
   // ─── Blog Notify ───
   function notifySubmit() {
     const email = document.getElementById('notify-email').value.trim();
