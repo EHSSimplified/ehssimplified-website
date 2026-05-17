@@ -1,6 +1,6 @@
 ---
 title: Why I Built EHS Simplified (And Why It Matters for Your Business)
-date: 2026-05-18T08:00:24.934Z
+date: 2026-05-11T08:00:24.934Z
 author: Aaron Leff, CSP
 topic: General EHS
 summary: "After 25 years in Environmental Health & Safety, I kept seeing the
