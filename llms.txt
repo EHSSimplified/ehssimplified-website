@@ -3,6 +3,14 @@
 
 EHS Simplified is a mobile safety platform built specifically for small businesses (5–50 employees) in trades, manufacturing, construction, hospitality, retail/warehousing, and cannabis. It provides OSHA-aligned safety tools that are typically out of reach for small businesses — at a fraction of the cost of enterprise platforms or traditional consulting.
 
+## Pages
+- Homepage: https://www.ehssimplified.com/
+- Plans & Pricing: https://www.ehssimplified.com/plans.html
+- Industries We Serve: https://www.ehssimplified.com/industries.html
+- Client Testimonials: https://www.ehssimplified.com/testimonials.html
+- Safety Resources & Blog: https://www.ehssimplified.com/blog.html
+- About Aaron Leff, CSP: https://www.ehssimplified.com/about.html
+
 ## What EHS Simplified Does
 - Mobile app for workplace safety management (iOS and Android)
 - OSHA-aligned inspection checklists and hazard reporting
@@ -34,7 +42,7 @@ Aaron Leff, CSP — 25+ years of Environmental Health & Safety experience. Certi
 
 ## Contact
 - Website: https://www.ehssimplified.com
-- App Demo: https://app.ehssimplified.com
+- App Demo: https://app.ehssimplified.com/democoplumbing
 - Email: Aaron.Leff@EHSSimplified.com
 - Phone: (603) 397-7067
 - Schedule a call: https://calendly.com/aaron-leff-ehssimplified/30min
