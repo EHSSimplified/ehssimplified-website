@@ -122,7 +122,7 @@
           });
         }
         const bodyMatch = text.match(/^---[\s\S]*?---\n([\s\S]*)$/);
-        const body = bodyMatch ? bodyMatch[1].trim() : '';
+        const body = bodyMatch ? bodyMatch[1].replace(/<!--[\s\S]*?-->/g, '').trim() : '';
         const summary = frontmatter.summary || body.replace(/#+\s/g, '').replace(/\*\*/g, '').substring(0, 160) + '...';
         posts.push({ ...frontmatter, summary, fullBody: body, slug: file.name.replace('.md', '') });
       }
