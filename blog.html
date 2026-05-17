@@ -36,27 +36,15 @@
 </nav>
 
 <section class="blog-page">
-  <div class="blog-coming-soon">
-    <div class="blog-icon">📋</div>
-    <div class="section-label" style="justify-content:center;display:flex;">Safety Resources</div>
-    <h1>Practical Safety Guidance<br>for Small Business</h1>
-    <p>Articles, checklists, and guides written by a CSP — not a content farm. Topics include OSHA compliance, workers' comp cost reduction, industry-specific hazards, and building a real safety culture.</p>
-    <div class="blog-topics">
-      <span class="blog-topic-tag">OSHA Compliance</span>
-      <span class="blog-topic-tag">Workers' Comp</span>
-      <span class="blog-topic-tag">Construction Safety</span>
-      <span class="blog-topic-tag">Hazard Communication</span>
-      <span class="blog-topic-tag">Safety Culture</span>
-      <span class="blog-topic-tag">Incident Investigation</span>
-      <span class="blog-topic-tag">Small Business EHS</span>
-      <span class="blog-topic-tag">Training Tips</span>
+  <div id="blog-container">
+    <div style="text-align:center;padding:60px 24px;">
+      <div class="blog-icon">📋</div>
+      <div class="section-label" style="justify-content:center;display:flex;">Safety Resources</div>
+      <h1 class="section-title">Practical Safety Guidance<br><span>for Small Business</span></h1>
+      <p class="section-sub" style="margin:0 auto;">Articles written by a CSP — not a content farm.</p>
     </div>
-    <p style="font-size:0.9rem;color:#6B7280;margin-bottom:16px;">New articles dropping soon. Enter your email to get notified.</p>
-    <div class="notify-form">
-      <input type="email" id="notify-email" placeholder="your@email.com" />
-      <button onclick="notifySubmit()">Notify Me</button>
-    </div>
-    <p id="notify-confirm" style="font-size:0.85rem;color:#0072CE;margin-top:12px;display:none;">✓ You're on the list!</p>
+    <div id="blog-posts-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;max-width:1100px;margin:0 auto;padding:0 5% 80px;"></div>
+    <div id="blog-loading" style="text-align:center;padding:60px;color:#6B7280;">Loading posts...</div>
   </div>
 </section>
 
@@ -113,8 +101,81 @@
     if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
     document.getElementById('notify-confirm').style.display = 'block';
     document.getElementById('notify-email').value = '';
-    console.log('Blog notify signup:', email);
   }
+
+  async function loadBlogPosts() {
+    const grid = document.getElementById('blog-posts-grid');
+    const loading = document.getElementById('blog-loading');
+    try {
+      const res = await fetch('https://api.github.com/repos/EHSSimplified/ehssimplified-website/contents/_posts');
+      const files = await res.json();
+      const posts = [];
+      for (const file of files) {
+        const r = await fetch(file.download_url);
+        const text = await r.text();
+        const frontmatter = {};
+        const match = text.match(/^---\n([\s\S]*?)\n---/);
+        if (match) {
+          match[1].split('\n').forEach(line => {
+            const [key, ...val] = line.split(': ');
+            if (key && val.length) frontmatter[key.trim()] = val.join(': ').trim().replace(/^"|"$/g, '');
+          });
+        }
+        const bodyMatch = text.match(/^---[\s\S]*?---\n([\s\S]*)$/);
+        const body = bodyMatch ? bodyMatch[1].trim() : '';
+        const summary = frontmatter.summary || body.replace(/#+\s/g, '').replace(/\*\*/g, '').substring(0, 160) + '...';
+        posts.push({ ...frontmatter, summary, fullBody: body, slug: file.name.replace('.md', '') });
+      }
+      loading.style.display = 'none';
+      if (posts.length === 0) {
+        grid.innerHTML = '<p style="color:#6B7280;text-align:center;grid-column:1/-1;">No posts yet — check back soon.</p>';
+        return;
+      }
+      posts.forEach(post => {
+        const card = document.createElement('div');
+        card.style.cssText = 'background:#fff;border:1px solid #E5E7EB;border-top:4px solid #0072CE;border-radius:8px;padding:28px;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:box-shadow 0.2s;';
+        card.onmouseenter = () => card.style.boxShadow = '0 4px 20px rgba(0,114,206,0.12)';
+        card.onmouseleave = () => card.style.boxShadow = 'none';
+        card.innerHTML = `
+          ${post.topic ? `<span style="font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0072CE;">${post.topic}</span>` : ''}
+          <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:800;line-height:1.2;margin:0;">${post.title || 'Untitled'}</h3>
+          <p style="font-size:0.85rem;color:#6B7280;margin:0;">${post.date ? new Date(post.date).toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'}) : ''} ${post.author ? '· ' + post.author : ''}</p>
+          <p style="font-size:0.9rem;color:#374151;line-height:1.6;margin:0;">${post.summary}</p>
+          <span style="color:#0072CE;font-weight:700;font-size:0.9rem;">Read More →</span>
+        `;
+        card.onclick = () => openPost(post);
+        grid.appendChild(card);
+      });
+    } catch (e) {
+      loading.textContent = 'Unable to load posts right now. Please try again later.';
+    }
+  }
+
+  function openPost(post) {
+    const container = document.getElementById('blog-container');
+    const body = post.fullBody || '';
+    const html = body
+      .replace(/^### (.+)$/gm, '<h3 style="font-family:\'Barlow Condensed\',sans-serif;font-size:1.3rem;font-weight:800;margin:24px 0 8px;">$1</h3>')
+      .replace(/^## (.+)$/gm, '<h2 style="font-family:\'Barlow Condensed\',sans-serif;font-size:1.6rem;font-weight:800;margin:32px 0 12px;">$1</h2>')
+      .replace(/^# (.+)$/gm, '<h1 style="font-family:\'Barlow Condensed\',sans-serif;font-size:2rem;font-weight:800;margin:32px 0 12px;">$1</h1>')
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.+?)\*/g, '<em>$1</em>')
+      .replace(/\n\n/g, '</p><p style="margin-bottom:16px;line-height:1.7;color:#374151;">')
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style="color:#0072CE;font-weight:600;">$1</a>');
+    container.innerHTML = `
+      <div style="max-width:760px;margin:0 auto;padding:60px 5%;">
+        <button onclick="loadBlogPosts()" style="background:none;border:none;color:#0072CE;font-weight:700;font-size:0.9rem;cursor:pointer;margin-bottom:32px;padding:0;">← Back to Blog</button>
+        ${post.topic ? `<div style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0072CE;margin-bottom:12px;">${post.topic}</div>` : ''}
+        <h1 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.1;margin-bottom:16px;">${post.title}</h1>
+        <p style="font-size:0.9rem;color:#6B7280;margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid #E5E7EB;">${post.date ? new Date(post.date).toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'}) : ''} · ${post.author || 'Aaron Leff, CSP'}</p>
+        <div style="font-size:1rem;line-height:1.8;color:#374151;">
+          <p style="margin-bottom:16px;line-height:1.7;color:#374151;">${html}</p>
+        </div>
+      </div>
+    `;
+  }
+
+  document.addEventListener('DOMContentLoaded', loadBlogPosts);
 </script>
 </body>
 </html>
