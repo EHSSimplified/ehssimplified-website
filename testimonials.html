@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Testimonials | EHS Simplified</title>
+  <meta name="description" content="See what small business owners say about EHS Simplified. Real feedback from construction, manufacturing, and trades businesses that use our safety app and CSP-backed consulting." />
+  <meta name="keywords" content="EHS Simplified reviews, safety app testimonials, small business safety program reviews" />
+  <meta property="og:title" content="Client Testimonials | EHS Simplified" />
+  <meta property="og:description" content="Real feedback from small business owners who no longer worry about safety compliance." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ehssimplified.com/testimonials.html" />
+  <link rel="canonical" href="https://www.ehssimplified.com/testimonials.html" />
+  <link rel="llms" type="text/plain" href="/llms.txt" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJF1YPC4KT"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HJF1YPC4KT');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wr5b1aij5e");</script>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="index.html">EHS <span>Simplified</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Why EHS</a></li>
+    <li><a href="plans.html">Plans</a></li>
+    <li><a href="industries.html">Industries</a></li>
+    <li><a href="testimonials.html" class="active">Testimonials</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="nav-cta">Schedule a Call</a></li>
+  </ul>
+</nav>
+
+<section class="testimonials-page">
+  <div class="section-inner">
+    <div class="section-label">Client Testimonials</div>
+    <h1 class="section-title">Trusted by <span>Small Businesses</span></h1>
+    <p class="section-sub">Real feedback from business owners who no longer worry about safety compliance.</p>
+    <div class="testimonials-grid" id="testimonials-grid">
+      <!-- Testimonials will appear here as customers submit them -->
+    </div>
+  </div>
+</section>
+
+<!-- Submit Testimonial -->
+<div class="submit-section">
+  <div class="submit-inner">
+    <div class="section-label" style="color:#60A5FA;">Share Your Experience</div>
+    <h2 class="section-title">How Has EHS Simplified<br><span>Helped Your Business?</span></h2>
+    <p class="section-sub">We'd love to hear from you. Your feedback helps other small business owners understand what's possible.</p>
+
+    <form class="form-grid" id="testimonial-form"
+          name="testimonials"
+          method="POST"
+          data-netlify="true"
+          data-netlify-recaptcha="true"
+          netlify-honeypot="bot-field"
+          action="/testimonials.html?submitted=true">
+
+      <!-- Netlify hidden fields -->
+      <input type="hidden" name="form-name" value="testimonials" />
+      <p style="display:none;"><input name="bot-field" /></p>
+
+      <div class="form-group">
+        <label for="t-name">Your Name</label>
+        <input type="text" id="t-name" name="name" placeholder="Jane Smith" required />
+      </div>
+      <div class="form-group">
+        <label for="t-company">Company &amp; Size</label>
+        <input type="text" id="t-company" name="company" placeholder="ABC Contracting, 14 employees" />
+      </div>
+      <div class="form-group">
+        <label for="t-industry">Industry</label>
+        <select id="t-industry" name="industry">
+          <option value="">Select your industry</option>
+          <option>Construction &amp; Trades</option>
+          <option>Manufacturing</option>
+          <option>Hospitality &amp; Food Service</option>
+          <option>Retail &amp; Warehousing</option>
+          <option>Cannabis Operations</option>
+          <option>HVAC / Plumbing / Electrical</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Your Rating</label>
+        <div class="star-rating">
+          <input type="radio" name="rating" id="star5" value="5" />
+          <label for="star5" title="5 stars">★</label>
+          <input type="radio" name="rating" id="star4" value="4" />
+          <label for="star4" title="4 stars">★</label>
+          <input type="radio" name="rating" id="star3" value="3" />
+          <label for="star3" title="3 stars">★</label>
+          <input type="radio" name="rating" id="star2" value="2" />
+          <label for="star2" title="2 stars">★</label>
+          <input type="radio" name="rating" id="star1" value="1" />
+          <label for="star1" title="1 star">★</label>
+        </div>
+      </div>
+      <div class="form-group full">
+        <label for="t-quote">Your Testimonial</label>
+        <textarea id="t-quote" name="testimonial" placeholder="Tell us how EHS Simplified has helped your business — what problem it solved, what changed, what you'd tell another business owner..." required></textarea>
+      </div>
+      <div class="form-group full" style="display:flex;align-items:center;gap:10px;">
+        <input type="checkbox" id="t-consent" name="consent" style="width:auto;background:none;border:none;padding:0;" required />
+        <label for="t-consent" style="font-size:0.82rem;text-transform:none;letter-spacing:0;color:#94A3B8;font-weight:400;">I give EHS Simplified permission to display this testimonial on their website.</label>
+      </div>
+      <div class="form-group full" data-netlify-recaptcha="true"></div>
+      <div class="form-group full">
+        <button type="submit" class="form-submit">Submit Testimonial</button>
+      </div>
+    </form>
+
+    <div class="form-success" id="form-success" style="display:none;">
+      <h3>Thank you! 🎉</h3>
+      <p>Your testimonial has been received. After a quick review, we'll add it to the page. We truly appreciate you taking the time.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">EHS <span>Simplified</span></div>
+        <p class="footer-tagline">The mobile safety app for small trade and manufacturing businesses. OSHA-aligned inspections, SDS library, training, and hazard reporting — starting at $99/month.</p>
+        <div class="footer-contact">
+          <a href="mailto:Aaron.Leff@EHSSimplified.com">Aaron.Leff@EHSSimplified.com</a>
+          <a href="tel:6033977067">(603) 397-7067</a>
+          <a>Strafford, NH</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="index.html">Why EHS</a>
+        <a href="plans.html">Plans &amp; Pricing</a>
+        <a href="industries.html">Industries</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About Aaron</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a>Safety Program Management</a>
+        <a>OSHA Compliance</a>
+        <a>Hazard Communication</a>
+        <a>Safety Training</a>
+        <a>Incident Investigation</a>
+        <a>Risk Assessments</a>
+      </div>
+      <div class="footer-col">
+        <h4>Industries</h4>
+        <a href="industries.html">Construction &amp; Trades</a>
+        <a href="industries.html">Manufacturing</a>
+        <a href="industries.html">Hospitality &amp; Food</a>
+        <a href="industries.html">Retail &amp; Warehousing</a>
+        <a href="industries.html">Cannabis</a>
+        <a href="industries.html">HVAC / Plumbing / Electrical</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 EHS Simplified. All rights reserved.</span>
+      <span class="footer-csp">⚠ Aaron Leff, CSP · Founder &amp; Consultant</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Show success message if redirected back after Netlify submission
+  if (window.location.search.includes('submitted=true')) {
+    document.getElementById('testimonial-form').style.display = 'none';
+    document.querySelector('.form-submit') && (document.querySelector('.form-submit').style.display = 'none');
+    document.getElementById('form-success').style.display = 'block';
+  }
+</script>
+
+<!-- Netlify Identity Widget -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) { window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; }); }
+    });
+  }
+</script>
+</body>
+</html>
