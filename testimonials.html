@@ -53,13 +53,12 @@
     <h2 class="section-title">How Has EHS Simplified<br><span>Helped Your Business?</span></h2>
     <p class="section-sub">We'd love to hear from you. Your feedback helps other small business owners understand what's possible.</p>
 
-    <form class="form-grid" id="testimonial-form"
-          name="testimonials"
-          method="POST"
-          data-netlify="true"
-          data-netlify-recaptcha="true"
-          netlify-honeypot="bot-field"
-          action="/testimonials.html?submitted=true">
+   <form class="form-grid" id="testimonial-form"
+      name="testimonials"
+      method="POST"
+      data-netlify="true"
+      data-netlify-recaptcha="true"
+      netlify-honeypot="bot-field">
 
       <!-- Netlify hidden fields -->
       <input type="hidden" name="form-name" value="testimonials" />
@@ -170,12 +169,41 @@
 </footer>
 
 <script>
-  // Show success message if redirected back after Netlify submission
-  if (window.location.search.includes('submitted=true')) {
-    document.getElementById('testimonial-form').style.display = 'none';
-    document.querySelector('.form-submit') && (document.querySelector('.form-submit').style.display = 'none');
-    document.getElementById('form-success').style.display = 'block';
-  }
+  document.getElementById('testimonial-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = this;
+    const formData = new FormData(form);
+
+    // Submit to Netlify Forms
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    })
+    .then(() => {
+      // Call our function to generate the approve URL
+      return fetch('/.netlify/functions/handle-testimonial-submission', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          data: {
+            name: formData.get('name'),
+            company: formData.get('company'),
+            industry: formData.get('industry'),
+            rating: formData.get('rating'),
+            testimonial: formData.get('testimonial')
+          }
+        })
+      });
+    })
+    .then(() => {
+      form.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    })
+    .catch(() => {
+      alert('Something went wrong. Please try again.');
+    });
+  });
 </script>
 
 <!-- Netlify Identity Widget -->
