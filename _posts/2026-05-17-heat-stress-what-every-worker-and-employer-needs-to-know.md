@@ -1,6 +1,6 @@
 ---
 title: "Heat Stress: What Every Worker and Employer Needs to Know"
-date: 2026-05-18T08:00:41.521Z
+date: 2026-05-25T08:00:41.521Z
 author: Aaron Leff, CSP
 topic: General EHS
 summary: Heat stress is a serious — and preventable — workplace hazard that
