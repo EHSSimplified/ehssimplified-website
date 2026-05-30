@@ -2,38 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.ehssimplified.com/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.ehssimplified.com/plans.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ehssimplified.com/blog</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.ehssimplified.com/industries.html</loc>
+    <loc>https://www.ehssimplified.com/blog/2026-05-30-ladder-safety-and-working-at-heights-the-osha-rules-small-businesses-keep-missing</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ehssimplified.com/blog/2026-05-17-heat-stress-what-every-worker-and-employer-needs-to-know</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ehssimplified.com/about.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.ehssimplified.com/blog/2026-05-14-why-i-built-ehs-simplified-and-why-it-matters-for-small-business</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ehssimplified.com/testimonials.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.ehssimplified.com/plans</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ehssimplified.com/industries</loc>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ehssimplified.com/blog.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.ehssimplified.com/about</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ehssimplified.com/testimonials</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
