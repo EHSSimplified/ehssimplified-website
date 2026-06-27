@@ -20,32 +20,32 @@
   <link rel="stylesheet" href="styles.css" />
   <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wr5b1aij5e");</script>
   <style>
-    /* ── Value bar above pricing grid ── */
+    /* ── Value bar ── */
     .value-bar {
       background: var(--dark);
       color: var(--white);
-      padding: 40px 5%;
+      padding: 48px 5%;
       text-align: center;
-    }
-    .value-bar p {
-      font-size: 1rem;
-      color: #94A3B8;
-      max-width: 680px;
-      margin: 10px auto 0;
-      line-height: 1.7;
     }
     .value-bar h2 {
       font-family: var(--font-display);
       font-size: clamp(1.4rem, 3vw, 1.9rem);
       font-weight: 800;
       color: var(--white);
+      margin-bottom: 10px;
     }
     .value-bar h2 span { color: var(--orange); }
+    .value-bar p {
+      font-size: 1rem;
+      color: #94A3B8;
+      max-width: 680px;
+      margin: 0 auto 28px;
+      line-height: 1.7;
+    }
     .value-stats {
       display: flex;
       justify-content: center;
       gap: 48px;
-      margin-top: 28px;
       flex-wrap: wrap;
     }
     .value-stat-num {
@@ -55,12 +55,96 @@
       color: var(--orange);
     }
     .value-stat-label {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: #94A3B8;
       text-transform: uppercase;
       letter-spacing: 0.07em;
       margin-top: 4px;
     }
+
+    /* ── Journey section ── */
+    .journey-section {
+      background: var(--white);
+      padding: 72px 5%;
+      border-bottom: 1px solid var(--border);
+    }
+    .journey-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .journey-track {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 48px;
+      position: relative;
+    }
+    .journey-track::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: 12.5%;
+      right: 12.5%;
+      height: 3px;
+      background: linear-gradient(to right, var(--blue), var(--orange));
+      z-index: 0;
+    }
+    .journey-step {
+      text-align: center;
+      padding: 0 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .journey-dot {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 3px solid var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--blue);
+    }
+    .journey-step.current .journey-dot {
+      background: var(--blue);
+      color: var(--white);
+    }
+    .journey-phase {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 6px;
+    }
+    .journey-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .journey-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .journey-note {
+      background: var(--blue-light);
+      border-left: 4px solid var(--blue);
+      border-radius: 0 6px 6px 0;
+      padding: 16px 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: var(--mid);
+      line-height: 1.6;
+    }
+    .journey-note strong { color: var(--blue); }
 
     /* ── Deliverable badge inside card ── */
     .deliverable-section {
@@ -75,7 +159,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--blue);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
     .deliverable-item {
       font-size: 0.85rem;
@@ -84,7 +168,7 @@
       display: flex;
       align-items: flex-start;
       gap: 6px;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
       line-height: 1.4;
     }
     .deliverable-item::before {
@@ -94,6 +178,22 @@
       margin-top: 3px;
       flex-shrink: 0;
     }
+
+    /* ── Consulting discount badge ── */
+    .consulting-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--dark);
+      color: var(--white);
+      border-radius: 4px;
+      padding: 5px 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin: 8px 0 14px;
+      letter-spacing: 0.03em;
+    }
+    .consulting-badge span { color: var(--orange); }
 
     /* ── FAQ section ── */
     .faq-section {
@@ -121,27 +221,37 @@
       line-height: 1.7;
     }
 
-    /* ── Comparison callout ── */
+    /* ── Compare band ── */
     .compare-band {
-      background: #fff;
+      background: var(--white);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
       padding: 40px 5%;
       text-align: center;
-    }
-    .compare-band p {
-      font-size: 1rem;
-      color: var(--mid);
-      max-width: 640px;
-      margin: 10px auto 0;
     }
     .compare-band h3 {
       font-family: var(--font-display);
       font-size: 1.5rem;
       font-weight: 800;
       color: var(--dark);
+      margin-bottom: 10px;
     }
     .compare-band h3 span { color: var(--blue); }
+    .compare-band p {
+      font-size: 1rem;
+      color: var(--mid);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .journey-track { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .journey-track::before { display: none; }
+    }
+    @media (max-width: 480px) {
+      .journey-track { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -171,7 +281,7 @@
 <!-- Value context bar -->
 <div class="value-bar">
   <h2>The Cost of Doing <span>Nothing</span> Is Not Zero.</h2>
-  <p>A single OSHA serious violation runs up to $16,550. One lost-time injury can spike your workers' comp premiums for years. Every plan below costs less per month than one hour of a large firm's consulting retainer.</p>
+  <p>A single OSHA serious violation runs up to $16,550. One lost-time injury can spike your workers' comp premiums for years. Every plan below costs a fraction of what one incident will cost you.</p>
   <div class="value-stats">
     <div>
       <div class="value-stat-num">$16,550</div>
@@ -183,7 +293,47 @@
     </div>
     <div>
       <div class="value-stat-num">$91K</div>
-      <div class="value-stat-label">Cost of hiring a full-time EHS specialist</div>
+      <div class="value-stat-label">Cost of a full-time EHS hire</div>
+    </div>
+  </div>
+</div>
+
+<!-- The EHS Journey -->
+<div class="journey-section">
+  <div class="journey-inner">
+    <div class="section-label" style="justify-content:center;display:flex;">How It Works Over Time</div>
+    <h2 class="section-title" style="text-align:center;">We Build You Up.<br><span>Then Step Back.</span></h2>
+    <p class="section-sub" style="text-align:center;margin:0 auto;">Most safety consultants want to keep you dependent. We don't. Our goal is to build a safety culture so strong that you need less help over time — and we'll tell you when you're ready to step down a tier.</p>
+
+    <div class="journey-track">
+      <div class="journey-step">
+        <div class="journey-dot">1</div>
+        <div class="journey-phase">Start Here</div>
+        <div class="journey-title">Safety Management</div>
+        <div class="journey-desc">We build your entire safety program from scratch. Policies, processes, recordkeeping — all of it. Heavy CSP involvement every month.</div>
+      </div>
+      <div class="journey-step">
+        <div class="journey-dot">2</div>
+        <div class="journey-phase">Strengthen</div>
+        <div class="journey-title">Safety Partner</div>
+        <div class="journey-desc">Your foundation is set. We focus on training content, audits, and compliance — reinforcing the culture you've started to build.</div>
+      </div>
+      <div class="journey-step">
+        <div class="journey-dot">3</div>
+        <div class="journey-phase">Maintain</div>
+        <div class="journey-title">Safety Foundation</div>
+        <div class="journey-desc">Your team runs day-to-day safety confidently. We keep your program fresh with monthly content and a regular CSP check-in.</div>
+      </div>
+      <div class="journey-step">
+        <div class="journey-dot">4</div>
+        <div class="journey-phase">Self-Sufficient</div>
+        <div class="journey-title">Safety Starter</div>
+        <div class="journey-desc">Your safety culture is strong. The app keeps everything organized. We're here when you need us — but you've got this.</div>
+      </div>
+    </div>
+
+    <div class="journey-note">
+      <strong>Our promise:</strong> We'll tell you when you're ready to move down a tier. Your safety program growing stronger is the goal — not keeping you on a higher plan longer than you need. And as your business grows, we'll be adding new services to grow with you.
     </div>
   </div>
 </div>
@@ -195,15 +345,16 @@
     <!-- Tier 1: Safety Starter -->
     <div class="pricing-card">
       <div class="pricing-tier">Safety Starter</div>
-      <div class="pricing-name">Get Compliant. Stay Compliant.</div>
+      <div class="pricing-name">You've Got This. We've Got Your Back.</div>
       <div class="pricing-price">$99<span>/mo</span></div>
-      <div class="pricing-period">12-month agreement · cancel with 30 days notice</div>
+      <div class="pricing-period">12-month agreement · 30-day cancellation notice</div>
+      <div class="consulting-badge">➕ Add-on consulting: <span>15% off</span> standard rate</div>
 
       <div class="deliverable-section">
         <div class="deliverable-label">What You Get</div>
-        <div class="deliverable-item">Full mobile safety app — inspections, SDS, training &amp; hazard reporting</div>
-        <div class="deliverable-item">Done-for-you app setup: SDS library, emergency contacts &amp; document portal loaded</div>
-        <div class="deliverable-item">Access to preloaded OSHA-aligned training video library</div>
+        <div class="deliverable-item">Full mobile safety app — inspections, SDS library, hazard reporting</div>
+        <div class="deliverable-item">Done-for-you onboarding: SDS library, emergency contacts &amp; document portal configured</div>
+        <div class="deliverable-item">OSHA-aligned inspection checklists loaded for your industry</div>
       </div>
 
       <ul class="pricing-features">
@@ -211,7 +362,6 @@
         <li>Secure company document portal</li>
         <li>Hazard &amp; near-miss reporting</li>
         <li>App support included</li>
-        <li>Add-on consulting available</li>
       </ul>
       <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="pricing-btn pricing-btn-outline">Get Started</a>
     </div>
@@ -220,23 +370,23 @@
     <div class="pricing-card popular">
       <div class="popular-badge">Most Popular</div>
       <div class="pricing-tier">Safety Foundation</div>
-      <div class="pricing-name">A Real Program, Built for You.</div>
+      <div class="pricing-name">Fresh Content. Regular Guidance.</div>
       <div class="pricing-price">$249<span>/mo</span></div>
-      <div class="pricing-period">12-month agreement · cancel with 30 days notice</div>
+      <div class="pricing-period">12-month agreement · 30-day cancellation notice</div>
+      <div class="consulting-badge">➕ Add-on consulting: <span>20% off</span> standard rate</div>
 
       <div class="deliverable-section">
         <div class="deliverable-label">Monthly Deliverables</div>
-        <div class="deliverable-item">1 custom toolbox talk or training module — written for your industry</div>
-        <div class="deliverable-item">Monthly program check-in with Aaron (CSP) — issues, questions, priorities</div>
-        <div class="deliverable-item">Annual safety program review — documented findings &amp; recommendations</div>
+        <div class="deliverable-item">1 custom toolbox talk — written for your industry and workforce</div>
+        <div class="deliverable-item">Monthly CSP check-in — priorities, questions, compliance guidance</div>
+        <div class="deliverable-item">Annual safety program review — documented findings &amp; action plan</div>
       </div>
 
       <ul class="pricing-features">
         <li>Everything in Safety Starter</li>
-        <li>Done-for-you app setup included</li>
         <li>SDS library built &amp; maintained for you</li>
         <li>OSHA compliance guidance on demand</li>
-        <li>Add-on consulting available</li>
+        <li>App support included</li>
       </ul>
       <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="pricing-btn pricing-btn-filled">Get Started</a>
     </div>
@@ -244,24 +394,24 @@
     <!-- Tier 3: Safety Partner -->
     <div class="pricing-card">
       <div class="pricing-tier">Safety Partner</div>
-      <div class="pricing-name">CSP in Your Corner, Every Month.</div>
+      <div class="pricing-name">A CSP in Your Corner Every Month.</div>
       <div class="pricing-price">$449<span>/mo</span></div>
-      <div class="pricing-period">12-month agreement · cancel with 30 days notice</div>
+      <div class="pricing-period">12-month agreement · 30-day cancellation notice</div>
+      <div class="consulting-badge">➕ Add-on consulting: <span>25% off</span> standard rate</div>
 
       <div class="deliverable-section">
         <div class="deliverable-label">Monthly Deliverables</div>
-        <div class="deliverable-item">1 custom written safety policy — OSHA-aligned, ready to use</div>
-        <div class="deliverable-item">1 toolbox talk or training module — tailored to your workforce</div>
-        <div class="deliverable-item">Quarterly compliance audit report — written findings, action items</div>
-        <div class="deliverable-item">Incident investigation support — when things go wrong, you're not alone</div>
+        <div class="deliverable-item">1 custom written safety policy — OSHA-aligned, ready to implement</div>
+        <div class="deliverable-item">1 toolbox talk — tailored to your workforce and current hazards</div>
+        <div class="deliverable-item">Quarterly compliance audit report — written findings &amp; action items</div>
+        <div class="deliverable-item">Incident investigation support — documentation &amp; root cause analysis</div>
       </div>
 
       <ul class="pricing-features">
         <li>Everything in Safety Foundation</li>
         <li>OSHA 300 log management &amp; recordkeeping</li>
-        <li>Priority CSP access — response within 1 business day</li>
+        <li>Priority CSP response — within 1 business day</li>
         <li>Workers' comp referral support</li>
-        <li>Add-on consulting available</li>
       </ul>
       <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="pricing-btn pricing-btn-outline">Get Started</a>
     </div>
@@ -271,15 +421,16 @@
       <div class="pricing-tier">Safety Management</div>
       <div class="pricing-name">Your Outsourced Safety Department.</div>
       <div class="pricing-price">$799<span>/mo</span></div>
-      <div class="pricing-period">12-month agreement · cancel with 30 days notice</div>
+      <div class="pricing-period">12-month agreement · 30-day cancellation notice</div>
+      <div class="consulting-badge">➕ Add-on consulting: <span>30% off</span> standard rate</div>
 
       <div class="deliverable-section">
         <div class="deliverable-label">Monthly Deliverables</div>
-        <div class="deliverable-item">2 custom written safety policies — built from scratch for your operation</div>
-        <div class="deliverable-item">2 toolbox talks or training modules — industry-specific content</div>
+        <div class="deliverable-item">2 custom written safety policies — built for your specific operation</div>
+        <div class="deliverable-item">2 toolbox talks — industry-specific, ready to run</div>
         <div class="deliverable-item">Quarterly compliance audit report with executive summary</div>
         <div class="deliverable-item">Full OSHA 300/300A/301 recordkeeping managed for you</div>
-        <div class="deliverable-item">Incident investigation — documented report delivered within 5 business days</div>
+        <div class="deliverable-item">Incident investigation — written report within 5 business days</div>
         <div class="deliverable-item">Annual safety program review — comprehensive written assessment</div>
       </div>
 
@@ -288,7 +439,7 @@
         <li>Dedicated CSP — same person every time</li>
         <li>Same-day response on urgent issues</li>
         <li>Workers' comp claim support &amp; documentation</li>
-        <li>OSHA inspection prep if needed</li>
+        <li>OSHA inspection prep support</li>
       </ul>
       <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="pricing-btn pricing-btn-outline">Get Started</a>
     </div>
@@ -297,10 +448,10 @@
   <p class="pricing-note" style="text-align:center;max-width:1200px;margin:24px auto 0;">Annual prepay available on request — save 2 months. All prices exclude applicable taxes. Not sure which plan fits? <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" style="color:var(--blue);font-weight:700;">Schedule a free 30-min call</a> and we'll figure it out together.</p>
 </section>
 
-<!-- Competitor comparison callout -->
+<!-- Competitor comparison -->
 <div class="compare-band">
   <h3>Enterprise EHS platforms cost <span>$800–$5,000/month</span> and weren't built for you.</h3>
-  <p>Traditional consulting firms bill $150–$300/hour with no deliverable guarantee. EHS Simplified gives you a CSP-backed program with defined monthly outputs — and it's ready in 48 hours, not 6 months.</p>
+  <p>Traditional consulting firms bill by the hour with no deliverable guarantee. EHS Simplified gives you a CSP-backed program with defined monthly outputs — ready in 48 hours, not 6 months.</p>
 </div>
 
 <!-- FAQ -->
@@ -311,27 +462,31 @@
 
     <div class="faq-item">
       <div class="faq-q">What exactly is a "custom safety policy"?</div>
-      <div class="faq-a">A written, OSHA-aligned policy document tailored to your specific business — your industry, your hazards, your language. Not a generic template with your name pasted in. Examples include a Hazard Communication Program, a Lockout/Tagout policy, a Fall Protection Plan, or a Respiratory Protection Program.</div>
+      <div class="faq-a">A written, OSHA-aligned policy document built specifically for your business — your industry, your hazards, your language. Not a generic template with your name pasted in. Examples include a Hazard Communication Program, Lockout/Tagout Policy, Fall Protection Plan, or Respiratory Protection Program.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">What's a toolbox talk or training module?</div>
-      <div class="faq-a">A toolbox talk is a short, focused safety topic your supervisor can run in 10–15 minutes before a shift — written for your crew, in plain language. A training module is a more structured learning activity on a specific hazard or skill. Both are delivered as ready-to-use documents each month.</div>
+      <div class="faq-q">What is a toolbox talk?</div>
+      <div class="faq-a">A short, focused safety topic your supervisor can run in 10–15 minutes before a shift — written for your crew, in plain language, on a hazard relevant to your work right now. Delivered as a ready-to-use document each month.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">What does OSHA 300 log management mean?</div>
-      <div class="faq-a">We track, maintain, and file your OSHA injury and illness recordkeeping — the 300 Log, 300A Summary, and 301 Incident Reports — so you're always compliant with recordkeeping requirements and ready if OSHA ever comes knocking.</div>
+      <div class="faq-q">What does OSHA 300 log management include?</div>
+      <div class="faq-a">We track, maintain, and file your OSHA injury and illness records — the 300 Log, 300A Annual Summary, and 301 Incident Reports — so you're always compliant and ready if OSHA comes knocking.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How does the "step down" process work?</div>
+      <div class="faq-a">As your safety program matures, we'll have an honest conversation about whether you still need the same level of support. If your culture is strong and your team is running safety confidently, we'll recommend moving to a lower tier — and we mean it. A Safety Management client who steps down to Safety Starter after 18 months is a success story, not a lost account.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">What happens if we have an incident on the Safety Starter plan?</div>
-      <div class="faq-a">You have access to add-on consulting at an hourly rate for any plan. On Safety Partner and above, incident investigation support is included — we help you document, investigate, and respond to workplace incidents as part of your subscription.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Can I upgrade or downgrade my plan?</div>
-      <div class="faq-a">Yes. If your needs change during the year, reach out and we'll work with you. Upgrades take effect immediately; downgrades take effect at the next renewal period.</div>
+      <div class="faq-a">Add-on consulting is available on every plan at a discount off our standard rate. On Safety Partner and above, incident investigation support is included in your subscription.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Is there a setup fee?</div>
-      <div class="faq-a">No setup fees on any plan. Done-for-you app configuration is included starting with Safety Starter — we load your SDS library, emergency contacts, and document portal as part of onboarding.</div>
+      <div class="faq-a">No setup fees on any plan. Done-for-you app configuration is included from day one — we load your SDS library, emergency contacts, and document portal as part of onboarding.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I upgrade my plan later?</div>
+      <div class="faq-a">Absolutely. If your business grows or you take on new work with higher hazard exposure, upgrading is simple. Upgrades take effect immediately; we'll prorate the difference.</div>
     </div>
   </div>
 </div>
