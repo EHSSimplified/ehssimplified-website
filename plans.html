@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plans &amp; Pricing | EHS Simplified</title>
-  <meta name="description" content="EHS Simplified pricing starts at $99/month. Choose from Safety Starter, Safety Foundation, Safety Partner, or Safety Management — all OSHA-aligned, CSP-backed safety programs for small business." />
-  <meta name="keywords" content="safety app pricing, EHS program cost, OSHA compliance pricing small business, safety management subscription" />
+  <meta name="description" content="EHS Simplified pricing starts at $99/month. Every plan delivers real safety outcomes — written policies, toolbox talks, compliance audits, and CSP-backed program management for small business." />
+  <meta name="keywords" content="safety program pricing, EHS consulting small business, OSHA compliance cost, safety management subscription, CSP consulting affordable" />
   <meta property="og:title" content="Plans &amp; Pricing | EHS Simplified" />
-  <meta property="og:description" content="Safety programs for small business starting at $99/month. CSP-backed, OSHA-aligned, and ready in 48 hours." />
+  <meta property="og:description" content="Deliverable-based safety programs for small business — starting at $99/month. You pay for outcomes, not the clock." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.ehssimplified.com/plans.html" />
   <link rel="canonical" href="https://www.ehssimplified.com/plans.html" />
@@ -19,6 +19,130 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wr5b1aij5e");</script>
+  <style>
+    /* ── Value bar above pricing grid ── */
+    .value-bar {
+      background: var(--dark);
+      color: var(--white);
+      padding: 40px 5%;
+      text-align: center;
+    }
+    .value-bar p {
+      font-size: 1rem;
+      color: #94A3B8;
+      max-width: 680px;
+      margin: 10px auto 0;
+      line-height: 1.7;
+    }
+    .value-bar h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 800;
+      color: var(--white);
+    }
+    .value-bar h2 span { color: var(--orange); }
+    .value-stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+    .value-stat-num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--orange);
+    }
+    .value-stat-label {
+      font-size: 0.8rem;
+      color: #94A3B8;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-top: 4px;
+    }
+
+    /* ── Deliverable badge inside card ── */
+    .deliverable-section {
+      background: var(--blue-light);
+      border-radius: 6px;
+      padding: 12px 14px;
+      margin: 14px 0;
+    }
+    .deliverable-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 6px;
+    }
+    .deliverable-item {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--dark);
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 4px;
+      line-height: 1.4;
+    }
+    .deliverable-item::before {
+      content: "✦";
+      color: var(--orange);
+      font-size: 0.6rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    /* ── FAQ section ── */
+    .faq-section {
+      background: var(--bg);
+      padding: 72px 5%;
+    }
+    .faq-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 22px 0;
+    }
+    .faq-q {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .faq-a {
+      font-size: 0.92rem;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+
+    /* ── Comparison callout ── */
+    .compare-band {
+      background: #fff;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 5%;
+      text-align: center;
+    }
+    .compare-band p {
+      font-size: 1rem;
+      color: var(--mid);
+      max-width: 640px;
+      margin: 10px auto 0;
+    }
+    .compare-band h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--dark);
+    }
+    .compare-band h3 span { color: var(--blue); }
+  </style>
 </head>
 <body>
 
@@ -35,84 +159,187 @@
   </ul>
 </nav>
 
+<!-- Page Header -->
 <section class="pricing">
   <div class="section-inner">
     <div class="section-label">Pricing</div>
-    <h1 class="section-title">Find Your <span>Right Fit</span></h1>
-    <p class="section-sub">All plans include a 12-month agreement with no surprise fees. Cancel anytime with 30 days notice.</p>
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <div class="pricing-tier">Safety Starter</div>
-        <div class="pricing-name">Manage Safety Your Way</div>
-        <div class="pricing-price">$99<span>/mo</span></div>
-        <div class="pricing-period">12-month agreement</div>
-        <ul class="pricing-features">
-          <li>Full mobile app access</li>
-          <li>Secure company document portal</li>
-          <li>SDS library (self-managed)</li>
-          <li>Preloaded training videos</li>
-          <li>App support included</li>
-          <li>Consulting available at hourly rates</li>
-        </ul>
-        <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="pricing-btn pricing-btn-outline">Get Started</a>
-      </div>
-      <div class="pricing-card popular">
-        <div class="popular-badge">Most Popular</div>
-        <div class="pricing-tier">Safety Foundation</div>
-        <div class="pricing-name">Built &amp; Ready to Go</div>
-        <div class="pricing-price">$199<span>/mo</span></div>
-        <div class="pricing-period">12-month agreement</div>
-        <ul class="pricing-features">
-          <li>Everything in Safety Starter</li>
-          <li>Done-for-you setup</li>
-          <li>SDS library populated for you</li>
-          <li>Emergency contacts configured</li>
-          <li>Basic policy framework loaded</li>
-          <li>30-min/month CSP check-in</li>
-          <li>Consulting available at hourly rates</li>
-        </ul>
-        <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="pricing-btn pricing-btn-filled">Get Started</a>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-tier">Safety Partner</div>
-        <div class="pricing-name">A Partner in Your Corner</div>
-        <div class="pricing-price">$349<span>/mo</span></div>
-        <div class="pricing-period">12-month agreement</div>
-        <ul class="pricing-features">
-          <li>Everything in Safety Foundation</li>
-          <li>2 hrs/month CSP consulting</li>
-          <li>Flexible — use time your way</li>
-          <li>Monthly safety program review</li>
-          <li>Compliance guidance</li>
-          <li>Policy support</li>
-          <li>Consulting available at hourly rates</li>
-        </ul>
-        <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="pricing-btn pricing-btn-outline">Get Started</a>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-tier">Safety Management</div>
-        <div class="pricing-name">Your Outsourced Safety Dept.</div>
-        <div class="pricing-price">$699<span>/mo</span></div>
-        <div class="pricing-period">12-month agreement</div>
-        <ul class="pricing-features">
-          <li>Everything in Safety Partner</li>
-          <li>4 hrs/month CSP consulting</li>
-          <li>1 custom safety policy/month</li>
-          <li>Custom training module/month</li>
-          <li>Dedicated CSP support</li>
-          <li>Active program management</li>
-          <li>Consulting available at hourly rates</li>
-        </ul>
-        <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="pricing-btn pricing-btn-outline">Get Started</a>
-      </div>
-    </div>
-    <p class="pricing-note">Annual prepay available on request — save 2 months. All prices exclude applicable taxes.</p>
+    <h1 class="section-title">You Pay for <span>Outcomes.</span><br>Not the Clock.</h1>
+    <p class="section-sub">Every plan delivers real, tangible safety work — written policies, training content, compliance audits, and CSP-backed program management. You get the result, not a bill for hours.</p>
   </div>
 </section>
 
+<!-- Value context bar -->
+<div class="value-bar">
+  <h2>The Cost of Doing <span>Nothing</span> Is Not Zero.</h2>
+  <p>A single OSHA serious violation runs up to $16,550. One lost-time injury can spike your workers' comp premiums for years. Every plan below costs less per month than one hour of a large firm's consulting retainer.</p>
+  <div class="value-stats">
+    <div>
+      <div class="value-stat-num">$16,550</div>
+      <div class="value-stat-label">OSHA fine per serious violation</div>
+    </div>
+    <div>
+      <div class="value-stat-num">$40K+</div>
+      <div class="value-stat-label">Average cost of one lost-time injury</div>
+    </div>
+    <div>
+      <div class="value-stat-num">$91K</div>
+      <div class="value-stat-label">Cost of hiring a full-time EHS specialist</div>
+    </div>
+  </div>
+</div>
+
+<!-- Pricing Grid -->
+<section style="background:var(--bg);padding:60px 5%;">
+  <div class="pricing-grid" style="max-width:1200px;margin:0 auto;">
+
+    <!-- Tier 1: Safety Starter -->
+    <div class="pricing-card">
+      <div class="pricing-tier">Safety Starter</div>
+      <div class="pricing-name">Get Compliant. Stay Compliant.</div>
+      <div class="pricing-price">$99<span>/mo</span></div>
+      <div class="pricing-period">12-month agreement · cancel with 30 days notice</div>
+
+      <div class="deliverable-section">
+        <div class="deliverable-label">What You Get</div>
+        <div class="deliverable-item">Full mobile safety app — inspections, SDS, training &amp; hazard reporting</div>
+        <div class="deliverable-item">Done-for-you app setup: SDS library, emergency contacts &amp; document portal loaded</div>
+        <div class="deliverable-item">Access to preloaded OSHA-aligned training video library</div>
+      </div>
+
+      <ul class="pricing-features">
+        <li>Unlimited users on your team</li>
+        <li>Secure company document portal</li>
+        <li>Hazard &amp; near-miss reporting</li>
+        <li>App support included</li>
+        <li>Add-on consulting available</li>
+      </ul>
+      <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="pricing-btn pricing-btn-outline">Get Started</a>
+    </div>
+
+    <!-- Tier 2: Safety Foundation -->
+    <div class="pricing-card popular">
+      <div class="popular-badge">Most Popular</div>
+      <div class="pricing-tier">Safety Foundation</div>
+      <div class="pricing-name">A Real Program, Built for You.</div>
+      <div class="pricing-price">$249<span>/mo</span></div>
+      <div class="pricing-period">12-month agreement · cancel with 30 days notice</div>
+
+      <div class="deliverable-section">
+        <div class="deliverable-label">Monthly Deliverables</div>
+        <div class="deliverable-item">1 custom toolbox talk or training module — written for your industry</div>
+        <div class="deliverable-item">Monthly program check-in with Aaron (CSP) — issues, questions, priorities</div>
+        <div class="deliverable-item">Annual safety program review — documented findings &amp; recommendations</div>
+      </div>
+
+      <ul class="pricing-features">
+        <li>Everything in Safety Starter</li>
+        <li>Done-for-you app setup included</li>
+        <li>SDS library built &amp; maintained for you</li>
+        <li>OSHA compliance guidance on demand</li>
+        <li>Add-on consulting available</li>
+      </ul>
+      <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="pricing-btn pricing-btn-filled">Get Started</a>
+    </div>
+
+    <!-- Tier 3: Safety Partner -->
+    <div class="pricing-card">
+      <div class="pricing-tier">Safety Partner</div>
+      <div class="pricing-name">CSP in Your Corner, Every Month.</div>
+      <div class="pricing-price">$449<span>/mo</span></div>
+      <div class="pricing-period">12-month agreement · cancel with 30 days notice</div>
+
+      <div class="deliverable-section">
+        <div class="deliverable-label">Monthly Deliverables</div>
+        <div class="deliverable-item">1 custom written safety policy — OSHA-aligned, ready to use</div>
+        <div class="deliverable-item">1 toolbox talk or training module — tailored to your workforce</div>
+        <div class="deliverable-item">Quarterly compliance audit report — written findings, action items</div>
+        <div class="deliverable-item">Incident investigation support — when things go wrong, you're not alone</div>
+      </div>
+
+      <ul class="pricing-features">
+        <li>Everything in Safety Foundation</li>
+        <li>OSHA 300 log management &amp; recordkeeping</li>
+        <li>Priority CSP access — response within 1 business day</li>
+        <li>Workers' comp referral support</li>
+        <li>Add-on consulting available</li>
+      </ul>
+      <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="pricing-btn pricing-btn-outline">Get Started</a>
+    </div>
+
+    <!-- Tier 4: Safety Management -->
+    <div class="pricing-card">
+      <div class="pricing-tier">Safety Management</div>
+      <div class="pricing-name">Your Outsourced Safety Department.</div>
+      <div class="pricing-price">$799<span>/mo</span></div>
+      <div class="pricing-period">12-month agreement · cancel with 30 days notice</div>
+
+      <div class="deliverable-section">
+        <div class="deliverable-label">Monthly Deliverables</div>
+        <div class="deliverable-item">2 custom written safety policies — built from scratch for your operation</div>
+        <div class="deliverable-item">2 toolbox talks or training modules — industry-specific content</div>
+        <div class="deliverable-item">Quarterly compliance audit report with executive summary</div>
+        <div class="deliverable-item">Full OSHA 300/300A/301 recordkeeping managed for you</div>
+        <div class="deliverable-item">Incident investigation — documented report delivered within 5 business days</div>
+        <div class="deliverable-item">Annual safety program review — comprehensive written assessment</div>
+      </div>
+
+      <ul class="pricing-features">
+        <li>Everything in Safety Partner</li>
+        <li>Dedicated CSP — same person every time</li>
+        <li>Same-day response on urgent issues</li>
+        <li>Workers' comp claim support &amp; documentation</li>
+        <li>OSHA inspection prep if needed</li>
+      </ul>
+      <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="pricing-btn pricing-btn-outline">Get Started</a>
+    </div>
+
+  </div>
+  <p class="pricing-note" style="text-align:center;max-width:1200px;margin:24px auto 0;">Annual prepay available on request — save 2 months. All prices exclude applicable taxes. Not sure which plan fits? <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" style="color:var(--blue);font-weight:700;">Schedule a free 30-min call</a> and we'll figure it out together.</p>
+</section>
+
+<!-- Competitor comparison callout -->
+<div class="compare-band">
+  <h3>Enterprise EHS platforms cost <span>$800–$5,000/month</span> and weren't built for you.</h3>
+  <p>Traditional consulting firms bill $150–$300/hour with no deliverable guarantee. EHS Simplified gives you a CSP-backed program with defined monthly outputs — and it's ready in 48 hours, not 6 months.</p>
+</div>
+
+<!-- FAQ -->
+<div class="faq-section">
+  <div class="faq-inner">
+    <div class="section-label" style="justify-content:center;display:flex;margin-bottom:8px;">Common Questions</div>
+    <h2 class="section-title" style="text-align:center;margin-bottom:40px;">Before You <span>Commit</span></h2>
+
+    <div class="faq-item">
+      <div class="faq-q">What exactly is a "custom safety policy"?</div>
+      <div class="faq-a">A written, OSHA-aligned policy document tailored to your specific business — your industry, your hazards, your language. Not a generic template with your name pasted in. Examples include a Hazard Communication Program, a Lockout/Tagout policy, a Fall Protection Plan, or a Respiratory Protection Program.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What's a toolbox talk or training module?</div>
+      <div class="faq-a">A toolbox talk is a short, focused safety topic your supervisor can run in 10–15 minutes before a shift — written for your crew, in plain language. A training module is a more structured learning activity on a specific hazard or skill. Both are delivered as ready-to-use documents each month.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What does OSHA 300 log management mean?</div>
+      <div class="faq-a">We track, maintain, and file your OSHA injury and illness recordkeeping — the 300 Log, 300A Summary, and 301 Incident Reports — so you're always compliant with recordkeeping requirements and ready if OSHA ever comes knocking.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What happens if we have an incident on the Safety Starter plan?</div>
+      <div class="faq-a">You have access to add-on consulting at an hourly rate for any plan. On Safety Partner and above, incident investigation support is included — we help you document, investigate, and respond to workplace incidents as part of your subscription.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I upgrade or downgrade my plan?</div>
+      <div class="faq-a">Yes. If your needs change during the year, reach out and we'll work with you. Upgrades take effect immediately; downgrades take effect at the next renewal period.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is there a setup fee?</div>
+      <div class="faq-a">No setup fees on any plan. Done-for-you app configuration is included starting with Safety Starter — we load your SDS library, emergency contacts, and document portal as part of onboarding.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA Band -->
 <div class="cta-band">
-  <h2>Want to See the App First?</h2>
-  <p>Try the live demo before you commit to a plan — no login required.</p>
+  <h2>Want to See the App Before You Decide?</h2>
+  <p>The live demo is open — no login, no sales call required. Explore exactly what your team would get on day one.</p>
   <a href="https://app.ehssimplified.com/democoplumbing" target="_blank" class="btn-primary">Launch Live Demo</a>
 </div>
 
