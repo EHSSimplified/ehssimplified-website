@@ -12,6 +12,20 @@ EHS Simplified is a CSP-led EHS consulting practice built for small and midsize 
 - Safety Resources & Blog: https://www.ehssimplified.com/blog.html
 - About Aaron Leff, CSP: https://www.ehssimplified.com/about.html
 
+## Blog Posts
+- [Why We Really Break the Rules (And What It's Costing All of Us)](https://www.ehssimplified.com/blog/2026-08-31-why-we-really-break-the-rules-and-what-its-costing-all-of-us)
+- [The Hidden Cost of Skipping Breaks (And What It's Doing to Your Premium)](https://www.ehssimplified.com/blog/2026-08-19-the-hidden-cost-of-skipping-breaks-and-what-its-doing-to-your-premium)
+- [You Have a Full-Time EHS Manager. Here's Why Your Plant Still Needs Outside Eyes](https://www.ehssimplified.com/blog/2026-07-28-you-have-a-full-time-ehs-manager-heres-why-your-plant-still-needs-outside-eyes)
+- [Why a Failed OEM Vendor Safety Audit and a Rising EMR Usually Have the Same Root Cause](https://www.ehssimplified.com/blog/2026-07-17-why-a-failed-oem-vendor-safety-audit-and-a-rising-emr-usually-have-the-same-root-cause)
+- [Emergency Action Plans: What OSHA Actually Requires Small Businesses to Have (2026 Guide)](https://www.ehssimplified.com/blog/2026-07-07-emergency-action-plans-what-osha-actually-requires-small-businesses-to-have-2026-guide)
+- [Safety Consultant for Small Business: What to Look For (2026 Guide)](https://www.ehssimplified.com/blog/2026-07-02-safety-consultant-for-small-business-what-to-look-for-2026-guide)
+- [The Real Cost of Skipping New Hire Safety Onboarding](https://www.ehssimplified.com/blog/2026-06-22-the-real-cost-of-skipping-new-hire-safety-onboarding)
+- [Employer Responsibility to Employees and Their Families: Why Workplace Safety Is the Most Human Business Decision You'll Make](https://www.ehssimplified.com/blog/2026-06-15-employer-responsibility-to-employees-and-their-families-why-workplace-safety-is-the-most-human-business-decision-youll-make)
+- [Safety Isn't a Cost. It's a Profit Center You Haven't Turned On Yet.](https://www.ehssimplified.com/blog/2026-06-09-safety-isnt-a-cost-its-a-profit-center-you-havent-turned-on-yet)
+- [Ladder Safety and Working at Heights: The OSHA Rules Small Businesses Keep Missing](https://www.ehssimplified.com/blog/2026-05-30-ladder-safety-and-working-at-heights-the-osha-rules-small-businesses-keep-missing)
+- [Heat Stress: What Every Worker and Employer Needs to Know](https://www.ehssimplified.com/blog/2026-05-17-heat-stress-what-every-worker-and-employer-needs-to-know)
+- [Why I Built EHS Simplified (And Why It Matters for Your Business)](https://www.ehssimplified.com/blog/2026-05-14-why-i-built-ehs-simplified-and-why-it-matters-for-your-business)
+
 ## What EHS Simplified Does
 - Dedicated fractional EHS Manager time, scaled by plan
 - Mobile app for workplace safety management (inspections, checklists, hazard reporting)
