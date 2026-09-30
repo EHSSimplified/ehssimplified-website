@@ -73,9 +73,9 @@ You don't need a full-time safety manager or a $5,000-a-month enterprise platfor
 2. **Documented training** so every worker knows the thresholds, the 4-to-1 rule, and three points of contact — and so you can prove it.
 3. **A fast way to report and fix hazards** before they become incidents or citations.
 
-That's exactly the gap EHS Simplified was built to close for small trade and manufacturing businesses. Inspections and checklists, OSHA-aligned training videos, and hazard/near-miss reporting all live in one app your whole team carries in their pocket — for less than $99/month, instead of the $800–$5,000 the enterprise platforms charge. The records build themselves as your team works, so when an inspector shows up, your proof is already there.
+That's exactly the gap EHS Simplified was built to close for small manufacturers. Inspections and checklists, OSHA-aligned training videos, and hazard/near-miss reporting all live in one app your whole team carries in their pocket — starting at $129/month, instead of the $800–$5,000 the enterprise platforms charge. The records build themselves as your team works, so when an inspector shows up, your proof is already there.
 
-**See it for yourself.** [Launch the free live demo →](https://app.ehssimplified.com/democoplumbing) — no login, no sales call. Or if you'd rather talk it through, [grab 30 minutes with a Certified Safety Professional](https://calendly.com/aaron-leff-ehssimplified/30min) and we'll map it to your trade. Not sure it fits your industry? [Here's how it works across construction, manufacturing, HVAC, and more.](https://ehssimplified.com/industries)
+**See it for yourself.** [Launch the free live demo →](https://app.ehssimplified.com/democoplumbing) — no login, no sales call. Or if you'd rather talk it through, [grab 30 minutes with a Certified Safety Professional](https://calendly.com/aaron-leff-ehssimplified/30min) and we'll map it to your operation. Not sure it fits your industry? [Here's how it works across manufacturing and more.](https://ehssimplified.com/industries)
 
 ## Frequently asked questions
 
@@ -96,4 +96,4 @@ Yes. OSHA's fall protection and ladder standards apply regardless of company siz
 
 ---
 
-*Written by **Aaron Leff, CSP** — Certified Safety Professional and founder of EHS Simplified, with 25+ years of EHS experience helping small trade and manufacturing businesses stay safe and compliant.*
+*Written by **Aaron Leff, CSP** — Certified Safety Professional and founder of EHS Simplified, with 25+ years of EHS experience helping small manufacturers stay safe and compliant.*

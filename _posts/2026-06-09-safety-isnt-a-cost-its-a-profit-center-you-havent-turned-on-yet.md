@@ -8,7 +8,7 @@ summary: Most small business owners file safety under "expenses" — and leave
   and EMR, qualifies you for higher-margin contracts on prequalification
   platforms like ISNetworld and Avetta, and keeps your best people from walking
   out the door. Here's how safety becomes a profit center for any small business
-  — from trades and manufacturing to hospitality and retail.
+  — from manufacturing to hospitality and retail.
 ---
 <!--StartFragment-->
 
@@ -58,7 +58,7 @@ You don't need an enterprise system or a full-time safety director to get there.
 
 Some of what's above is sharper in trades and manufacturing — prequalification platforms live mostly in construction and industrial work. But the core of it isn't industry-specific at all. A restaurant, a retail floor, a warehouse: every one of them keeps its best people longer, runs more smoothly, and pays less in claims when the people doing the work trust that the place is looking out for them. Good safety culture is good business, full stop.
 
-That's the gap I built EHS Simplified to close for small businesses across trades, manufacturing, hospitality, retail, and beyond. (It's also the case I make in more depth in my book on Kindle, *Stop the Bleeding*, if you want the full argument with the numbers worked through.)
+That's the gap I built EHS Simplified to close for small manufacturers — and small businesses across hospitality, retail, and beyond. (It's also the case I make in more depth in my book on Kindle, *Stop the Bleeding*, if you want the full argument with the numbers worked through.)
 
 If you've ever lost a bid to a prequalification score, or you suspect your mod is quietly eating your margin, that's worth a conversation. The first one's on me.
 

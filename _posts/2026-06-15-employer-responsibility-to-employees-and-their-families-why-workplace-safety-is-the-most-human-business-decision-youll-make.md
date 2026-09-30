@@ -48,7 +48,7 @@ Safety is not an expense. It is the investment that makes everything else possib
 
 Most small business owners know they should be doing more on safety — but between job sites, customer demands, and thin margins, formal safety programs can feel like something only large corporations have the bandwidth to run. That assumption costs lives and money.
 
-A functional safety program for a small business in construction, manufacturing, trades, or hospitality doesn't require a dedicated safety department. It requires consistency in four areas:
+A functional safety program for a small manufacturer — or a small business in hospitality and beyond — doesn't require a dedicated safety department. It requires consistency in four areas:
 
 **1. Hazard identification and job hazard analysis (JHA)** Before any task begins — especially high-risk ones like working at heights, operating heavy equipment, or handling hazardous materials — a brief written hazard review should happen. Job hazard analyses document the steps of a task, identify what can go wrong, and specify controls. They are also among the first documents OSHA requests during an inspection.
 
@@ -76,7 +76,7 @@ Proactive safety is not idealism. It is the most rational business decision a sm
 
 EHS Simplified was built specifically for the small business owner who knows safety matters but doesn't have the time, staff, or budget for enterprise-level EHS software. The platform puts your safety program in your pocket — giving you mobile access to safety inspections, incident reporting, training logs, and compliance documentation from any job site.
 
-Where most EHS platforms are priced and designed for companies with thousands of employees, EHS Simplified was engineered for the 5- to 50-person crew: straightforward to use, fast to implement, and built around the inspections and records that OSHA actually asks for.
+Where most EHS platforms are priced and designed for companies with thousands of employees, EHS Simplified was engineered for manufacturers under 100 employees: straightforward to use, fast to implement, and built around the inspections and records that OSHA actually asks for.
 
 The next time you think about the cost of a safety tool, think about the alternative. Think about that phone call.
 
@@ -100,6 +100,6 @@ The next time you think about the cost of a safety tool, think about the alterna
 
 - - -
 
-*Written by **Aaron Leff, CSP** — Certified Safety Professional and founder of EHS Simplified, with 25+ years of EHS experience helping small businesses in construction, manufacturing, trades, and hospitality build practical, compliant safety programs.*
+*Written by **Aaron Leff, CSP** — Certified Safety Professional and founder of EHS Simplified, with 25+ years of EHS experience helping small manufacturers build practical, compliant safety programs.*
 
 <!--EndFragment-->

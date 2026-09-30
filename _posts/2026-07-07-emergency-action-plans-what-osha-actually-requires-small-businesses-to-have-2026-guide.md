@@ -16,13 +16,13 @@ Emergency planning isn't just a fire-drill formality. According to the U.S. Cham
 
 An emergency action plan is a written document required whenever an OSHA standard in Part 1910 calls for one — this includes standards covering fire safety, hazardous materials, and several industry-specific rules [29 CFR 1910.38(a)]. If any OSHA standard that applies to your operations requires an EAP, this section's requirements kick in automatically.
 
-In plain terms: if you store flammable materials, work with hazardous chemicals, operate in a facility with a fire suppression or alarm system, or fall under several other general industry standards, you almost certainly need one. Many small business owners in construction, manufacturing, and hospitality don't realize how many "unrelated" OSHA standards quietly trigger this requirement.
+In plain terms: if you store flammable materials, work with hazardous chemicals, operate in a facility with a fire suppression or alarm system, or fall under several other general industry standards, you almost certainly need one. Many small business owners in manufacturing, construction, and hospitality don't realize how many "unrelated" OSHA standards quietly trigger this requirement.
 
 ## Do I Need a Written Plan, or Can I Just Tell My Employees?
 
 This is the most common point of confusion, and it has a hard numeric line. OSHA requires the plan to be in writing, kept in the workplace, and available for employee review — with one exception: **employers with 10 or fewer employees may communicate the plan orally** [29 CFR 1910.38(b)].
 
-If you're a nine-person electrical contractor, an oral plan technically satisfies the letter of the rule — but "technically compliant" and "actually protects your people" aren't the same thing. If you have 11 employees and no written plan, that's a straightforward citation waiting to happen, and it's one of the easiest violations for an inspector to identify in the first five minutes of a walkthrough.
+If you're a nine-person machine shop, an oral plan technically satisfies the letter of the rule — but "technically compliant" and "actually protects your people" aren't the same thing. If you have 11 employees and no written plan, that's a straightforward citation waiting to happen, and it's one of the easiest violations for an inspector to identify in the first five minutes of a walkthrough.
 
 ## What Are the Minimum Elements OSHA Requires in an EAP?
 
@@ -57,7 +57,7 @@ OSHA requires you to review the emergency action plan with each covered employee
 | Ongoing cost | Recurring consulting fees per revision | Flat, predictable subscription |
 | Access during an actual emergency | Wherever the paper copy happens to be | On your phone, any time |
 
-EHS Simplified is a mobile compliance app built specifically for small business owners in construction, trades, manufacturing, and hospitality who need OSHA-required documentation — like emergency action plans — without hiring a full-time safety department or paying for a new consulting engagement every time something changes.
+EHS Simplified is a mobile compliance app built specifically for small manufacturers — and small business owners in hospitality and beyond — who need OSHA-required documentation — like emergency action plans — without hiring a full-time safety department or paying for a new consulting engagement every time something changes.
 
 **Ready to see how it works?** [Try a free demo](https://app.ehssimplified.com) and see your first plan built in minutes, or [schedule a call with a Certified Safety Professional](https://ehssimplified.com/schedule) if you want a human to walk through your specific risks first.
 

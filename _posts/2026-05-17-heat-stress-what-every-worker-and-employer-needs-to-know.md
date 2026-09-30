@@ -4,7 +4,7 @@ date: 2026-05-18T08:00:41.521Z
 author: Aaron Leff, CSP
 topic: General EHS
 summary: Heat stress is a serious — and preventable — workplace hazard that
-  affects workers in construction, manufacturing, hospitality, and beyond. This
+  affects workers in manufacturing, construction, hospitality, and beyond. This
   post breaks down the warning signs of heat-related illness, who's most at
   risk, and the practical steps every employer should have in place before
   temperatures rise.

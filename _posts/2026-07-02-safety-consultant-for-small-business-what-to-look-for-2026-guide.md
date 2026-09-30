@@ -15,7 +15,7 @@ summary: Small business owners want responsive, proactive safety support — not
 
 The best safety consultants for small businesses share four traits: same-day response times, plain-language explanations of regulatory requirements, proactive deadline alerts, and direct access to a Certified Safety Professional (CSP) rather than a general support queue. Most small business owners don't lack access to safety information — they lack a partner who's thinking about their risk before they have to ask.
 
-That standard isn't unique to safety. It's the same thing people expect from a good insurance broker, accountant, or attorney: not someone who shows up at renewal, but someone who's paying attention year-round.
+That standard isn't unique to safety. It's the same thing people expect from a good accountant or attorney: not someone who shows up at renewal, but someone who's paying attention year-round.
 
 ### Why Do Traditional Safety Consulting Relationships Fall Short?
 
@@ -25,7 +25,7 @@ That gap gets expensive fast. Employers with fewer than 25 employees can qualify
 
 ### What Does EHS Simplified Do?
 
-EHS Simplified is a mobile compliance app built for small business owners in construction, manufacturing, hospitality, and trades who need OSHA recordkeeping, training documentation, and direct CSP access without hiring a full-time safety manager. Instead of a static annual program, it keeps documentation current in real time and puts a real safety professional one message away.
+EHS Simplified is a mobile compliance app built for small manufacturers — and small business owners in hospitality and beyond — who need OSHA recordkeeping, training documentation, and direct CSP access without hiring a full-time safety manager. Instead of a static annual program, it keeps documentation current in real time and puts a real safety professional one message away.
 
 ### Safety Consultant vs. EHS Simplified: What's the Difference?
 
