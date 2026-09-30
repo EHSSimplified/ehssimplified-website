@@ -1,10 +1,11 @@
 # EHS Simplified
-> Safety solutions for small trade and manufacturing businesses. Mobile app + CSP expertise, starting at $99/month.
+> Full-scale EHS consulting for small manufacturers (under 100 employees), delivered fractionally. A Certified Safety Professional (CSP) pairs 25+ years of experience with a mobile safety platform. Plans start at $129/month.
 
-EHS Simplified is a mobile safety platform built specifically for small businesses (5–50 employees) in trades, manufacturing, construction, hospitality, retail/warehousing, and cannabis. It provides OSHA-aligned safety tools that are typically out of reach for small businesses — at a fraction of the cost of enterprise platforms or traditional consulting.
+EHS Simplified is a CSP-led EHS consulting practice built for small and midsize manufacturers — metal fabrication, machining, assembly, and food & beverage production — who carry full OSHA compliance obligations without an in-house safety department. It combines a dedicated fractional EHS Manager with a mobile app covering safety inspections, SDS library management, hazard and near-miss reporting, OSHA-aligned training, and incident investigation. EHS Simplified also supports retail/warehousing, hospitality/food service, and cannabis operations.
 
 ## Pages
 - Homepage: https://www.ehssimplified.com/
+- Manufacturing Safety Consulting FAQ: https://www.ehssimplified.com/faq.html
 - Plans & Pricing: https://www.ehssimplified.com/plans.html
 - Industries We Serve: https://www.ehssimplified.com/industries.html
 - Client Testimonials: https://www.ehssimplified.com/testimonials.html
@@ -12,30 +13,27 @@ EHS Simplified is a mobile safety platform built specifically for small business
 - About Aaron Leff, CSP: https://www.ehssimplified.com/about.html
 
 ## What EHS Simplified Does
-- Mobile app for workplace safety management (iOS and Android)
-- OSHA-aligned inspection checklists and hazard reporting
-- SDS (Safety Data Sheet) library for chemical safety
-- Preloaded safety training videos
-- Secure company document portal
-- Emergency contacts and response plans
-- CSP (Certified Safety Professional) expertise behind every subscription
+- Dedicated fractional EHS Manager time, scaled by plan
+- Mobile app for workplace safety management (inspections, checklists, hazard reporting)
+- SDS (Safety Data Sheet) library, built and maintained
+- OSHA-aligned safety training, including new-hire onboarding
+- OSHA 300/300A/301 recordkeeping support
+- Incident investigation and risk assessments
+- Quarterly and annual compliance audits (plan-dependent)
 
 ## Who It's For
-Small businesses of 5–50 employees in:
-- Construction & trades (roofing, framing, general contracting)
-- Manufacturing and metal fabrication
-- HVAC, plumbing, and electrical contractors
-- Hospitality and food service
-- Retail and warehousing
-- Cannabis cultivation and processing
+Small and midsize manufacturers, generally under 100 employees:
+- Metal fabrication and machining
+- Assembly operations
+- Food and beverage production
+Also supported: retail & warehousing, hospitality & food service, cannabis operations.
 
-## Pricing
-- Safety Starter: $99/month — full app access, self-managed
-- Safety Foundation: $199/month — done-for-you setup, monthly CSP check-in
-- Safety Partner: $349/month — 2 hrs/month CSP consulting
-- Safety Management: $699/month — 4 hrs/month CSP consulting, custom policies and training
-
-All plans are 12-month agreements. Annual prepay available.
+## Pricing (plans start at $129/month, 12-month agreement)
+- Safety Standby — $129/mo: full app access, quarterly EHS Manager check-in
+- Safety Guided — $249/mo: monthly check-in, 1 safety program/month
+- Safety Partnered — $429/mo (most popular): 2 hrs/month EHS Manager time, 2 safety programs/month, OSHA 300 log management
+- Safety Embedded — $849/mo: 4+ hrs/month, dedicated EHS Manager, full OSHA recordkeeping
+- Safety Executive — $1,499/mo: 8+ hrs/month, quarterly on-site visit, annual mock OSHA audit
 
 ## About the Founder
 Aaron Leff, CSP — 25+ years of Environmental Health & Safety experience. Certified Safety Professional. Based in Strafford, NH.

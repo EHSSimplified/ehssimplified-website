@@ -13,6 +13,7 @@ const staticPages = [
   { loc: '/industries',   priority: '0.7', changefreq: 'monthly' },
   { loc: '/about',        priority: '0.7', changefreq: 'monthly' },
   { loc: '/testimonials', priority: '0.6', changefreq: 'monthly' },
+  { loc: '/faq',           priority: '0.9', changefreq: 'weekly'  },
 ];
 
 const today = new Date().toISOString().split('T')[0];
