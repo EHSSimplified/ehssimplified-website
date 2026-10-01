@@ -27,13 +27,17 @@ EHS Simplified is a CSP-led EHS consulting practice built for small and midsize 
 - [Why I Built EHS Simplified (And Why It Matters for Your Business)](https://www.ehssimplified.com/blog/2026-05-14-why-i-built-ehs-simplified-and-why-it-matters-for-your-business)
 
 ## What EHS Simplified Does
-- Dedicated fractional EHS Manager time, scaled by plan
+- Remote-first fractional EHS Manager support, scaled by plan
 - Mobile app for workplace safety management (inspections, checklists, hazard reporting)
 - SDS (Safety Data Sheet) library, built and maintained
 - OSHA-aligned safety training, including new-hire onboarding
 - OSHA 300/300A/301 recordkeeping support
 - Incident investigation and risk assessments
-- Quarterly and annual compliance audits (plan-dependent)
+- OSHA compliance gap assessments with a corrective action plan and progress tracking
+- Written safety programs and training materials
+- 6S (5S + Safety) guidance and coaching
+- OSHA inspection readiness and citation response guidance
+- Quarterly site visits on the Safety Executive plan
 
 ## Who It's For
 Small and midsize manufacturers, generally under 100 employees:
@@ -45,9 +49,9 @@ Also supported: retail & warehousing, hospitality & food service, cannabis opera
 ## Pricing (plans start at $129/month, 12-month agreement)
 - Safety Standby — $129/mo: full app access, quarterly EHS Manager check-in
 - Safety Guided — $249/mo: monthly check-in, 1 safety program/month
-- Safety Partnered — $429/mo (most popular): 2 hrs/month EHS Manager time, 2 safety programs/month, OSHA 300 log management
-- Safety Embedded — $849/mo: 4+ hrs/month, dedicated EHS Manager, full OSHA recordkeeping
-- Safety Executive — $1,499/mo: 8+ hrs/month, quarterly on-site visit, annual mock OSHA audit
+- Safety Partnered — $429/mo (most popular): onboarding gap assessment with corrective action plan, monthly action plan tracking, 2 safety programs/month, OSHA 300 log management, 6S guidance
+- Safety Embedded — $849/mo: twice-monthly action plan tracking, dedicated EHS Manager, 3 safety programs/month, full OSHA recordkeeping, incident investigation and citation response guidance
+- Safety Executive — $1,499/mo: quarterly site visit, OSHA inspection readiness guidance, after-hours emergency line
 
 ## About the Founder
 Aaron Leff, CSP — 25+ years of Environmental Health & Safety experience. Certified Safety Professional. Based in Strafford, NH.
