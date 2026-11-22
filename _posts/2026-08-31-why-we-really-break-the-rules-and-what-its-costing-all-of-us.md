@@ -50,4 +50,4 @@ You don't need a bigger rulebook. You need every rule to carry its reason with i
 
 ## Your Next Step
 
-Want to see where the "why" gaps are showing up in your own safety program — not guess at them? Try EHS Simplified's live demo, free and with no login required: [app.ehssimplified.com/democoplumbing](https://app.ehssimplified.com/democoplumbing).
+Want to see where the "why" gaps are showing up in your own safety program — not guess at them? Try the Agentic EHS demo, free and with no sign-up: [demo.agentic-ehs.com](https://demo.agentic-ehs.com).

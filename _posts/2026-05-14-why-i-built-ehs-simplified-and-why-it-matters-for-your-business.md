@@ -60,6 +60,6 @@ If you've got a question you'd like me to tackle, reach out. I'm a real person, 
 
 *Aaron Leff is a Certified Safety Professional (CSP) with 25+ years of EHS experience and the founder of EHS Simplified. He works with small manufacturers — and small businesses across food service and more — to build safety programs that actually get used.*
 
-*Ready to see the app? [Launch the live demo](https://app.ehssimplified.com/) — no login required.*
+*Ready to see it? [Try the Agentic EHS demo](https://demo.agentic-ehs.com) — no sign-up required.*
 
 <!--EndFragment-->
