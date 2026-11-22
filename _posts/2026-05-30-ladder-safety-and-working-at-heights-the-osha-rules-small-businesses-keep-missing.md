@@ -75,7 +75,7 @@ You don't need a full-time safety manager or a $5,000-a-month enterprise platfor
 
 That's exactly the gap EHS Simplified was built to close for small manufacturers. Inspections and checklists, OSHA-aligned training materials, and hazard/near-miss reporting all live in one app your whole team carries in their pocket — starting at $129/month, instead of the $800–$5,000 the enterprise platforms charge. The records build themselves as your team works, so when an inspector shows up, your proof is already there.
 
-**See it for yourself.** [Launch the free live demo →](https://demo.agentic-ehs.com) — no login, no sales call. Or if you'd rather talk it through, [grab 30 minutes with a Certified Safety Professional](https://calendly.com/aaron-leff-ehssimplified/30min) and we'll map it to your operation. Not sure it fits your industry? [Here's how it works across manufacturing and more.](https://ehssimplified.com/industries)
+**See it for yourself.** [See the Agentic EHS demo →](https://demo.agentic-ehs.com) — no sign-up, no sales call. Or if you'd rather talk it through, [grab 30 minutes with a Certified Safety Professional](https://calendly.com/aaron-leff-ehssimplified/30min) and we'll map it to your operation. Not sure it fits your industry? [Here's how it works across manufacturing and more.](https://ehssimplified.com/industries)
 
 ## Frequently asked questions
 

@@ -75,4 +75,4 @@ Yes. Part-time, seasonal and temporary workers all count for the electronic subm
 
 ## Want a second set of eyes before February 1?
 
-Agentic EHS keeps your injury log, 300A and February 1 reminders in one place, and every plan includes time with a Certified Safety Professional. If you'd like me to review your 2026 log and 300A with you before they go on the wall, [book a 30-minute call](https://calendly.com/aaron-leff-ehssimplified/30min). If you'd rather look around first, see [how our plans work](https://www.ehssimplified.com/plans.html).
+Agentic EHS keeps your injury logs and compliance calendar in one place, with a Certified Safety Professional checking the work and on call. If you'd like me to review your 2026 log and 300A with you before they go on the wall, [book a 30-minute call](https://calendly.com/aaron-leff-ehssimplified/30min). If you'd rather look around first, [try the demo](https://demo.agentic-ehs.com) or see [how our plans work](https://www.ehssimplified.com/plans.html).
