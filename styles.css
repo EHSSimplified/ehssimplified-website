@@ -50,6 +50,10 @@ body {
 }
 
 .nav-logo span { color: var(--orange); }
+.nav-logo { display: inline-flex; align-items: center; gap: 8px; }
+.nav-logo img, .footer-logo img { display: block; flex: none; }
+.footer-logo { display: flex; align-items: center; gap: 8px; }
+.nav-mobile-cta { display: none; }
 
 .nav-links {
   display: flex;
@@ -1041,6 +1045,7 @@ footer {
 
 @media (max-width: 600px) {
   .nav-links { display: none; }
+  .nav-mobile-cta { display: inline-block; background: var(--orange); color: var(--white); font-weight: 700; font-size: 0.85rem; text-decoration: none; padding: 8px 14px; border-radius: 6px; }
   .problem-grid, .industries-grid, .pricing-grid { grid-template-columns: 1fr; }
   .hero-stats { flex-wrap: wrap; gap: 20px; }
   .form-grid { grid-template-columns: 1fr; }
@@ -1083,3 +1088,33 @@ footer {
   color: var(--blue);
   font-weight: 600;
 }
+
+/* ─── AGENTIC EHS LAUNCH ─── */
+.hero-trial { margin-top: 14px; font-size: 0.95rem; color: #CBD5E1; }
+.hero-trial a { color: var(--orange); font-weight: 700; text-decoration: none; }
+.hero-card-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.hero-card-name { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; line-height: 1; color: var(--white); }
+.hero-card-name span { color: var(--orange); }
+.hero-card-by { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #94A3B8; margin-top: 4px; }
+.pullquote a { color: var(--orange); font-weight: 700; text-decoration: none; white-space: nowrap; }
+.cta-band-sub { margin-top: 14px; }
+.cta-band-sub a { color: inherit; font-weight: 600; }
+
+.time-calc-section { background: var(--bg); padding: 8px 5% 8px; }
+.time-calc { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--orange); border-radius: 10px; padding: 24px 28px; display: grid; gap: 12px; }
+.time-calc h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; }
+.time-calc-fields { display: flex; flex-wrap: wrap; gap: 16px; }
+.time-calc-fields label { flex: 1 1 220px; display: grid; gap: 6px; font-size: 0.85rem; font-weight: 600; color: var(--mid); }
+.time-calc-fields input { font: inherit; font-size: 1.05rem; padding: 10px 12px; border: 1px solid var(--border); border-radius: 6px; }
+.time-calc-out { font-size: 1.1rem; color: var(--dark); min-height: 1.6em; }
+.time-calc-note { font-size: 0.8rem; color: var(--muted); }
+.billing-toggle { display: flex; justify-content: center; gap: 0; max-width: 360px; margin: 24px auto 0; border: 2px solid var(--blue); border-radius: 8px; overflow: hidden; }
+.billing-toggle button { flex: 1; font: inherit; font-weight: 700; padding: 10px 12px; border: 0; background: var(--white); color: var(--blue); cursor: pointer; }
+.billing-toggle button.on { background: var(--blue); color: var(--white); }
+.billing-toggle small { font-weight: 500; font-size: 0.75rem; }
+.plan-included { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 24px 28px; }
+.plan-included h2 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; margin-bottom: 12px; }
+.plan-included ul { columns: 2 280px; column-gap: 32px; padding-left: 18px; }
+.plan-included li { font-size: 0.92rem; color: var(--mid); margin-bottom: 8px; break-inside: avoid; }
+.pricing-note p { margin-bottom: 10px; font-size: 0.9rem; color: var(--mid); }
+.pricing-note a { color: var(--blue); font-weight: 700; }

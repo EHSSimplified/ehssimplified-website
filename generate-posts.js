@@ -97,6 +97,7 @@ function generatePostHtml(frontmatter, body, slug) {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/img/ehs-simplified-mark.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/styles.css" />
   <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wr5b1aij5e");</script>
   <style>
@@ -117,7 +118,8 @@ function generatePostHtml(frontmatter, body, slug) {
 <body>
 
 <nav class="nav">
-  <a class="nav-logo" href="/index.html">EHS <span>Simplified</span></a>
+  <a class="nav-logo" href="/index.html"><img src="/img/ehs-simplified-mark.svg" alt="" width="26" height="31">EHS <span>Simplified</span></a>
+  <a class="nav-mobile-cta" href="https://demo.agentic-ehs.com" target="_blank" rel="noopener">See the demo</a>
   <ul class="nav-links">
     <li><a href="/index.html">Why EHS</a></li>
     <li><a href="/plans.html">Plans</a></li>
@@ -126,6 +128,7 @@ function generatePostHtml(frontmatter, body, slug) {
     <li><a href="/testimonials.html">Testimonials</a></li>
     <li><a href="/blog.html" class="active">Blog</a></li>
     <li><a href="/about.html">About</a></li>
+    <li><a href="https://demo.agentic-ehs.com" target="_blank" rel="noopener">Demo</a></li>
     <li><a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="nav-cta">Schedule a Call</a></li>
   </ul>
 </nav>
@@ -139,9 +142,9 @@ function generatePostHtml(frontmatter, body, slug) {
     ${content}
   </div>
   <div class="post-cta">
-    <h3>See EHS Simplified in Action</h3>
-    <p>Mobile safety app for small manufacturers — starting at $129/month.</p>
-    <a href="https://app.ehssimplified.com" target="_blank">Launch Free Demo →</a>
+    <h3>Safety landed on your plate? Get your hours back.</h3>
+    <p>Agentic EHS writes your programs, builds your training and plans your day, with a Certified Safety Professional on call. Try the demo; no sign-up needed.</p>
+    <a href="https://demo.agentic-ehs.com" target="_blank" rel="noopener">See the Demo →</a>
   </div>
 </article>
 
@@ -149,8 +152,8 @@ function generatePostHtml(frontmatter, body, slug) {
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <div class="footer-logo">EHS <span>Simplified</span></div>
-        <p class="footer-tagline">A full-scale EHS consulting practice for small manufacturers, built around a fractional CSP-led safety team, plus a mobile safety platform your whole team can use — OSHA-aligned inspections, SDS library, training, and hazard reporting. Plans start at $129/month.</p>
+        <div class="footer-logo"><img src="/img/ehs-simplified-mark-white.svg" alt="" width="24" height="29">EHS <span>Simplified</span></div>
+        <p class="footer-tagline">CSP-led safety for leaders who got handed safety on top of their day job. Home of Agentic EHS: AI that does the safety paperwork, checked by a Certified Safety Professional. Plans from $449/month.</p>
         <div class="footer-contact">
           <a href="mailto:Aaron.Leff@EHSSimplified.com">Aaron.Leff@EHSSimplified.com</a>
           <a href="tel:6033977067">(603) 397-7067</a>
@@ -169,19 +172,19 @@ function generatePostHtml(frontmatter, body, slug) {
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <a>Safety Program Management</a>
-        <a>OSHA Compliance</a>
-        <a>Hazard Communication</a>
-        <a>Safety Training</a>
-        <a>Incident Investigation</a>
-        <a>Risk Assessments</a>
+        <a href="plans.html">Agentic EHS software</a>
+        <a href="plans.html">Written safety programs</a>
+        <a href="plans.html">Training &amp; inspections</a>
+        <a href="plans.html">Ergonomic assessments</a>
+        <a href="plans.html">CSP time every month</a>
+        <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" rel="noopener">On-site projects</a>
       </div>
       <div class="footer-col">
         <h4>Industries</h4>
-        <a href="/industries.html">Manufacturing</a>
-        <a href="/industries.html">Retail &amp; Warehousing</a>
-        <a href="/industries.html">Hospitality &amp; Food</a>
-        <a href="/industries.html">Cannabis</a>
+        <a href="industries.html">Small shops</a>
+        <a href="industries.html">In-house safety teams</a>
+        <a href="industries.html">Multi-site companies</a>
+        <a href="https://demo.agentic-ehs.com" target="_blank" rel="noopener">See the demo</a>
       </div>
     </div>
     <div class="footer-bottom">
