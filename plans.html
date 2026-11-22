@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plans &amp; Pricing | Fractional EHS Manager Services | EHS Simplified</title>
-  <meta name="description" content="EHS Simplified is a full-scale, CSP-led EHS consulting practice delivering program management on a fractional basis — starting at $129/month. Every plan bakes in real EHS Manager time, not hourly billing." />
+  <title>Plans &amp; Pricing: Agentic EHS With CSP Time Included | EHS Simplified</title>
+  <meta name="description" content="Agentic EHS plans from $449/month: AI-written safety programs, training, inspections and ergonomics, with Certified Safety Professional time every month. 14-day free trial; workers always free." />
   <meta name="keywords" content="fractional EHS manager, EHS consulting pricing, outsourced safety department, OSHA compliance consulting cost, CSP consulting, safety program management, remote EHS manager, OSHA compliance gap assessment, written safety programs, 6S safety" />
-  <meta property="og:title" content="Plans &amp; Pricing | Fractional EHS Manager Services | EHS Simplified" />
-  <meta property="og:description" content="Full-scale EHS program management, priced to scale with your business — starting at $129/month. You get dedicated CSP time and defined outcomes, not a bill for hours." />
+  <meta property="og:title" content="Plans &amp; Pricing | Agentic EHS by EHS Simplified" />
+  <meta property="og:description" content="One price, all software included, with CSP time every month. Essentials $449, Professional $849, Multi-site $1,695, Enterprise custom. 14-day free trial." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.ehssimplified.com/plans.html" />
   <link rel="canonical" href="https://www.ehssimplified.com/plans.html" />
@@ -17,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/img/ehs-simplified-mark.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
   <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wr5b1aij5e");</script>
   <style>
@@ -245,16 +246,16 @@
       line-height: 1.6;
     }
 
-    /* ── Pricing grid: 5 tiers ── */
+    /* ── Pricing grid: 4 plans ── */
     .pricing-grid {
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
     }
     .pricing-name { font-size: 1.15rem; }
     .pricing-price { font-size: 2.1rem; }
 
-    @media (max-width: 1300px) {
-      .pricing-grid { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 1100px) {
+      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 700px) {
       .pricing-grid { grid-template-columns: 1fr; }
@@ -272,7 +273,8 @@
 <body>
 
 <nav class="nav">
-  <a class="nav-logo" href="index.html">EHS <span>Simplified</span></a>
+  <a class="nav-logo" href="index.html"><img src="/img/ehs-simplified-mark.svg" alt="" width="26" height="31">EHS <span>Simplified</span></a>
+  <a class="nav-mobile-cta" href="https://demo.agentic-ehs.com" target="_blank" rel="noopener">See the demo</a>
   <ul class="nav-links">
     <li><a href="index.html">Why EHS</a></li>
     <li><a href="plans.html" class="active">Plans</a></li>
@@ -281,6 +283,7 @@
     <li><a href="testimonials.html">Testimonials</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="about.html">About</a></li>
+    <li><a href="https://demo.agentic-ehs.com" target="_blank" rel="noopener">Demo</a></li>
     <li><a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="nav-cta">Schedule a Call</a></li>
   </ul>
 </nav>
@@ -288,292 +291,134 @@
 <!-- Page Header -->
 <section class="pricing">
   <div class="section-inner">
-    <div class="section-label">Pricing</div>
-    <h1 class="section-title">You Pay for <span>Outcomes.</span><br>Not the Clock.</h1>
-    <p class="section-sub">Every plan puts a dedicated fractional EHS Manager's time directly to work for your business — not a software subscription. The deliverable and the price are agreed upfront, and both hold regardless of how long the work actually takes.</p>
+    <div class="section-label">Plans</div>
+    <h1 class="section-title">Get Your Hours Back.<br><span>Not Another Binder.</span></h1>
+    <p class="section-sub">One price, all software included, with Certified Safety Professional time every month. Every plan starts with a 14-day free trial, and workers are always free.</p>
+  </div>
+</section>
+
+<!-- Time calculator -->
+<section class="time-calc-section" id="time-calc">
+  <div class="section-inner">
+    <div class="time-calc">
+      <h2>What is safety costing you in time?</h2>
+      <div class="time-calc-fields">
+        <label>Your hourly cost, with benefits ($)<input id="tc-rate" type="number" inputmode="decimal" min="1" max="500" value="60"></label>
+        <label>Hours a week on safety<input id="tc-hours" type="number" inputmode="decimal" min="1" max="60" value="8"></label>
+      </div>
+      <p class="time-calc-out" id="tc-out" aria-live="polite"></p>
+      <p class="time-calc-note">Your own estimate, worked out on this page; nothing is sent anywhere. How much time Agentic EHS saves depends on your shop and how you use it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Plans -->
+<section style="background:var(--bg);padding:20px 5% 60px;">
+  <div class="billing-toggle" role="group" aria-label="Billing">
+    <button type="button" class="on" data-billing="month" aria-pressed="true">Monthly</button>
+    <button type="button" data-billing="year" aria-pressed="false">Yearly <small>2 months free</small></button>
+  </div>
+  <div class="pricing-grid" style="max-width:1200px;margin:24px auto 0;">
+    <div class="pricing-card">
+      <div class="pricing-tier">One site</div>
+      <div class="pricing-name">Essentials</div>
+      <div class="pricing-price" data-month="$449" data-year="$4,490">$449<span class="per">/mo</span></div>
+      <div class="pricing-period" data-month="Billed monthly · cancel any time" data-year="Billed yearly · 2 months free">Billed monthly · cancel any time</div>
+      <ul class="pricing-features"><li>1 CSP hour every month</li><li>CSP answers within 2 business days</li><li>3 manager seats · unlimited workers</li><li>1 site</li><li>Every feature included</li></ul>
+      <a href="https://app.agentic-ehs.com/start" class="pricing-btn pricing-btn-outline">Start 14-day free trial</a>
+    </div>
+    <div class="pricing-card popular">
+      <div class="popular-badge">Most popular</div>
+      <div class="pricing-tier">Growing teams</div>
+      <div class="pricing-name">Professional</div>
+      <div class="pricing-price" data-month="$849" data-year="$8,490">$849<span class="per">/mo</span></div>
+      <div class="pricing-period" data-month="Billed monthly · cancel any time" data-year="Billed yearly · 2 months free">Billed monthly · cancel any time</div>
+      <ul class="pricing-features"><li>2 CSP hours every month</li><li>CSP answers by the next business day</li><li>10 manager seats · unlimited workers</li><li>2 sites</li><li>Every feature included</li></ul>
+      <a href="https://app.agentic-ehs.com/start" class="pricing-btn pricing-btn-filled">Start 14-day free trial</a>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-tier">Several locations</div>
+      <div class="pricing-name">Multi-site</div>
+      <div class="pricing-price" data-month="$1,695" data-year="$16,950">$1,695<span class="per">/mo</span></div>
+      <div class="pricing-period" data-month="Billed monthly · cancel any time" data-year="Billed yearly · 2 months free">Billed monthly · cancel any time</div>
+      <ul class="pricing-features"><li>4 CSP hours every month</li><li>CSP answers the same business day</li><li>25 manager seats · unlimited workers</li><li>5 sites</li><li>Every feature included</li></ul>
+      <a href="https://app.agentic-ehs.com/start" class="pricing-btn pricing-btn-outline">Start 14-day free trial</a>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-tier">Larger companies</div>
+      <div class="pricing-name">Enterprise</div>
+      <div class="pricing-price">Custom</div>
+      <div class="pricing-period">Priced to your sites and team</div>
+      <ul class="pricing-features"><li>More sites and manager seats</li><li>A dedicated CSP and agreed response times</li><li>Setup, data moves and team training</li><li>Every feature included</li></ul>
+      <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" rel="noopener" class="pricing-btn pricing-btn-outline">Talk to us</a>
+    </div>
+  </div>
+  <div class="plan-included" style="max-width:1200px;margin:40px auto 0;">
+    <h2>Every plan includes</h2>
+    <ul>
+      <li>Written safety programs drafted for your site, approved by a named person</li>
+      <li>Employee training with pictures, quizzes, sign-offs and records</li>
+      <li>“My day”: your safety work laid out each morning, desk work and floor work</li>
+      <li>Inspections, hazard and close-call reporting, and actions to close the loop</li>
+      <li>Ergonomic assessments from a phone photo, with fixes ranked best first</li>
+      <li>Compliance calendar, SDS library, risk assessments and injury logs</li>
+      <li>Escalate to a CSP from any screen, with a time meter so there are no surprise bills</li>
+      <li>Workers free and unlimited; anyone can ask a safety question</li>
+    </ul>
+  </div>
+  <div class="pricing-note" style="max-width:1200px;margin:32px auto 0;">
+    <p><strong>14-day free trial:</strong> $0 today. Your card is charged on day 15 unless you cancel first. During the trial you can draft up to 3 AI-written programs, and printouts are marked “Trial.” Both limits go away when your plan starts.</p>
+    <p>Extra manager seats $25/month, extra sites $150/month, extra CSP hours $195. Bigger projects, like an on-site visit or a full program overhaul, are quoted separately and never billed without your approval. Prices exclude applicable taxes. Paying by PO and invoice? <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" rel="noopener">Talk to us</a>.</p>
+    <p>Not sure which plan fits? <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" rel="noopener">Book a free 15-minute call</a> and we'll work it out together.</p>
   </div>
 </section>
 
 <!-- Value context bar -->
 <div class="value-bar">
   <h2>The Cost of Doing <span>Nothing</span> Is Not Zero.</h2>
-  <p>A single OSHA serious violation runs up to $16,550. One lost-time injury can spike your workers' comp premiums for years. A full-time EHS hire runs six figures. Every plan below costs a fraction of any of those outcomes.</p>
+  <p>A serious OSHA violation can cost up to $16,550. One lost-time injury can raise workers' comp costs for years. A full-time safety hire runs six figures. Every plan costs a fraction of any of those.</p>
   <div class="value-stats">
-    <div>
-      <div class="value-stat-num">$16,550</div>
-      <div class="value-stat-label">OSHA fine per serious violation</div>
-    </div>
-    <div>
-      <div class="value-stat-num">$40K+</div>
-      <div class="value-stat-label">Average cost of one lost-time injury</div>
-    </div>
-    <div>
-      <div class="value-stat-num">$91K–$122K</div>
-      <div class="value-stat-label">Cost of a full-time EHS hire, plus benefits</div>
-    </div>
+    <div><div class="value-stat-num">$16,550</div><div class="value-stat-label">Max OSHA fine per serious violation</div></div>
+    <div><div class="value-stat-num">$91K–$122K</div><div class="value-stat-label">Full-time EHS hire, plus benefits</div></div>
+    <div><div class="value-stat-num">$449</div><div class="value-stat-label">Agentic EHS, per month</div></div>
   </div>
 </div>
 
-<!-- The EHS Journey -->
-<div class="journey-section">
-  <div class="journey-inner">
-    <div class="section-label" style="justify-content:center;display:flex;">How It Works Over Time</div>
-    <h2 class="section-title" style="text-align:center;">We Build You Up.<br><span>Then Step Back.</span></h2>
-    <p class="section-sub" style="text-align:center;margin:0 auto;">Most safety consultants want to keep you dependent. We don't. Our goal is to build a safety culture so strong that you need less of our time over time — and we'll tell you when you're ready to step down a tier.</p>
-
-    <div class="journey-track">
-      <div class="journey-step">
-        <div class="journey-dot">1</div>
-        <div class="journey-phase">Start Here</div>
-        <div class="journey-title">Safety Executive</div>
-        <div class="journey-desc">We run the program like an in-house safety department — a gap assessment to set the roadmap, quarterly site visits, and an after-hours line when it counts.</div>
-      </div>
-      <div class="journey-step">
-        <div class="journey-dot">2</div>
-        <div class="journey-phase">Build</div>
-        <div class="journey-title">Safety Embedded</div>
-        <div class="journey-desc">Your foundation is set. We're embedded in your program — action plan tracking, recordkeeping, and hands-on program management, reinforcing the culture you've built.</div>
-      </div>
-      <div class="journey-step">
-        <div class="journey-dot">3</div>
-        <div class="journey-phase">Strengthen</div>
-        <div class="journey-title">Safety Partnered</div>
-        <div class="journey-desc">A gap assessment sets the roadmap. Your fractional EHS Manager keeps the action plan moving and your program compliant, without a full-time hire.</div>
-      </div>
-      <div class="journey-step">
-        <div class="journey-dot">4</div>
-        <div class="journey-phase">Maintain</div>
-        <div class="journey-title">Safety Guided</div>
-        <div class="journey-desc">Your team runs day-to-day safety confidently. A monthly check-in with your EHS Manager and fresh content keep the program current.</div>
-      </div>
-      <div class="journey-step">
-        <div class="journey-dot">5</div>
-        <div class="journey-phase">Self-Sufficient</div>
-        <div class="journey-title">Safety Standby</div>
-        <div class="journey-desc">Your safety culture is strong. The app keeps everything organized. We're on standby when you need us — but you've got this.</div>
-      </div>
-    </div>
-
-    <div class="journey-note">
-      <strong>Our promise:</strong> We'll tell you when you're ready to move down a tier. Your safety program growing stronger is the goal — not keeping you on a higher plan longer than you need. And as your business grows, we'll be adding new services to grow with you.
-    </div>
-  </div>
-</div>
-
-<!-- Pricing Grid -->
-<section style="background:var(--bg);padding:60px 5%;">
-  <div class="pricing-grid" style="max-width:1300px;margin:0 auto;">
-
-    <!-- Tier 1: Safety Standby -->
-    <div class="pricing-card">
-      <div class="pricing-tier">Safety Standby</div>
-      <div class="pricing-name">You've Got This. We're on Standby.</div>
-      <div class="pricing-price">$129<span>/mo</span></div>
-      <div class="pricing-period">12-month agreement · 30-day cancellation notice</div>
-      <div class="consulting-badge">➕ Additional consulting: <span>15% off</span> standard rate</div>
-
-      <div class="deliverable-section">
-        <div class="deliverable-label">What You Get</div>
-        <div class="deliverable-item">Full mobile safety app included — inspections, SDS library, hazard reporting</div>
-        <div class="deliverable-item">Quarterly check-in call with your EHS Manager — priorities, questions, compliance guidance</div>
-        <div class="deliverable-item">Email &amp; text access to your EHS Manager between calls</div>
-        <div class="deliverable-item">Done-for-you onboarding: SDS library, emergency contacts &amp; document portal configured</div>
-      </div>
-
-      <ul class="pricing-features">
-        <li>Unlimited users on your team</li>
-        <li>Secure company document portal</li>
-        <li>Hazard &amp; near-miss reporting</li>
-        <li>App support included</li>
-        <li>Support questions answered within 1 business day</li>
-        <li>Urgent issues: same business day response</li>
-      </ul>
-      <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="pricing-btn pricing-btn-outline">Get Started</a>
-    </div>
-
-    <!-- Tier 2: Safety Guided -->
-    <div class="pricing-card">
-      <div class="pricing-tier">Safety Guided</div>
-      <div class="pricing-name">A Second Set of Expert Eyes, Monthly.</div>
-      <div class="pricing-price">$249<span>/mo</span></div>
-      <div class="pricing-period">12-month agreement · 30-day cancellation notice</div>
-      <div class="consulting-badge">➕ Additional consulting: <span>20% off</span> standard rate</div>
-
-      <div class="deliverable-section">
-        <div class="deliverable-label">Monthly Deliverables</div>
-        <div class="deliverable-item">Monthly check-in with your EHS Manager — program review &amp; light policy guidance</div>
-        <div class="deliverable-item">1 complete safety program per month — written policy plus supporting training materials</div>
-        <div class="deliverable-item">OSHA compliance guidance on demand</div>
-      </div>
-
-      <ul class="pricing-features">
-        <li>Everything in Safety Standby</li>
-        <li>SDS library built &amp; maintained for you</li>
-        <li>App support included</li>
-        <li>Support questions answered within 1 business day</li>
-        <li>Urgent issues: same business day response</li>
-      </ul>
-      <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="pricing-btn pricing-btn-outline">Get Started</a>
-    </div>
-
-    <!-- Tier 3: Safety Partnered -->
-    <div class="pricing-card popular">
-      <div class="popular-badge">Most Popular</div>
-      <div class="pricing-tier">Safety Partnered</div>
-      <div class="pricing-name">Your Fractional EHS Manager, Monthly.</div>
-      <div class="pricing-price">$429<span>/mo</span></div>
-      <div class="pricing-period">12-month agreement · 30-day cancellation notice</div>
-      <div class="consulting-badge">➕ Additional consulting: <span>25% off</span> standard rate</div>
-
-      <div class="deliverable-section">
-        <div class="deliverable-label">What You Get</div>
-        <div class="deliverable-item">Onboarding compliance gap assessment — written findings &amp; corrective action plan</div>
-        <div class="deliverable-item">Monthly action plan tracking with your EHS Manager</div>
-        <div class="deliverable-item">2 complete safety programs per month — written policy plus supporting training materials</div>
-        <div class="deliverable-item">2 risk assessments per month</div>
-      </div>
-
-      <ul class="pricing-features">
-        <li>Everything in Safety Guided</li>
-        <li>OSHA 300 log management &amp; recordkeeping</li>
-        <li>6S guidance (5S + Safety)</li>
-        <li>Support questions answered the same business day</li>
-        <li>Urgent issues: response within 4 hours</li>
-        <li>Safety documentation your workers' comp carrier asks for</li>
-      </ul>
-      <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="pricing-btn pricing-btn-filled">Get Started</a>
-    </div>
-
-    <!-- Tier 4: Safety Embedded -->
-    <div class="pricing-card">
-      <div class="pricing-tier">Safety Embedded</div>
-      <div class="pricing-name">Your Outsourced EHS Department.</div>
-      <div class="pricing-price">$849<span>/mo</span></div>
-      <div class="pricing-period">12-month agreement · 30-day cancellation notice</div>
-      <div class="consulting-badge">➕ Additional consulting: <span>30% off</span> standard rate</div>
-
-      <div class="deliverable-section">
-        <div class="deliverable-label">What You Get</div>
-        <div class="deliverable-item">Twice-monthly action plan tracking with your EHS Manager</div>
-        <div class="deliverable-item">3 complete safety programs per month — written policy plus supporting training materials</div>
-        <div class="deliverable-item">Full OSHA 300/300A/301 recordkeeping managed for you</div>
-        <div class="deliverable-item">Incident investigation guidance &amp; root cause support</div>
-        <div class="deliverable-item">6S coaching for your team</div>
-        <div class="deliverable-item">OSHA citation response guidance</div>
-      </div>
-
-      <ul class="pricing-features">
-        <li>Everything in Safety Partnered</li>
-        <li>Dedicated EHS Manager — same person every time</li>
-        <li>Support questions answered the same business day</li>
-        <li>Urgent issues: response within 2 hours</li>
-        <li>Incident documentation to back up your workers' comp claims</li>
-      </ul>
-      <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="pricing-btn pricing-btn-outline">Get Started</a>
-    </div>
-
-    <!-- Tier 5: Safety Executive -->
-    <div class="pricing-card">
-      <div class="pricing-tier">Safety Executive</div>
-      <div class="pricing-name">A Full-Time Safety Department. Without the Full-Time Cost.</div>
-      <div class="pricing-price">$1,499<span>/mo</span></div>
-      <div class="pricing-period">12-month agreement · 30-day cancellation notice</div>
-      <div class="consulting-badge">➕ Additional consulting: <span>35% off</span> standard rate</div>
-
-      <div class="deliverable-section">
-        <div class="deliverable-label">What You Get</div>
-        <div class="deliverable-item">Quarterly site visit — corrective actions verified on your floor</div>
-        <div class="deliverable-item">OSHA inspection readiness guidance</div>
-        <div class="deliverable-item">Dedicated after-hours emergency line*</div>
-        <div class="deliverable-item">Emergency response within 1 hour, any time*</div>
-      </div>
-
-      <ul class="pricing-features">
-        <li>Everything in Safety Embedded</li>
-        <li>Support questions answered within 4 business hours</li>
-        <li>Remote-first, with on-site visits when they matter</li>
-      </ul>
-      <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" class="pricing-btn pricing-btn-outline">Get Started</a>
-    </div>
-
-  </div>
-  <p class="pricing-note" style="text-align:center;max-width:1300px;margin:24px auto 0;">All prices exclude applicable taxes. Not sure which plan fits? <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" style="color:var(--blue);font-weight:700;">Schedule a free 30-min call</a> and we'll figure it out together.</p>
-  <p class="pricing-note" style="text-align:center;max-width:1300px;margin:12px auto 0;">Every plan covers the calls, programs, and deliverables listed. Bigger projects — a full program overhaul or an on-site assessment, for example — are quoted separately and never billed without your approval. Urgent means a serious injury, an OSHA inspector on site, or an imminent hazard: call or text for those.</p>
-  <p class="pricing-note" style="text-align:center;max-width:1300px;margin:12px auto 0;">*Emergency response is by phone or text, and guidance is provided remotely. It does not replace calling 911 or your internal emergency procedures. EHS Simplified is a safety consulting practice. We do not sell or provide insurance.</p>
-</section>
-
-<!-- Competitor comparison -->
-<div class="compare-band">
-  <h3>The program rigor of a national consulting firm. <span>Without the overhead.</span></h3>
-  <p>National EHS consulting firms and compliance platforms carry retainers and licensing costs that run well beyond what most growing businesses can justify, often locked behind rigid annual contracts built for companies with an in-house safety department. EHS Simplified delivers that same caliber of program management and defined monthly outcomes, at a price built to scale with you. But we treat the safety of every client's company — and every one of their employees — as personal, not just another account.</p>
-</div>
-
-<!-- FAQ -->
-<div class="faq-section">
-  <div class="faq-inner">
-    <div class="section-label" style="justify-content:center;display:flex;margin-bottom:8px;">Common Questions</div>
-    <h2 class="section-title" style="text-align:center;margin-bottom:40px;">Before You <span>Commit</span></h2>
-
-    <div class="faq-item">
-      <div class="faq-q">Do plans come with a set number of hours?</div>
-      <div class="faq-a">No. You're buying a service, not billable hours. Each plan is defined by what you get — the check-ins, programs, and deliverables listed — plus reasonable day-to-day guidance from your EHS Manager. If your needs consistently outgrow your plan, we'll say so honestly and talk through the right fit.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Is this a remote service?</div>
-      <div class="faq-a">Mostly, yes. Gap assessments, written programs, training materials, recordkeeping, and guidance are all delivered remotely by phone, video, and the app. Safety Executive adds a quarterly site visit, and on-site work is available on any plan by quote.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How does the gap assessment work?</div>
-      <div class="faq-a">Starting at Safety Partnered, we open with a one-time compliance gap assessment of your programs, records, and operations against the OSHA standards that apply to you. You get written findings and a prioritized corrective action plan. From there, regular check-ins track that plan to completion.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Do you perform mock OSHA audits or represent us during an inspection?</div>
-      <div class="faq-a">No. We don't run mock OSHA audits or act as your representative with OSHA. What we do is a compliance gap assessment that shows where you stand, then guide you through inspection readiness and citation response so you know exactly what to do and say.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What exactly is a "custom safety policy"?</div>
-      <div class="faq-a">A written, OSHA-aligned policy document built specifically for your business — your industry, your hazards, your language. Not a generic template with your name pasted in. Examples include a Hazard Communication Program, Lockout/Tagout Policy, Fall Protection Plan, or Respiratory Protection Program.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What is a toolbox talk?</div>
-      <div class="faq-a">A short, focused safety topic your supervisor can run in 10–15 minutes before a shift — written for your crew, in plain language, on a hazard relevant to your work right now. Delivered as a ready-to-use document each month.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What does OSHA 300 log management include?</div>
-      <div class="faq-a">We track, maintain, and file your OSHA injury and illness records — the 300 Log, 300A Annual Summary, and 301 Incident Reports — so you're always compliant and ready if OSHA comes knocking.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How does the "step down" process work?</div>
-      <div class="faq-a">As your safety program matures, we'll have an honest conversation about whether you still need the same level of support. If your culture is strong and your team is running safety confidently, we'll recommend moving to a lower tier — and we mean it. A Safety Executive client who steps down to Safety Guided after 18 months is a success story, not a lost account.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What happens if we have an incident on the Safety Standby or Guided plan?</div>
-      <div class="faq-a">Additional consulting is available on every plan at a discount off our standard rate. On Safety Embedded and above, incident investigation guidance is included in your plan.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Is there a setup fee?</div>
-      <div class="faq-a">No setup fees on any plan. Done-for-you app configuration is included from day one — we load your SDS library, emergency contacts, and document portal as part of onboarding.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Can I upgrade my plan later?</div>
-      <div class="faq-a">Absolutely. If your business grows or you take on new work with higher hazard exposure, upgrading is simple. Upgrades take effect immediately; we'll prorate the difference.</div>
-    </div>
-  </div>
-</div>
-
-<!-- CTA Band -->
 <div class="cta-band">
-  <h2>Want to See the App Before You Decide?</h2>
-  <p>The live demo is open — no login, no sales call required. Explore exactly what your team would get on day one.</p>
-  <a href="https://app.ehssimplified.com/democoplumbing" target="_blank" class="btn-primary">Launch Live Demo</a>
+  <h2>See It Before You Subscribe.</h2>
+  <p>The demo is open: a sample company with a year of safety records. No sign-up, nothing to install.</p>
+  <a href="https://demo.agentic-ehs.com" target="_blank" rel="noopener" class="btn-primary">See the Demo</a>
 </div>
+
+<script>
+(function () {
+  var rate = document.getElementById('tc-rate'), hours = document.getElementById('tc-hours'), out = document.getElementById('tc-out');
+  function money(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+  function calc() {
+    var r = Math.min(Number(rate.value) || 0, 500), h = Math.min(Number(hours.value) || 0, 60);
+    if (r <= 0 || h <= 0) { out.textContent = ''; return; }
+    var monthly = r * h * 52 / 12, back = Math.ceil(449 / r);
+    out.innerHTML = 'That\u2019s about <strong>' + money(monthly) + ' a month</strong> of your time. Essentials is $449 a month, so it pays for itself if it gives you back about <strong>' + back + ' hours a month</strong>.';
+  }
+  rate.addEventListener('input', calc); hours.addEventListener('input', calc); calc();
+  var btns = document.querySelectorAll('[data-billing]');
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var k = b.getAttribute('data-billing');
+      btns.forEach(function (x) { var on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+      document.querySelectorAll('.pricing-price[data-month]').forEach(function (p) { p.firstChild.nodeValue = p.getAttribute('data-' + k); p.querySelector('.per').textContent = k === 'year' ? '/yr' : '/mo'; });
+      document.querySelectorAll('.pricing-period[data-month]').forEach(function (p) { p.textContent = p.getAttribute('data-' + k); });
+    });
+  });
+})();
+</script>
 
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <div class="footer-logo">EHS <span>Simplified</span></div>
-        <p class="footer-tagline">A full-scale EHS consulting practice for small manufacturers, built around a fractional CSP-led safety team, plus a mobile safety platform your whole team can use — OSHA-aligned inspections, SDS library, training, and hazard reporting. Plans start at $129/month.</p>
+        <div class="footer-logo"><img src="/img/ehs-simplified-mark-white.svg" alt="" width="24" height="29">EHS <span>Simplified</span></div>
+        <p class="footer-tagline">CSP-led safety for leaders who got handed safety on top of their day job. Home of Agentic EHS: AI that does the safety paperwork, checked by a Certified Safety Professional. Plans from $449/month.</p>
         <div class="footer-contact">
           <a href="mailto:Aaron.Leff@EHSSimplified.com">Aaron.Leff@EHSSimplified.com</a>
           <a href="tel:6033977067">(603) 397-7067</a>
@@ -592,20 +437,19 @@
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <a>Fractional EHS Management</a>
-        <a>Safety Program Management</a>
-        <a>OSHA Compliance</a>
-        <a>Hazard Communication</a>
-        <a>Safety Training</a>
-        <a>Incident Investigation</a>
-        <a>Risk Assessments</a>
+        <a href="plans.html">Agentic EHS software</a>
+        <a href="plans.html">Written safety programs</a>
+        <a href="plans.html">Training &amp; inspections</a>
+        <a href="plans.html">Ergonomic assessments</a>
+        <a href="plans.html">CSP time every month</a>
+        <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" rel="noopener">On-site projects</a>
       </div>
       <div class="footer-col">
         <h4>Industries</h4>
-        <a href="industries.html">Manufacturing</a>
-        <a href="industries.html">Retail &amp; Warehousing</a>
-        <a href="industries.html">Hospitality &amp; Food</a>
-        <a href="industries.html">Cannabis</a>
+        <a href="industries.html">Small shops</a>
+        <a href="industries.html">In-house safety teams</a>
+        <a href="industries.html">Multi-site companies</a>
+        <a href="https://demo.agentic-ehs.com" target="_blank" rel="noopener">See the demo</a>
       </div>
     </div>
     <div class="footer-bottom">
