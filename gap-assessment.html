@@ -365,7 +365,7 @@
         field("email","Work email","email",true,"email") + field("phone","Phone (optional)","tel",false,"tel") +
         field("company","Company","text",true,"organization") + field("job_title","Job title (optional)","text",false,"organization-title") +
       '</div>' +
-      '<p class="hint" style="font-size:12.5px;color:var(--muted);margin:4px 0 0">By continuing, you agree that EHS Simplified may contact you about your results. No spam, and you can unsubscribe anytime.</p>';
+      '<p class="hint" style="font-size:12.5px;color:var(--muted);margin:4px 0 0">By continuing, you agree to receive your results and occasional safety tips from EHS Simplified by email. Unsubscribe anytime.</p>';
   }
   function field(id,label,type,req,ac){
     return '<div class="field"><label class="lbl" for="'+id+'">'+label+'</label><input type="'+type+'" id="'+id+'" autocomplete="'+ac+'" value="'+esc(contact[id])+'"'+(req?' required':'')+'></div>';
