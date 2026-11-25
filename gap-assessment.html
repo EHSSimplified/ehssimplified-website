@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free EHS Gap Assessment | EHS Simplified</title>
+<meta name="description" content="A free 6-minute EHS gap assessment for small manufacturers. Score your OSHA compliance gaps, see your potential fine and injury cost exposure, and get a plan recommendation from a Certified Safety Professional.">
+<style>
+  :root{
+    --navy:#111827; --navy2:#0B1324; --ink:#1F2937; --muted:#6B7280; --line:#E5E7EB;
+    --bg:#F5F7FA; --card:#FFFFFF; --orange:#FF7900; --orange-d:#E06A00; --blue:#0072CE; --blue-l:#7CC1FF;
+    --green:#15803D; --amber:#B45309; --red:#B91C1C; --crit:#7F1D1D;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:var(--blue)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+  header.top{background:var(--navy);color:#fff}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{font-weight:800;letter-spacing:.2px;color:#fff;text-decoration:none;font-size:17px}
+  .brand span{color:var(--orange)}
+  .top-link{color:#CBD5E1;font-size:14px;text-decoration:none}
+  .hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:44px 0 56px}
+  .eyebrow{color:var(--orange);font-weight:700;font-size:12px;letter-spacing:1.4px;text-transform:uppercase;margin:0 0 10px}
+  h1{font-size:32px;line-height:1.15;margin:0 0 14px;font-weight:800}
+  .hero p.lead{color:#CBD5E1;font-size:17px;margin:0 0 22px;max-width:620px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px;padding:0;list-style:none}
+  .chips li{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#E5E7EB;font-size:13px;padding:6px 12px;border-radius:999px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:8px;font-weight:700;font-size:16px;padding:15px 22px;cursor:pointer;text-decoration:none;transition:background .15s,transform .05s}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--orange);color:#fff}
+  .btn-primary:hover{background:var(--orange-d)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .btn-ghost:hover{background:#fff}
+  .btn-blue{background:var(--blue);color:#fff}
+  .btn[disabled]{opacity:.45;cursor:not-allowed}
+  .fine{font-size:12.5px;color:#94A3B8;margin-top:14px}
+  main{padding:0 0 60px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;margin-top:-28px;box-shadow:0 8px 30px rgba(17,24,39,.06)}
+  .card + .card{margin-top:18px}
+  #results > .card:first-child{margin-top:24px}
+  .progress{height:6px;background:var(--line);border-radius:99px;overflow:hidden;margin:0 0 6px}
+  .progress > div{height:100%;background:var(--orange);width:0;transition:width .3s}
+  .progress-label{font-size:12.5px;color:var(--muted);margin:0 0 18px;display:flex;justify-content:space-between}
+  h2{font-size:22px;margin:0 0 6px;line-height:1.25}
+  .sub{color:var(--muted);margin:0 0 20px;font-size:15px}
+  .field{margin:0 0 18px}
+  .field label.lbl{display:block;font-weight:600;font-size:14.5px;margin:0 0 7px}
+  .field .hint{font-size:12.5px;color:var(--muted);margin-top:5px}
+  input[type=text],input[type=email],input[type=tel],input[type=number],select{width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1px solid #D1D5DB;border-radius:8px;background:#fff;color:var(--ink)}
+  input:focus,select:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .seg{display:flex;flex-wrap:wrap;gap:8px}
+  .seg button{font:inherit;font-size:14.5px;padding:10px 14px;border-radius:8px;border:1px solid #D1D5DB;background:#fff;color:var(--ink);cursor:pointer;min-width:64px}
+  .seg button:hover{border-color:var(--blue)}
+  .seg button.on{background:var(--navy);border-color:var(--navy);color:#fff}
+  .seg button.on.yes{background:var(--green);border-color:var(--green)}
+  .seg button.on.partial{background:var(--amber);border-color:var(--amber)}
+  .seg button.on.no{background:var(--red);border-color:var(--red)}
+  .seg button.on.unsure{background:#4B5563;border-color:#4B5563}
+  .q{padding:18px 0;border-top:1px solid var(--line)}
+  .q:first-of-type{border-top:0;padding-top:4px}
+  .q p.qt{margin:0 0 4px;font-weight:600;font-size:15.5px}
+  .q .cite{font-size:12px;color:var(--muted);margin:0 0 10px}
+  .q.missing p.qt{color:var(--red)}
+  .nav{display:flex;justify-content:space-between;gap:10px;margin-top:22px}
+  .nav .btn{min-width:120px}
+  .note{background:#FFF7ED;border:1px solid #FED7AA;color:#7C2D12;border-radius:10px;padding:12px 14px;font-size:14px;margin:0 0 18px}
+  .err{color:var(--red);font-size:13.5px;margin-top:10px;min-height:1em}
+  .hide{display:none!important}
+  /* Results */
+  .score-head{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+  .ring{position:relative;width:150px;height:150px;flex:0 0 150px}
+  .ring svg{transform:rotate(-90deg)}
+  .ring .val{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .ring .val b{font-size:40px;line-height:1}
+  .ring .val small{font-size:12px;color:var(--muted)}
+  .badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;padding:5px 10px;border-radius:999px;color:#fff;margin:0 0 8px}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0 4px}
+  .kpi{border:1px solid var(--line);border-radius:12px;padding:14px;background:#FAFBFC}
+  .kpi .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;font-weight:700}
+  .kpi .v{font-size:22px;font-weight:800;margin:4px 0 2px;line-height:1.15}
+  .kpi .d{font-size:12.5px;color:var(--muted)}
+  .bars .row{margin:0 0 12px}
+  .bars .row .t{display:flex;justify-content:space-between;font-size:14px;margin:0 0 5px}
+  .bars .row .b{height:10px;background:var(--line);border-radius:99px;overflow:hidden}
+  .bars .row .b > div{height:100%;border-radius:99px}
+  .gap{border:1px solid var(--line);border-left:4px solid var(--red);border-radius:10px;padding:12px 14px;margin:0 0 10px}
+  .gap h4{margin:0 0 3px;font-size:15px}
+  .gap .m{font-size:12.5px;color:var(--muted);margin:0 0 6px}
+  .gap p{margin:0;font-size:14px}
+  .gap .tag{display:inline-block;margin-top:8px;font-size:12px;font-weight:700;color:var(--blue);background:#EFF6FF;border-radius:6px;padding:3px 8px}
+  .plan{background:var(--navy);color:#fff;border-radius:14px;padding:24px;margin-top:4px}
+  .plan .eyebrow{margin-bottom:6px}
+  .plan h3{font-size:26px;margin:0 0 4px}
+  .plan .price{font-size:18px;color:#CBD5E1;margin:0 0 14px}
+  .plan .price b{color:#fff;font-size:28px}
+  .plan ul{margin:0 0 16px;padding-left:18px;color:#E5E7EB;font-size:14.5px}
+  .plan ul li{margin:0 0 6px}
+  .plan .why{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px 14px;font-size:14px;color:#E5E7EB;margin:0 0 18px}
+  .plan .ctas{display:flex;flex-wrap:wrap;gap:10px}
+  .plan .btn-ghost{color:#fff;border-color:rgba(255,255,255,.3)}
+  .plan .btn-ghost:hover{background:rgba(255,255,255,.08)}
+  details{border-top:1px solid var(--line);padding-top:14px;margin-top:6px}
+  details summary{cursor:pointer;font-weight:700;font-size:14.5px}
+  details ul{font-size:13.5px;color:var(--muted);padding-left:18px}
+  .disclaimer{font-size:12px;color:var(--muted);margin-top:16px}
+  footer{color:var(--muted);font-size:12.5px;text-align:center;padding:24px 0 40px}
+  @media (max-width:640px){
+    h1{font-size:26px}
+    .grid2{grid-template-columns:1fr}
+    .kpis{grid-template-columns:1fr}
+    .card{padding:20px;border-radius:12px}
+    .nav .btn{flex:1;min-width:0}
+  }
+  @media print{
+    header.top,.hero,.nav,.plan .ctas,#printBtn,footer{display:none!important}
+    body{background:#fff}
+    .card{box-shadow:none;margin-top:0;border:0}
+    .plan{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+
+<!-- Netlify Forms needs this static copy of the form at build time to register it. -->
+<form name="gap-assessment" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input name="bot-field"><input name="first_name"><input name="last_name"><input name="email"><input name="phone">
+  <input name="company"><input name="job_title"><input name="employees"><input name="sites"><input name="manager_seats">
+  <input name="industry"><input name="naics"><input name="safety_owner"><input name="recordables_12mo"><input name="readiness_score">
+  <input name="risk_level"><input name="fine_low"><input name="fine_high"><input name="injury_cost_3yr">
+  <input name="recommended_plan"><input name="top_gaps"><textarea name="all_answers"></textarea>
+  <input name="utm_source"><input name="utm_medium"><input name="utm_campaign"><input name="referrer">
+</form>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="https://www.ehssimplified.com">EHS <span>Simplified</span></a>
+    <a class="top-link" href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" rel="noopener">Talk to a CSP</a>
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="wrap">
+    <p class="eyebrow">Free EHS Gap Assessment</p>
+    <h1>Safety landed on your plate. Find out what it could cost you.</h1>
+    <p class="lead">Answer 26 quick questions about your shop. You'll get a readiness score, your potential OSHA fine and injury cost exposure, your top gaps, and the plan that fits.</p>
+    <ul class="chips">
+      <li>About 6 minutes</li>
+      <li>Built for businesses under 100 employees</li>
+      <li>Created by a Certified Safety Professional</li>
+    </ul>
+    <button class="btn btn-primary" id="startBtn">Start the free assessment</button>
+    <p class="fine">Your answers stay private. Nothing is shared with OSHA or anyone else.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+    <div class="card hide" id="flow">
+      <div class="progress"><div id="bar"></div></div>
+      <div class="progress-label"><span id="stepName"></span><span id="stepCount"></span></div>
+      <div id="stepBody"></div>
+      <div class="err" id="stepErr"></div>
+      <div class="nav">
+        <button class="btn btn-ghost" id="backBtn">Back</button>
+        <button class="btn btn-primary" id="nextBtn">Next</button>
+      </div>
+    </div>
+
+    <div id="results" class="hide"></div>
+  </div>
+</main>
+
+<footer>
+  EHS Simplified &middot; Strafford, NH &middot; (603) 397-7067 &middot; <a href="mailto:Aaron.Leff@EHSSimplified.com">Aaron.Leff@EHSSimplified.com</a>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---------- Settings you may want to edit ----------
+  var LINKS = {
+    call: "https://calendly.com/aaron-leff-ehssimplified/30min",
+    trial: "https://app.agentic-ehs.com/start",
+    demo: "https://demo.agentic-ehs.com",
+    plans: "https://www.ehssimplified.com/plans"
+  };
+  var OSHA_SERIOUS_MAX = 16550;       // 2025 amounts, unchanged for 2026 (OSHA memo, May 21, 2026)
+  var OSHA_REPEAT_MAX = 165514;
+  var COST_PER_INJURY = 48000;        // NSC Injury Facts, cost per medically consulted injury, 2024
+  var MFG_TRC_RATE = 2.7;             // BLS, manufacturing recordable cases per 100 FTE, 2024
+  var PROFIT_MARGIN = 0.08;           // used for "sales needed to cover" figure
+
+  var PLANS = {
+    "Essentials":   {price:"$449", per:"/mo", sites:"1 site", seats:"3 manager seats", csp:"1 CSP hour/month", resp:"CSP response within 2 business days"},
+    "Professional": {price:"$849", per:"/mo", sites:"Up to 2 sites", seats:"10 manager seats", csp:"2 CSP hours/month", resp:"CSP response by the next business day"},
+    "Multi-site":   {price:"$1,695", per:"/mo", sites:"Up to 5 sites", seats:"25 manager seats", csp:"4 CSP hours/month", resp:"Same-business-day CSP response"},
+    "Enterprise":   {price:"Custom", per:"", sites:"More than 5 sites", seats:"Seats sized to your team", csp:"Dedicated CSP", resp:"Agreed response times, setup and team training"}
+  };
+
+  // ---------- Questions ----------
+  var SECTIONS = [
+    {id:"rec",    name:"Recordkeeping & reporting", intro:"OSHA usually starts here. Missing paperwork is the fastest citation an inspector can write."},
+    {id:"prog",   name:"Written programs", intro:"These are among OSHA's most-cited standards in manufacturing every year."},
+    {id:"floor",  name:"Equipment & shop floor", intro:"Where most serious injuries happen, and where inspectors spend their walkaround."},
+    {id:"people", name:"Training & ownership", intro:"Programs only work if people know them, and someone owns them."},
+    {id:"env",    name:"Environmental", intro:"Not OSHA, but EPA and state agencies fine these too, often per day."}
+  ];
+
+  // w = severity weight (3 high, 2 medium, 1 low). pen = counts toward OSHA fine estimate. env = environmental (scored, not in OSHA $).
+  var Q = [
+    {id:"rk1", s:"rec", w:2, pen:true, cite:"29 CFR 1904", title:"OSHA 300 log and 300A posting",
+      q:"Is your OSHA 300 log up to date, and do you post the 300A summary from Feb 1 to Apr 30 every year?",
+      fix:"Bring the 300 log up to date and put the 300A posting on the calendar.", feat:"Injury logs + compliance calendar"},
+    {id:"rk2", s:"rec", w:1, pen:true, cite:"29 CFR 1904.41", minEmp:20, title:"Electronic 300A submission",
+      q:"Do you submit your 300A data to OSHA electronically by March 2 every year?",
+      fix:"Submit through OSHA's Injury Tracking Application and set an annual reminder.", feat:"Compliance calendar"},
+    {id:"rk3", s:"rec", w:2, pen:true, cite:"29 CFR 1904.39", title:"Severe injury reporting",
+      q:"Do your supervisors know a fatality must be reported to OSHA within 8 hours, and a hospitalization, amputation or eye loss within 24 hours?",
+      fix:"Write a one-page reporting procedure and post it where supervisors will see it.", feat:"Incident reporting"},
+    {id:"rk4", s:"rec", w:2, pen:false, cite:"Best practice", title:"Incident investigation",
+      q:"Do you investigate injuries and near misses for root cause, and track corrective actions until they're closed?",
+      fix:"Use a simple investigation form and track each corrective action to closure.", feat:"Incident reporting + corrective actions"},
+
+    {id:"hc", s:"prog", w:3, pen:true, cite:"29 CFR 1910.1200", title:"Hazard Communication",
+      q:"Do you have a written HazCom program, an SDS for every chemical on site, labeled secondary containers, and trained employees?",
+      fix:"Inventory chemicals, collect SDSs, label containers and train employees on the written program.", feat:"SDS library + written programs"},
+    {id:"loto1", s:"prog", w:3, pen:true, na:true, cite:"29 CFR 1910.147", title:"Lockout/tagout program",
+      q:"Do you have a written lockout/tagout program with machine-specific procedures for equipment that gets serviced or cleared?",
+      fix:"Write machine-specific energy control procedures, starting with the equipment that gets cleared most often.", feat:"CSP-approved written programs"},
+    {id:"loto2", s:"prog", w:2, pen:true, na:true, cite:"29 CFR 1910.147(c)(6)", title:"Annual LOTO inspections",
+      q:"Is every LOTO procedure inspected at least once a year, with the inspection documented?",
+      fix:"Schedule annual periodic inspections and keep the certification on file.", feat:"Inspections + compliance calendar"},
+    {id:"eap", s:"prog", w:2, pen:true, cite:"29 CFR 1910.38 / .39", title:"Emergency action and fire prevention",
+      q:"Do you have a written emergency action plan and fire prevention plan, and have employees been trained on them?",
+      fix:"Document evacuation routes, alarms, roles and fire hazards, then walk employees through them.", feat:"Written programs + employee training"},
+    {id:"ppe", s:"prog", w:2, pen:true, cite:"29 CFR 1910.132(d)", title:"PPE hazard assessment",
+      q:"Do you have a written, certified PPE hazard assessment for each job or work area?",
+      fix:"Assess each job or area, choose the PPE it needs, and sign the certification.", feat:"Risk assessments"},
+    {id:"resp", s:"prog", w:3, pen:true, na:true, cite:"29 CFR 1910.134", title:"Respiratory protection",
+      q:"Where respirators are required, do you have a written program, medical evaluations and annual fit tests?",
+      fix:"Complete medical evaluations and fit tests, and put the written program in place.", feat:"Written programs + compliance calendar"},
+    {id:"hear", s:"prog", w:2, pen:true, na:true, cite:"29 CFR 1910.95", title:"Hearing conservation",
+      q:"Has noise been measured, and where it reaches 85 dBA, are employees in a hearing conservation program with annual audiograms?",
+      fix:"Run noise monitoring, then set up audiograms and hearing protection where it's needed.", feat:"Compliance calendar + training"},
+
+    {id:"guard", s:"floor", w:3, pen:true, cite:"29 CFR 1910.212 / .219", title:"Machine guarding",
+      q:"Are points of operation, belts, pulleys, chains and other moving parts guarded on every machine?",
+      fix:"Walk every machine, fix missing or bypassed guards, and add guarding checks to inspections.", feat:"Inspections from your phone"},
+    {id:"fork", s:"floor", w:3, pen:true, na:true, cite:"29 CFR 1910.178", title:"Forklift operators",
+      q:"Are forklift operators trained, evaluated at least every 3 years, and doing daily pre-shift checks?",
+      fix:"Train and evaluate every operator, and start daily pre-shift checklists.", feat:"Employee training + inspections"},
+    {id:"elec", s:"floor", w:2, pen:true, cite:"29 CFR 1910.303 / .305", title:"Electrical",
+      q:"Do electrical panels have 36 inches of clearance, with no extension cords used as permanent wiring and no open panel slots?",
+      fix:"Clear the panels, replace extension cords with permanent wiring, and close open slots.", feat:"Inspections"},
+    {id:"walk", s:"floor", w:2, pen:true, cite:"29 CFR 1910.22 / .23 / .28", title:"Walking-working surfaces",
+      q:"Do aisles stay clear, do mezzanines and platforms 4 feet or higher have guardrails, and are ladders inspected?",
+      fix:"Mark and keep aisles clear, guard elevated edges, and add ladders to inspections.", feat:"Inspections"},
+    {id:"ext", s:"floor", w:1, pen:true, cite:"29 CFR 1910.157", title:"Fire extinguishers",
+      q:"Are fire extinguishers checked monthly and serviced every year, and are employees trained to use them?",
+      fix:"Tag monthly checks, book annual service, and provide yearly training.", feat:"Inspections + compliance calendar"},
+    {id:"eye", s:"floor", w:2, pen:true, na:true, cite:"29 CFR 1910.151(c)", title:"Eyewash and shower stations",
+      q:"Where corrosive chemicals are used, is there a working eyewash or shower close by?",
+      fix:"Install or relocate eyewash stations and add them to routine checks.", feat:"Inspections"},
+    {id:"cs", s:"floor", w:3, pen:true, na:true, cite:"29 CFR 1910.146", title:"Confined spaces",
+      q:"Have tanks, pits, hoppers and similar spaces been evaluated, with a permit program in place where it's needed?",
+      fix:"Evaluate and label each space, then set up permits, rescue and training if needed.", feat:"Risk assessments + written programs"},
+    {id:"ergo", s:"floor", w:2, pen:false, cite:"General Duty Clause", title:"Ergonomics",
+      q:"Have lifting, reaching and repetitive tasks been assessed for strain risk?",
+      fix:"Assess your highest-volume manual tasks first. Strain injuries are the most common in manufacturing.", feat:"Ergonomic assessments from phone photos"},
+
+    {id:"orient", s:"people", w:2, pen:false, cite:"Training required across OSHA standards", title:"New hire orientation",
+      q:"Do new hires get a documented safety orientation before they start working?",
+      fix:"Build a short orientation checklist and keep the signed record.", feat:"Employee training"},
+    {id:"records", s:"people", w:2, pen:false, cite:"Training documentation", title:"Training records",
+      q:"Can you pull training records (who, what and when) for any employee within a day?",
+      fix:"Put every training record in one place, searchable by employee.", feat:"Employee training records"},
+    {id:"insp", s:"people", w:2, pen:false, cite:"Best practice", title:"Supervisor inspections",
+      q:"Do supervisors do documented safety inspections of the floor at least once a month?",
+      fix:"Give supervisors a 10-minute monthly checklist and track the findings.", feat:"Inspections + My day view"},
+    {id:"owner", s:"people", w:2, pen:false, cite:"Best practice", title:"Program ownership",
+      q:"Does someone with real EHS knowledge own the program, rather than fitting it in between other jobs?",
+      fix:"Put a qualified safety professional behind your program, even part-time.", feat:"CSP escalation from any screen"},
+    {id:"cmte", s:"people", w:1, pen:false, cite:"Best practice", title:"Employee input",
+      q:"Do employees have a regular way to raise hazards, such as safety meetings, a committee or a reporting app?",
+      fix:"Make it easy to report hazards from the floor, and close the loop on every report.", feat:"Hazard and incident reporting"},
+
+    {id:"hw", s:"env", w:2, pen:false, env:true, na:true, cite:"40 CFR 262", title:"Hazardous waste",
+      q:"Do you know your hazardous waste generator status, and are waste containers labeled, closed and dated?",
+      fix:"Confirm your generator category, then label, close and date every container.", feat:"Compliance calendar + CSP guidance"},
+    {id:"spill", s:"env", w:2, pen:false, env:true, na:true, cite:"40 CFR 112 / stormwater permits", title:"Spill and stormwater",
+      q:"Have your oil storage, spill plans and stormwater permits been checked for your site? (An SPCC plan is needed above 1,320 gallons of oil.)",
+      fix:"Total your oil storage and check whether you need an SPCC plan or a stormwater permit.", feat:"Compliance calendar + CSP guidance"}
+  ];
+
+  var GAP = {yes:0, partial:0.5, no:1, unsure:0.75};
+  var GRAVITY = {3:1.0, 2:0.6, 1:0.3};
+
+  // ---------- State ----------
+  var profile = {employees:"", sites:"", seats:"", industry:"", naics:"", owner:"", recordables:""};
+  var answers = {};
+  var contact = {first_name:"", last_name:"", email:"", phone:"", company:"", job_title:""};
+  var steps = ["profile"].concat(SECTIONS.map(function(s){return s.id;})).concat(["contact"]);
+  var step = 0;
+
+  var $ = function(id){return document.getElementById(id);};
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+  function money(n){
+    n = Math.round(n);
+    if(n >= 1000000) return "$" + (n/1000000).toFixed(1).replace(/\.0$/,"") + "M";
+    if(n >= 10000) return "$" + Math.round(n/1000) + "k";
+    if(n >= 1000) return "$" + (n/1000).toFixed(1).replace(/\.0$/,"") + "k";
+    return "$" + n;
+  }
+  function emp(){ return parseInt(profile.employees,10) || 0; }
+  function applies(q){ return !(q.minEmp && emp() && emp() < q.minEmp); }
+
+  // ---------- Rendering steps ----------
+  function segHtml(name, opts, current){
+    return '<div class="seg" data-name="'+name+'">' + opts.map(function(o){
+      var on = current === o[0] ? " on " + o[0] : "";
+      return '<button type="button" class="'+on+'" data-v="'+o[0]+'">'+o[1]+'</button>';
+    }).join("") + '</div>';
+  }
+
+  function renderProfile(){
+    return '<h2>About your operation</h2><p class="sub">This sets your fine reductions, injury baseline and plan fit.</p>' +
+      '<div class="grid2">' +
+        '<div class="field"><label class="lbl" for="employees">How many employees do you have?</label><input type="number" id="employees" min="1" max="5000" inputmode="numeric" placeholder="e.g. 45" value="'+esc(profile.employees)+'"><div class="hint">Count everyone, all locations.</div></div>' +
+        '<div class="field"><label class="lbl" for="industry">What type of business are you?</label><select id="industry">' +
+          ['','Manufacturing or production','Construction or trades','Warehousing or distribution','Auto, equipment or repair shop','Food or beverage','Lab or healthcare','Landscaping or property services','Other'].map(function(v){
+            return '<option value="'+esc(v)+'"'+(profile.industry===v?' selected':'')+'>'+(v||'Select one')+'</option>';}).join("") +
+        '</select></div>' +
+      '</div>' +
+      '<div class="field"><label class="lbl" for="naics">What\'s your NAICS code? (optional)</label><input type="text" id="naics" inputmode="numeric" maxlength="6" placeholder="e.g. 332710" value="'+esc(profile.naics)+'"><div class="hint">Skip it if you don\'t know it. Your accountant can find it on your business tax return.</div></div>' +
+      '<div class="field"><label class="lbl">How many permanent locations do you operate?</label>' + segHtml("sites",[["1","1"],["2","2"],["3-5","3 to 5"],["6+","6 or more"]],profile.sites) + '<div class="hint">Count your own shops, plants, warehouses and yards. Don\'t count customer job sites.</div></div>' +
+      '<div class="field"><label class="lbl">How many supervisors and managers need safety access?</label>' + segHtml("seats",[["1-3","1 to 3"],["4-10","4 to 10"],["11-25","11 to 25"],["26+","26 or more"]],profile.seats) + '</div>' +
+      '<div class="field"><label class="lbl">Who runs safety today?</label>' + segHtml("owner",[["pro","A dedicated EHS pro"],["parttime","Owner, Operations or HR"],["nobody","Honestly, no one"]],profile.owner) + '</div>' +
+      '<div class="field"><label class="lbl">In the last 12 months, how many work injuries needed more than first aid, or caused missed work or light duty?</label>' + segHtml("recordables",[["0","0"],["1","1"],["2-3","2 to 3"],["4+","4 or more"],["unsure","Not sure"]],profile.recordables) + '<div class="hint">Count injuries that needed stitches, prescription medicine or a doctor\'s work restrictions. Don\'t count bandages, ice packs or over-the-counter pain relievers.</div></div>';
+  }
+
+  function renderSection(sid){
+    var sec = SECTIONS.filter(function(s){return s.id===sid;})[0];
+    var html = '<h2>'+esc(sec.name)+'</h2><p class="sub">'+esc(sec.intro)+'</p>';
+    Q.filter(function(q){return q.s===sid;}).forEach(function(q){
+      if(!applies(q)){
+        answers[q.id] = "na";
+        html += '<div class="q"><p class="qt">'+esc(q.q)+'</p><p class="cite">'+esc(q.cite)+' &middot; Doesn\'t apply under 20 employees, so we skipped it.</p></div>';
+        return;
+      }
+      var opts = [["yes","Yes"],["partial","Partly"],["no","No"],["unsure","Not sure"]];
+      if(q.na) opts.push(["na","Doesn't apply"]);
+      html += '<div class="q" id="q_'+q.id+'"><p class="qt">'+esc(q.q)+'</p><p class="cite">'+esc(q.cite)+'</p>' + segHtml("q:"+q.id, opts, answers[q.id]) + '</div>';
+    });
+    return html;
+  }
+
+  function renderContact(){
+    return '<h2>Where should we send your results?</h2><p class="sub">Your score, fine and injury cost exposure, top gaps and plan recommendation are ready. Enter your details to see them now.</p>' +
+      '<div class="grid2">' +
+        field("first_name","First name","text",true,"given-name") + field("last_name","Last name","text",true,"family-name") +
+        field("email","Work email","email",true,"email") + field("phone","Phone (optional)","tel",false,"tel") +
+        field("company","Company","text",true,"organization") + field("job_title","Job title (optional)","text",false,"organization-title") +
+      '</div>' +
+      '<p class="hint" style="font-size:12.5px;color:var(--muted);margin:4px 0 0">By continuing, you agree that EHS Simplified may contact you about your results. No spam, and you can unsubscribe anytime.</p>';
+  }
+  function field(id,label,type,req,ac){
+    return '<div class="field"><label class="lbl" for="'+id+'">'+label+'</label><input type="'+type+'" id="'+id+'" autocomplete="'+ac+'" value="'+esc(contact[id])+'"'+(req?' required':'')+'></div>';
+  }
+
+  function render(){
+    var id = steps[step];
+    var body = id==="profile" ? renderProfile() : id==="contact" ? renderContact() : renderSection(id);
+    $("stepBody").innerHTML = body;
+    $("stepErr").textContent = "";
+    var label = id==="profile" ? "Your operation" : id==="contact" ? "Your results" : SECTIONS.filter(function(s){return s.id===id;})[0].name;
+    $("stepName").textContent = label;
+    $("stepCount").textContent = "Step " + (step+1) + " of " + steps.length;
+    $("bar").style.width = Math.round((step)/(steps.length) * 100) + "%";
+    $("backBtn").style.visibility = step===0 ? "hidden" : "visible";
+    $("nextBtn").textContent = id==="contact" ? "Show my results" : "Next";
+    wireSegs();
+  }
+
+  function wireSegs(){
+    Array.prototype.forEach.call(document.querySelectorAll(".seg"), function(seg){
+      seg.addEventListener("click", function(e){
+        var b = e.target.closest("button"); if(!b) return;
+        var name = seg.getAttribute("data-name"), v = b.getAttribute("data-v");
+        Array.prototype.forEach.call(seg.querySelectorAll("button"), function(x){ x.className = ""; });
+        b.className = "on " + v;
+        if(name.indexOf("q:")===0){ answers[name.slice(2)] = v; var w=$("q_"+name.slice(2)); if(w) w.classList.remove("missing"); }
+        else profile[name] = v;
+      });
+    });
+  }
+
+  function collect(){
+    var id = steps[step];
+    if(id==="profile"){
+      profile.employees = ($("employees").value||"").trim();
+      profile.industry = $("industry").value;
+      profile.naics = ($("naics").value||"").replace(/\D/g,"");
+    } else if(id==="contact"){
+      Object.keys(contact).forEach(function(k){ contact[k] = ($(k).value||"").trim(); });
+    }
+  }
+
+  function validate(){
+    var id = steps[step];
+    if(id==="profile"){
+      if(!(emp() > 0)) return "Enter your number of employees.";
+      if(!profile.sites || !profile.seats || !profile.owner || !profile.recordables) return "Answer each question to continue.";
+      return "";
+    }
+    if(id==="contact"){
+      if(!contact.first_name || !contact.last_name || !contact.company) return "First name, last name and company are required.";
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact.email)) return "Enter a valid work email.";
+      return "";
+    }
+    var missing = Q.filter(function(q){ return q.s===id && applies(q) && !answers[q.id]; });
+    missing.forEach(function(q){ var w=$("q_"+q.id); if(w) w.classList.add("missing"); });
+    if(missing.length){ var w=$("q_"+missing[0].id); if(w) w.scrollIntoView({behavior:"smooth",block:"center"}); return "Answer each question to continue. Pick \"Not sure\" if you don't know."; }
+    return "";
+  }
+
+  // ---------- Scoring ----------
+  function compute(){
+    var e = emp();
+    var sizeRed = e<=25 ? 0.70 : e<=100 ? 0.30 : e<=250 ? 0.10 : 0;
+    var tot=0, got=0, secs={}, fineLow=0, fineHigh=0, penGaps=0, gaps=[], envGaps=0, unsure=0;
+    SECTIONS.forEach(function(s){ secs[s.id]={w:0,g:0}; });
+    Q.forEach(function(q){
+      var a = answers[q.id];
+      if(!a || a==="na") return;
+      var g = GAP[a];
+      tot += q.w; got += q.w*g;
+      secs[q.s].w += q.w; secs[q.s].g += q.w*g;
+      if(a==="unsure") unsure++;
+      if(g>0){
+        if(q.pen){
+          fineLow += OSHA_SERIOUS_MAX * GRAVITY[q.w] * (1-sizeRed) * g;
+          fineHigh += OSHA_SERIOUS_MAX * g;
+          penGaps++;
+        }
+        if(q.env) envGaps++;
+        gaps.push({q:q, a:a, rank: q.w * g * (q.pen ? 1.25 : 1)});
+      }
+    });
+    var gapRatio = tot ? got/tot : 0;
+    var readiness = Math.round(100 * (1 - gapRatio));
+
+    // Ownership and injury history adjust risk (not the compliance score itself)
+    var mult = 0.7 + 0.9*gapRatio;
+    if(profile.owner==="nobody") mult += 0.15;
+    if(profile.owner==="pro") mult -= 0.1;
+    var riskAdj = e/100 * MFG_TRC_RATE * Math.max(0.5,mult);
+    var reported = {"0":0,"1":1,"2-3":2.5,"4+":5}[profile.recordables];
+    var annualInj = Math.max(reported||0, riskAdj);
+    var injury3 = annualInj * 3 * COST_PER_INJURY;
+    var salesNeeded = injury3 / PROFIT_MARGIN;
+
+    var level, color;
+    if(readiness>=85){level="Low risk";color="#15803D";}
+    else if(readiness>=70){level="Moderate risk";color="#B45309";}
+    else if(readiness>=50){level="High risk";color="#B91C1C";}
+    else {level="Critical risk";color="#7F1D1D";}
+
+    gaps.sort(function(a,b){return b.rank-a.rank;});
+
+    // Plan fit
+    var seats = profile.seats, sites = profile.sites, plan="Essentials", why=[];
+    if(sites==="6+" || seats==="26+"){ plan="Enterprise"; why.push(sites==="6+" ? "You run more than 5 locations." : "You need more than 25 manager seats."); }
+    else if(sites==="3-5" || seats==="11-25"){ plan="Multi-site"; why.push(sites==="3-5" ? "Multi-site covers up to 5 locations." : "You need 11 to 25 manager seats."); }
+    else if(sites==="2" || seats==="4-10"){ plan="Professional"; why.push(sites==="2" ? "Professional covers your 2 locations." : "You need more than 3 manager seats."); }
+    else { why.push("One site with up to 3 managers fits Essentials."); }
+    if(plan==="Essentials" && (readiness<50 || (readiness<70 && (e>=40 || profile.owner!=="pro")))){
+      plan="Professional";
+      why.push("Your gaps call for more CSP time and next-day answers while you close them.");
+    }
+    if(gaps.length) why.push("Your top gaps are covered by features in every plan, listed below.");
+
+    return {readiness:readiness, level:level, color:color, secs:secs, fineLow:fineLow, fineHigh:fineHigh, penGaps:penGaps,
+      envGaps:envGaps, unsure:unsure, gaps:gaps, annualInj:annualInj, injury3:injury3, salesNeeded:salesNeeded,
+      sizeRed:sizeRed, plan:plan, why:why, reported:reported};
+  }
+
+  // ---------- Submit lead (Netlify Forms) ----------
+  function submitLead(r){
+    var qs = new URLSearchParams(location.search);
+    var data = {
+      "form-name":"gap-assessment", "bot-field":"",
+      first_name:contact.first_name, last_name:contact.last_name, email:contact.email, phone:contact.phone,
+      company:contact.company, job_title:contact.job_title, employees:profile.employees, sites:profile.sites,
+      manager_seats:profile.seats, industry:profile.industry, naics:profile.naics, safety_owner:profile.owner, recordables_12mo:profile.recordables,
+      readiness_score:String(r.readiness), risk_level:r.level, fine_low:String(Math.round(r.fineLow)), fine_high:String(Math.round(r.fineHigh)),
+      injury_cost_3yr:String(Math.round(r.injury3)), recommended_plan:r.plan,
+      top_gaps:r.gaps.slice(0,6).map(function(g){return g.q.title;}).join("; "),
+      all_answers:Q.map(function(q){return q.id+"="+(answers[q.id]||"");}).join(", "),
+      utm_source:qs.get("utm_source")||"", utm_medium:qs.get("utm_medium")||"", utm_campaign:qs.get("utm_campaign")||"",
+      referrer:document.referrer||""
+    };
+    var body = Object.keys(data).map(function(k){return encodeURIComponent(k)+"="+encodeURIComponent(data[k]);}).join("&");
+    try{
+      return fetch("/", {method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body:body}).catch(function(){});
+    }catch(e){ return Promise.resolve(); }
+  }
+
+  // ---------- Results ----------
+  function showResults(){
+    var r = compute();
+    var circ = 2*Math.PI*62, off = circ*(1-r.readiness/100);
+    var secRows = SECTIONS.map(function(s){
+      var d = r.secs[s.id]; if(!d.w) return "";
+      var sc = Math.round(100*(1-d.g/d.w));
+      var c = sc>=85?"#15803D":sc>=70?"#B45309":sc>=50?"#B91C1C":"#7F1D1D";
+      return '<div class="row"><div class="t"><span>'+esc(s.name)+'</span><b>'+sc+'</b></div><div class="b"><div style="width:'+sc+'%;background:'+c+'"></div></div></div>';
+    }).join("");
+
+    var top = r.gaps.slice(0,6);
+    var gapHtml = top.length ? top.map(function(g){
+      var lab = {no:"No",partial:"Partly",unsure:"Not sure"}[g.a];
+      var bc = g.a==="partial" ? "#B45309" : g.a==="unsure" ? "#4B5563" : "#B91C1C";
+      return '<div class="gap" style="border-left-color:'+bc+'"><h4>'+esc(g.q.title)+'</h4><p class="m">'+esc(g.q.cite)+' &middot; You answered: '+lab+(g.q.pen?' &middot; Citable':'')+'</p><p>'+esc(g.q.fix)+'</p><span class="tag">Agentic-EHS: '+esc(g.q.feat)+'</span></div>';
+    }).join("") : '<p>No gaps flagged. That\'s rare, and worth confirming with a quick review from a CSP.</p>';
+
+    var feats = [];
+    top.forEach(function(g){ g.q.feat.split(/\s*\+\s*/).forEach(function(f){ if(feats.indexOf(f)<0 && feats.length<5) feats.push(f); }); });
+    if(!feats.length) feats = ["Written safety programs","Employee training","Inspections and incident reporting","Compliance calendar"];
+
+    var p = PLANS[r.plan];
+    var firstName = esc(contact.first_name);
+    var unsureNote = r.unsure>=4 ? '<div class="note">You answered "Not sure" '+r.unsure+' times. Unknowns count as likely gaps, because an inspector won\'t give credit for them either.</div>' : "";
+
+    var html =
+    '<div class="card" id="resCard">' +
+      '<p class="eyebrow" style="margin:0 0 6px">'+esc(contact.company)+' &middot; EHS Gap Assessment</p>' +
+      '<div class="score-head">' +
+        '<div class="ring"><svg width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="62" fill="none" stroke="#E5E7EB" stroke-width="14"/><circle cx="75" cy="75" r="62" fill="none" stroke="'+r.color+'" stroke-width="14" stroke-linecap="round" stroke-dasharray="'+circ.toFixed(1)+'" stroke-dashoffset="'+off.toFixed(1)+'"/></svg><div class="val"><b>'+r.readiness+'</b><small>out of 100</small></div></div>' +
+        '<div style="flex:1;min-width:220px"><span class="badge" style="background:'+r.color+'">'+r.level+'</span>' +
+          '<h2 style="margin-bottom:6px">'+firstName+', here\'s where you stand.</h2>' +
+          '<p class="sub" style="margin:0">Your EHS readiness score is '+r.readiness+'. We found '+r.gaps.length+' gap'+(r.gaps.length===1?'':'s')+', including '+r.penGaps+' an OSHA inspector could cite.</p></div>' +
+      '</div>' +
+      unsureNote.replace('class="note"','class="note" style="margin-top:18px"') +
+      '<div class="kpis">' +
+        '<div class="kpi"><div class="k">OSHA fine exposure</div><div class="v">'+money(r.fineLow)+' &ndash; '+money(r.fineHigh)+'</div><div class="d">If inspected today. Low end includes your '+Math.round(r.sizeRed*100)+'% small-employer reduction.</div></div>' +
+        '<div class="kpi"><div class="k">3-year injury cost</div><div class="v">'+money(r.injury3)+'</div><div class="d">About '+r.annualInj.toFixed(1)+' injuries a year at your risk level.</div></div>' +
+        '<div class="kpi"><div class="k">Sales to cover it</div><div class="v">'+money(r.salesNeeded)+'</div><div class="d">New revenue needed to pay for those injuries at an 8% margin.</div></div>' +
+      '</div>' +
+      (r.envGaps ? '<p class="disclaimer" style="margin-top:8px">You also have '+r.envGaps+' environmental gap'+(r.envGaps===1?'':'s')+'. EPA and state penalties aren\'t in the OSHA estimate and are often assessed per day.</p>' : '') +
+    '</div>' +
+
+    '<div class="card"><h2>Score by area</h2><p class="sub">100 means fully in place.</p><div class="bars">'+secRows+'</div></div>' +
+
+    '<div class="card"><h2>Your top gaps to close first</h2><p class="sub">Ranked by severity and citation risk.</p>'+gapHtml+'</div>' +
+
+    '<div class="card" style="padding:0;border:0;background:transparent;box-shadow:none">' +
+      '<div class="plan">' +
+        '<p class="eyebrow">Recommended plan</p>' +
+        '<h3>Agentic-EHS '+esc(r.plan)+'</h3>' +
+        '<p class="price"><b>'+p.price+'</b>'+p.per+'</p>' +
+        '<div class="why"><b>Why this plan:</b> '+r.why.map(esc).join(" ")+'</div>' +
+        '<ul><li>'+p.sites+' &middot; '+p.seats+' &middot; unlimited workers</li><li>'+p.csp+' &middot; '+p.resp+'</li>' +
+          '<li>Closes your gaps with: '+feats.map(esc).join(", ")+'</li>' +
+          '<li>Programs and training built for your site, and approved by a Certified Safety Professional before you use them</li></ul>' +
+        '<div class="ctas">' +
+          (r.plan==="Enterprise"
+            ? '<a class="btn btn-primary" href="'+LINKS.call+'" target="_blank" rel="noopener">Book a 15-minute call</a><a class="btn btn-ghost" href="'+LINKS.demo+'" target="_blank" rel="noopener">See the demo</a>'
+            : '<a class="btn btn-primary" href="'+LINKS.trial+'" target="_blank" rel="noopener">Start a 14-day free trial</a><a class="btn btn-ghost" href="'+LINKS.call+'" target="_blank" rel="noopener">Review my results with a CSP</a><a class="btn btn-ghost" href="'+LINKS.demo+'" target="_blank" rel="noopener">See the demo</a>') +
+        '</div>' +
+      '</div>' +
+    '</div>' +
+
+    '<div class="card">' +
+      '<button class="btn btn-ghost" id="printBtn" type="button">Save or print my results</button>' +
+      '<details><summary>How we calculated this</summary><ul>' +
+        '<li>Readiness score: each answer is weighted by severity. "Partly" counts as half a gap, "Not sure" as three-quarters, and "Doesn\'t apply" is left out.</li>' +
+        '<li>Fine exposure: $'+OSHA_SERIOUS_MAX.toLocaleString()+' is OSHA\'s maximum per serious violation, unchanged for 2026. The low end scales by severity and applies OSHA\'s size reduction (70% for 1 to 25 employees, 30% for 26 to 100, 10% for 101 to 250). The high end is the maximum per violation. Repeat or willful violations can reach $'+OSHA_REPEAT_MAX.toLocaleString()+' each.</li>' +
+        '<li>Injuries: based on the 2024 manufacturing rate of '+MFG_TRC_RATE+' recordable cases per 100 full-time workers (BLS), adjusted for your gaps and who owns safety, or your reported injuries if higher.</li>' +
+        '<li>Injury cost: $'+COST_PER_INJURY.toLocaleString()+' per medically consulted injury (National Safety Council, 2024). This includes wages, medical and administrative costs. Your actual cost will vary.</li>' +
+        '<li>Sales to cover it: the 3-year injury cost divided by an 8% profit margin.</li>' +
+      '</ul></details>' +
+      '<p class="disclaimer">This self-assessment is an educational estimate based on your answers. It is not an OSHA inspection, a legal opinion or a guarantee of compliance. Actual penalties depend on OSHA\'s findings, classifications and settlement.</p>' +
+    '</div>';
+
+    $("results").innerHTML = html;
+    $("results").classList.remove("hide");
+    $("flow").classList.add("hide");
+    $("hero").classList.add("hide");
+    window.scrollTo({top:0,behavior:"smooth"});
+    $("printBtn").addEventListener("click", function(){ window.print(); });
+  }
+
+  // ---------- Navigation ----------
+  $("startBtn").addEventListener("click", function(){
+    $("flow").classList.remove("hide");
+    $("startBtn").classList.add("hide");
+    render();
+    $("flow").scrollIntoView({behavior:"smooth",block:"start"});
+  });
+  $("backBtn").addEventListener("click", function(){
+    collect(); if(step>0){ step--; render(); $("flow").scrollIntoView({behavior:"smooth",block:"start"}); }
+  });
+  $("nextBtn").addEventListener("click", function(){
+    collect();
+    var err = validate();
+    if(err){ $("stepErr").textContent = err; return; }
+    if(steps[step]==="contact"){
+      var btn = $("nextBtn"); btn.disabled = true; btn.textContent = "Scoring...";
+      var r = compute();
+      var done = false;
+      var finish = function(){ if(done) return; done = true; showResults(); };
+      Promise.resolve(submitLead(r)).then(finish, finish);
+      setTimeout(finish, 2500);
+      return;
+    }
+    step++; render(); $("flow").scrollIntoView({behavior:"smooth",block:"start"});
+  });
+
+  // Deep link: ?start=1 skips the intro (use this from the Omnisend pop-up)
+  if(new URLSearchParams(location.search).get("start")==="1"){ $("startBtn").click(); }
+})();
+</script>
+</body>
+</html>

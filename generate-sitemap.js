@@ -32,6 +32,7 @@ const staticPages = [
   { loc: '/blog',         file: 'blog.html',         priority: '0.8', changefreq: 'weekly'  },
   { loc: '/about',        file: 'about.html',        priority: '0.7', changefreq: 'monthly' },
   { loc: '/testimonials', file: 'testimonials.html', priority: '0.6', changefreq: 'monthly' },
+  { loc: '/gap-assessment', file: 'gap-assessment.html', priority: '0.8', changefreq: 'monthly' },
 ];
 
 // Newest blog post date, so /blog shows as updated whenever a post is added or edited
