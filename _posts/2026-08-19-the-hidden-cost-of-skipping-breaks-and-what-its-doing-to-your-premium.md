@@ -48,4 +48,4 @@ None of this slows a job down as much as owners assume. A 15-minute break costs 
 
 ## Your Next Step
 
-Want to see where fatigue and downtime gaps are actually showing up in your safety program — not guess at it? Try EHS Simplified's live demo, free and with no login required, and see what a fractional EHS program looks like in practice: [demo.agentic-ehs.com](https://demo.agentic-ehs.com).
+Want to see where fatigue and downtime gaps are actually showing up in your safety program — not guess at it? Try the Agentic EHS demo, free and with no sign-up: [demo.agentic-ehs.com](https://demo.agentic-ehs.com).

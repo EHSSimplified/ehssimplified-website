@@ -62,7 +62,7 @@ OSHA requires you to review the emergency action plan with each covered employee
 
 EHS Simplified is a mobile compliance app built specifically for small manufacturers — and small business owners in hospitality and beyond — who need OSHA-required documentation — like emergency action plans — without hiring a full-time safety department or paying for a new consulting engagement every time something changes.
 
-**Ready to see how it works?** [Try a free demo](https://demo.agentic-ehs.com) and see your first plan built in minutes, or [schedule a call with a Certified Safety Professional](https://calendly.com/aaron-leff-ehssimplified/30min) if you want a human to walk through your specific risks first.
+**Ready to see how it works?** [Try the Agentic EHS demo](https://demo.agentic-ehs.com) and see how a written plan gets drafted, or [schedule a call with a Certified Safety Professional](https://calendly.com/aaron-leff-ehssimplified/30min) if you want a human to walk through your specific risks first.
 
 ## Frequently Asked Questions
 
