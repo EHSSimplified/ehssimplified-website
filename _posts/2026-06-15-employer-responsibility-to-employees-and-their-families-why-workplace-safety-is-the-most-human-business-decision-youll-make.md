@@ -80,7 +80,7 @@ Where most EHS platforms are priced and designed for companies with thousands of
 
 The next time you think about the cost of a safety tool, think about the alternative. Think about that phone call.
 
-**[Try EHS Simplified free — schedule a demo today](https://ehssimplified.com/demo)** and see how quickly your team can have a working safety program in place. Or if you'd like to talk through your specific compliance gaps, **[schedule a 30-minute call with Aaron Leff, CSP](https://calendly.com/aaron-leff-ehssimplified/30min)** — a Certified Safety Professional with 25+ years of EHS experience helping small businesses stay safe and out of trouble.
+**[Try EHS Simplified free — schedule a demo today](https://demo.agentic-ehs.com)** and see how quickly your team can have a working safety program in place. Or if you'd like to talk through your specific compliance gaps, **[schedule a 30-minute call with Aaron Leff, CSP](https://calendly.com/aaron-leff-ehssimplified/30min)** — a Certified Safety Professional with 25+ years of EHS experience helping small businesses stay safe and out of trouble.
 
 - - -
 

@@ -11,6 +11,9 @@ summary: "After 25 years in Environmental Health & Safety, I kept seeing the
   ignoring safety is never zero, and what you can expect from this blog going
   forward."
 ---
+
+*Update, November 2026: the EHS Simplified app is now [Agentic EHS](https://www.ehssimplified.com/blog/2026-11-22-introducing-agentic-ehs). The ideas below still hold; the tools got a lot better.*
+
 <!--StartFragment-->
 
 # Why I Built EHS Simplified (And Why It Matters for Your Business)
@@ -60,6 +63,6 @@ If you've got a question you'd like me to tackle, reach out. I'm a real person, 
 
 *Aaron Leff is a Certified Safety Professional (CSP) with 25+ years of EHS experience and the founder of EHS Simplified. He works with small manufacturers — and small businesses across food service and more — to build safety programs that actually get used.*
 
-*Ready to see the app? [Launch the live demo](https://app.ehssimplified.com/) — no login required.*
+*Ready to see the app? [Launch the live demo](https://demo.agentic-ehs.com) — no login required.*
 
 <!--EndFragment-->

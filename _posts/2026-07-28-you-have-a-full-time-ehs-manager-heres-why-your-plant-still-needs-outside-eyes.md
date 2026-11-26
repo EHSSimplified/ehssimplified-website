@@ -80,9 +80,9 @@ Start with our free **Safety Culture Self-Assessment** — a short, no-obligatio
 
 **[Take the free Safety Culture Self-Assessment →](https://www.ehssimplified.com/)**
 
-Prefer a live walkthrough of how a mobile OSHA compliance platform keeps daily inspections, SDS access, and training in one place between outside audits? **[Try the free demo at app.ehssimplified.com →](https://app.ehssimplified.com)**
+Prefer a live walkthrough of how a mobile OSHA compliance platform keeps daily inspections, SDS access, and training in one place between outside audits? **[Try the free demo at demo.agentic-ehs.com](https://demo.agentic-ehs.com)**
 
-Want a CSP with 25 years of in-house manufacturing experience to walk your floor directly? **[Schedule a consult with Aaron →](https://www.ehssimplified.com/contact)**
+Want a CSP with 25 years of in-house manufacturing experience to walk your floor directly? **[Schedule a consult with Aaron →](https://calendly.com/aaron-leff-ehssimplified/30min)**
 
 - - -
 

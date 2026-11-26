@@ -8,6 +8,9 @@ summary: Does your small business need a written OSHA emergency action plan?
   Learn the 1910.38 requirements, penalties for non-compliance, and how to build
   one.
 ---
+
+*Update, November 2026: the EHS Simplified app is now [Agentic EHS](https://www.ehssimplified.com/blog/2026-11-22-introducing-agentic-ehs). The ideas below still hold; the tools got a lot better.*
+
 **Under OSHA's 29 CFR 1910.38, any employer whose workplace is covered by a standard requiring an emergency action plan (EAP) must have one — and if you have more than 10 employees, it must be written, not just talked about. Most small business owners assume a verbal "here's where the exit is" conversation counts. It doesn't, and the gap between what owners assume and what OSHA requires is where citations happen.**
 
 Emergency planning isn't just a fire-drill formality. According to the U.S. Chamber of Commerce Foundation and Verizon's 2026 national survey of small and mid-sized businesses, 69% have no disaster plan in place at all, even though the U.S. Small Business Administration reports that 25% of businesses that close after a disaster never reopen. For a small business owner, an emergency action plan isn't paperwork — it's the difference between a bad afternoon and a business that doesn't survive the year.
@@ -59,7 +62,7 @@ OSHA requires you to review the emergency action plan with each covered employee
 
 EHS Simplified is a mobile compliance app built specifically for small manufacturers — and small business owners in hospitality and beyond — who need OSHA-required documentation — like emergency action plans — without hiring a full-time safety department or paying for a new consulting engagement every time something changes.
 
-**Ready to see how it works?** [Try a free demo](https://app.ehssimplified.com) and see your first plan built in minutes, or [schedule a call with a Certified Safety Professional](https://ehssimplified.com/schedule) if you want a human to walk through your specific risks first.
+**Ready to see how it works?** [Try a free demo](https://demo.agentic-ehs.com) and see your first plan built in minutes, or [schedule a call with a Certified Safety Professional](https://calendly.com/aaron-leff-ehssimplified/30min) if you want a human to walk through your specific risks first.
 
 ## Frequently Asked Questions
 

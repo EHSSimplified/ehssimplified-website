@@ -87,13 +87,6 @@ What's next after November 20?
 
 Mixtures. The employer deadline to update labels, the program and training for mixtures is May 19, 2028.
 
-Need a hand before November 20?
+## Behind on the November 20 update?
 
-If you'd like someone to review your SDSs, labels and written program with you before the deadline, book a 30-minute call with me. If you'd rather look around first, try the EHS Simplified app free.
-
-Internal links to add before publishing
-"fractional EHS leadership" → https://www.ehssimplified.com/plans
-"my years running safety inside manufacturing plants" → https://www.ehssimplified.com/about
-"manufacturers with fewer than 100 employees" → https://www.ehssimplified.com/industries
-Any existing HazCom or written-program post (I couldn't crawl the blog index to check)
-Once the Episode 1 video is on YouTube, embed it just above the FAQ
+You're not alone, and it's not too late to get it right. If you'd like someone to review your SDSs, labels and written program with you, [book a 30-minute call with me](https://calendly.com/aaron-leff-ehssimplified/30min). If you'd rather look around first, [try the Agentic EHS demo](https://demo.agentic-ehs.com): no sign-up, and it shows how the SDS library flags out-of-date sheets.

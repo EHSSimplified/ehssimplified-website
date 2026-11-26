@@ -98,7 +98,7 @@ For small businesses, the barrier to safety onboarding isn't awareness — it's 
 
 EHS Simplified was built for exactly this situation. Our mobile EHS compliance platform gives small businesses a structured, defensible framework for new hire safety onboarding — without requiring a dedicated safety department to run it. You can deploy job-specific training, track completions, store signed acknowledgments, and generate audit-ready documentation, all from a single platform your team can access from any device.
 
-Not sure where to start? **[Schedule a free call with a Certified Safety Professional](https://ehssimplified.com/csp-call)** to review your current onboarding process and identify your highest-priority gaps. Or **[request a free demo](https://ehssimplified.com/demo)** to see how EHS Simplified structures new hire onboarding from day one.
+Not sure where to start? **[Schedule a free call with a Certified Safety Professional](https://calendly.com/aaron-leff-ehssimplified/30min)** to review your current onboarding process and identify your highest-priority gaps. Or **[request a free demo](https://demo.agentic-ehs.com)** to see how EHS Simplified structures new hire onboarding from day one.
 
 - - -
 

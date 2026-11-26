@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Free EHS Gap Assessment | EHS Simplified</title>
-<meta name="description" content="A free 6-minute EHS gap assessment for small manufacturers. Score your OSHA compliance gaps, see your potential fine and injury cost exposure, and get a plan recommendation from a Certified Safety Professional.">
+<meta name="description" content="A free 6-minute EHS gap assessment for small businesses. Score your OSHA compliance gaps, see your potential fine and injury cost exposure, and get a plan recommendation from a Certified Safety Professional.">
 <style>
   :root{
     --navy:#111827; --navy2:#0B1324; --ink:#1F2937; --muted:#6B7280; --line:#E5E7EB;
@@ -196,7 +196,7 @@
 
   var PLANS = {
     "Essentials":   {price:"$449", per:"/mo", sites:"1 site", seats:"3 manager seats", csp:"1 CSP hour/month", resp:"CSP response within 2 business days"},
-    "Professional": {price:"$849", per:"/mo", sites:"Up to 2 sites", seats:"10 manager seats", csp:"2 CSP hours/month", resp:"CSP response by the next business day"},
+    "Professional": {price:"$849", per:"/mo", sites:"1 site", seats:"10 manager seats", csp:"2 CSP hours/month", resp:"CSP response by the next business day"},
     "Multi-site":   {price:"$1,695", per:"/mo", sites:"Up to 5 sites", seats:"25 manager seats", csp:"4 CSP hours/month", resp:"Same-business-day CSP response"},
     "Enterprise":   {price:"Custom", per:"", sites:"More than 5 sites", seats:"Seats sized to your team", csp:"Dedicated CSP", resp:"Agreed response times, setup and team training"}
   };
@@ -204,7 +204,7 @@
   // ---------- Questions ----------
   var SECTIONS = [
     {id:"rec",    name:"Recordkeeping & reporting", intro:"OSHA usually starts here. Missing paperwork is the fastest citation an inspector can write."},
-    {id:"prog",   name:"Written programs", intro:"These are among OSHA's most-cited standards in manufacturing every year."},
+    {id:"prog",   name:"Written programs", intro:"These are among OSHA's most-cited standards every year."},
     {id:"floor",  name:"Equipment & shop floor", intro:"Where most serious injuries happen, and where inspectors spend their walkaround."},
     {id:"people", name:"Training & ownership", intro:"Programs only work if people know them, and someone owns them."},
     {id:"env",    name:"Environmental", intro:"Not OSHA, but EPA and state agencies fine these too, often per day."}
@@ -270,7 +270,7 @@
       fix:"Evaluate and label each space, then set up permits, rescue and training if needed.", feat:"Risk assessments + written programs"},
     {id:"ergo", s:"floor", w:2, pen:false, cite:"General Duty Clause", title:"Ergonomics",
       q:"Have lifting, reaching and repetitive tasks been assessed for strain risk?",
-      fix:"Assess your highest-volume manual tasks first. Strain injuries are the most common in manufacturing.", feat:"Ergonomic assessments from phone photos"},
+      fix:"Assess your highest-volume manual tasks first. Strain injuries are among the most common workplace injuries.", feat:"Ergonomic assessments from phone photos"},
 
     {id:"orient", s:"people", w:2, pen:false, cite:"Training required across OSHA standards", title:"New hire orientation",
       q:"Do new hires get a documented safety orientation before they start working?",
@@ -474,8 +474,8 @@
     // Plan fit
     var seats = profile.seats, sites = profile.sites, plan="Essentials", why=[];
     if(sites==="6+" || seats==="26+"){ plan="Enterprise"; why.push(sites==="6+" ? "You run more than 5 locations." : "You need more than 25 manager seats."); }
-    else if(sites==="3-5" || seats==="11-25"){ plan="Multi-site"; why.push(sites==="3-5" ? "Multi-site covers up to 5 locations." : "You need 11 to 25 manager seats."); }
-    else if(sites==="2" || seats==="4-10"){ plan="Professional"; why.push(sites==="2" ? "Professional covers your 2 locations." : "You need more than 3 manager seats."); }
+    else if(sites==="2" || sites==="3-5" || seats==="11-25"){ plan="Multi-site"; why.push(sites!=="1" && sites ? "Multi-site covers 2 to 5 locations." : "You need 11 to 25 manager seats."); }
+    else if(seats==="4-10"){ plan="Professional"; why.push("You need more than 3 manager seats."); }
     else { why.push("One site with up to 3 managers fits Essentials."); }
     if(plan==="Essentials" && (readiness<50 || (readiness<70 && (e>=40 || profile.owner!=="pro")))){
       plan="Professional";

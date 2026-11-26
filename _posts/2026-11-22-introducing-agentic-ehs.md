@@ -1,9 +1,9 @@
 ---
-title: "Introducing Agentic EHS: AI Drafts It, a CSP Checks It"
+title: "Introducing Agentic EHS: We Draft It, a CSP Checks It"
 date: 2026-11-22T21:00:00.000Z
 author: Aaron Leff, CSP
 topic: General EHS
-summary: Agentic EHS is new EHS software from EHS Simplified. AI drafts your
+summary: Agentic EHS is new EHS software from EHS Simplified. It drafts your
   safety programs, training and daily plan, and a CSP checks the work. From $449/month.
 ---
 Today I'm launching Agentic EHS, the new software from EHS Simplified. It drafts your written safety programs, builds your training, plans your inspections and lays out your safety work each morning. A Certified Safety Professional checks the work and is a tap away when you need one. It replaces the EHS Simplified mobile app.
@@ -45,7 +45,7 @@ Only with a person in charge of it. That's the rule I built this around. The AI 
 Plans start at **$449 a month** for one site, with all software and monthly CSP time included ([see all plans](https://www.ehssimplified.com/plans.html)):
 
 - **Essentials** — $449/month, 1 CSP hour, 1 site
-- **Professional** — $849/month, 2 CSP hours, 2 sites
+- **Professional** — $849/month, 2 CSP hours, 1 site
 - **Multi-site** — $1,695/month, 4 CSP hours, 5 sites
 - **Enterprise** — custom pricing for larger companies
 
@@ -67,7 +67,7 @@ Yes. The demo is a sample company with a year of safety records. No sign-up, not
 
 ### What if I have more than one site?
 
-The Professional and Multi-site plans cover two and five sites, and Enterprise covers more.
+Essentials and Professional cover one site. Multi-site covers up to five, and Enterprise covers more.
 
 ## See it for yourself
 
