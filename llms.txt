@@ -1,5 +1,5 @@
 # EHS Simplified — home of Agentic EHS
-> CSP-led safety for leaders who got handed safety on top of their day job. Agentic EHS is AI-powered EHS software that drafts written safety programs, training, inspections and a daily safety plan, with a Certified Safety Professional (CSP) checking the work and on call. Plans from $449/month, all software included, 14-day free trial.
+> CSP-led safety for leaders who got handed safety on top of their day job. Agentic EHS is EHS software that drafts written safety programs, training, inspections and a daily safety plan, with a Certified Safety Professional (CSP) checking the work and on call. Plans from $449/month, all software included, 14-day free trial.
 
 EHS Simplified, LLC is led by Aaron Leff, CSP (25+ years in EHS). Its software, Agentic EHS, serves companies from a single small shop to several sites: the operations, HR or plant manager or owner who carries safety duties without a safety background, the in-house safety professional running a department of one, and multi-site companies. Nothing the AI drafts is final until a named person approves it.
 
@@ -44,7 +44,7 @@ Built for real work: machines and equipment, chemicals, lifting and vehicles.
 
 ## Pricing (all software included; 14-day free trial; workers always free)
 - Essentials — $449/month ($4,490/year): 1 CSP hour/month, answers within 2 business days, 3 manager seats, 1 site
-- Professional — $849/month ($8,490/year): 2 CSP hours/month, next-business-day answers, 10 manager seats, 2 sites
+- Professional — $849/month ($8,490/year): 2 CSP hours/month, next-business-day answers, 10 manager seats, 1 site
 - Multi-site — $1,695/month ($16,950/year): 4 CSP hours/month, same-business-day answers, 25 manager seats, 5 sites
 - Enterprise — custom pricing: more sites and seats, a dedicated CSP, agreed response times
 - Extras: manager seat $25/month, site $150/month, CSP hour $195. On-site projects quoted separately.

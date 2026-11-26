@@ -153,7 +153,7 @@ function generatePostHtml(frontmatter, body, slug) {
     <div class="footer-top">
       <div>
         <div class="footer-logo"><img src="/img/ehs-simplified-mark-white.svg" alt="" width="24" height="29">EHS <span>Simplified</span></div>
-        <p class="footer-tagline">CSP-led safety for leaders who got handed safety on top of their day job. Home of Agentic EHS: AI that does the safety paperwork, checked by a Certified Safety Professional. Plans from $449/month.</p>
+        <p class="footer-tagline">CSP-led safety for leaders who got handed safety on top of their day job. Home of Agentic EHS: software that does the safety paperwork, checked by a Certified Safety Professional. Plans from $449/month.</p>
         <div class="footer-contact">
           <a href="mailto:Aaron.Leff@EHSSimplified.com">Aaron.Leff@EHSSimplified.com</a>
           <a href="tel:6033977067">(603) 397-7067</a>
@@ -169,6 +169,7 @@ function generatePostHtml(frontmatter, body, slug) {
         <a href="/testimonials.html">Testimonials</a>
         <a href="/blog.html">Blog</a>
         <a href="/about.html">About Aaron</a>
+        <a href="/gap-assessment.html">Free Gap Assessment</a>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
@@ -189,7 +190,7 @@ function generatePostHtml(frontmatter, body, slug) {
     </div>
     <div class="footer-bottom">
       <span>© 2026 EHS Simplified. All rights reserved.</span>
-      <span class="footer-csp">⚠ Aaron Leff, CSP · Founder &amp; Consultant</span>
+      <span class="footer-csp">Aaron Leff, CSP · Founder &amp; Consultant</span>
     </div>
   </div>
 </footer>
