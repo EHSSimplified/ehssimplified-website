@@ -173,18 +173,18 @@ function generatePostHtml(frontmatter, body, slug) {
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="plans.html">Agentic EHS software</a>
-        <a href="plans.html">Written safety programs</a>
-        <a href="plans.html">Training &amp; inspections</a>
-        <a href="plans.html">Ergonomic assessments</a>
-        <a href="plans.html">CSP time every month</a>
+        <a href="/plans.html">Agentic EHS software</a>
+        <a href="/plans.html">Written safety programs</a>
+        <a href="/plans.html">Training &amp; inspections</a>
+        <a href="/plans.html">Ergonomic assessments</a>
+        <a href="/plans.html">CSP time every month</a>
         <a href="https://calendly.com/aaron-leff-ehssimplified/30min" target="_blank" rel="noopener">On-site projects</a>
       </div>
       <div class="footer-col">
         <h4>Industries</h4>
-        <a href="industries.html">Small shops</a>
-        <a href="industries.html">In-house safety teams</a>
-        <a href="industries.html">Multi-site companies</a>
+        <a href="/industries.html">Small shops</a>
+        <a href="/industries.html">In-house safety teams</a>
+        <a href="/industries.html">Multi-site companies</a>
         <a href="https://demo.agentic-ehs.com" target="_blank" rel="noopener">See the demo</a>
       </div>
     </div>
