@@ -13,6 +13,7 @@ EHS Simplified, LLC is led by Aaron Leff, CSP (25+ years in EHS). Its software, 
 - About Aaron Leff, CSP: https://www.ehssimplified.com/about.html
 
 ## Blog Posts
+- [Introducing Agentic EHS: We Draft It, a CSP Checks It](https://www.ehssimplified.com/blog/2026-11-22-introducing-agentic-ehs)
 - [Do I Need an OSHA 300 Log? Feb 1 Guide for Small Shops](https://www.ehssimplified.com/blog/2026-11-22-do-i-need-an-osha-300-log-feb-1-guide-for-small-shops)
 - [HazCom Deadline Nov 20: What Small Shops Must Do](https://www.ehssimplified.com/blog/2026-10-28-hazcom-deadline-nov-20-what-small-shops-must-do)
 - [Why We Really Break the Rules (And What It's Costing All of Us)](https://www.ehssimplified.com/blog/2026-08-31-why-we-really-break-the-rules-and-what-its-costing-all-of-us)
